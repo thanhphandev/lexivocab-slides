@@ -19,7 +19,7 @@ fonts:
 
 <div class="cover-slide h-full">
 <div class="flex items-center gap-3 mb-6" v-motion :initial="{ opacity: 0, y: -20 }" :enter="{ opacity: 1, y: 0, transition: { duration: 800 } }">
-<div class="w-12 h-12 bg-gradient-to-br from-[#FF6B00] to-[#FFA63D] rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">L</div>
+<img src="/logo.png" class="w-12 h-12 rounded-xl shadow-lg" alt="LexiVocab Logo" />
 <div class="cover-logo">LexiVocab</div>
 </div>
 
@@ -170,7 +170,7 @@ transition: slide-up
 Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đứt đoạn luồng tư duy, tạo ra cảm giác nản chí khi đọc tài liệu ngoại ngữ.
 </p>
 
-<div class="highlight-box mt-8 animate-fade-up animate-delay-4" v-click>
+<div class="highlight-box mt-8 animate-fade-up animate-delay-4">
 <div class="flex gap-4 items-start">
 <div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center shrink-0 text-[var(--lv-primary)] border border-orange-100">
 <div class="i-lucide-brain text-xl"></div>
@@ -185,17 +185,17 @@ Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đ
 </div>
 
 <!-- Right Side Visual -->
-<div class="relative h-[320px] w-full flex items-center justify-center animate-fade-up animate-delay-2">
+<div class="relative h-[280px] w-full flex items-center justify-center animate-fade-up animate-delay-2">
 <img src="/context_switching.png" alt="Context Switching Illustration" class="w-full h-full object-cover rounded-2xl shadow-2xl border border-gray-100" />
 
 <!-- Distraction Metric -->
-<div class="absolute -bottom-6 -left-6 z-20 hover:scale-105 transition-transform" v-click>
-<div class="glass-card !p-5 !rounded-2xl border-red-100 bg-white/95 text-center shadow-2xl backdrop-blur-xl">
-<div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-2 text-red-500">
-<div class="i-lucide-arrow-left-right text-xl"></div>
+<div class="absolute bottom-3 left-3 z-20 hover:scale-105 transition-transform">
+<div class="glass-card !p-4 !rounded-xl border-red-100 bg-white/95 text-center shadow-2xl backdrop-blur-xl">
+<div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-1.5 text-red-500">
+<div class="i-lucide-arrow-left-right text-lg"></div>
 </div>
-<div class="text-red-500 font-black text-2xl leading-none mb-1">-40%</div>
-<div class="text-[9px] font-bold uppercase tracking-widest text-gray-500">Hiệu suất</div>
+<div class="text-red-500 font-black text-xl leading-none mb-0.5">-40%</div>
+<div class="text-[8px] font-bold uppercase tracking-widest text-gray-500">Hiệu suất</div>
 </div>
 </div>
 </div>
@@ -217,20 +217,6 @@ transition: fade
   <ForgetCurve />
 </div>
 
-<div class="grid grid-cols-3 gap-4 animate-fade-up animate-delay-4">
-  <div class="glass-card !p-4 !rounded-xl border-orange-50" v-click>
-    <div class="text-[var(--lv-primary)] font-black text-2xl leading-none mb-1">60%</div>
-    <div class="text-[10px] font-bold uppercase tracking-wider text-gray-500">Quên sau 1 giờ</div>
-  </div>
-  <div class="glass-card !p-4 !rounded-xl border-orange-50" v-click>
-    <div class="text-[var(--lv-primary)] font-black text-2xl leading-none mb-1">80%</div>
-    <div class="text-[10px] font-bold uppercase tracking-wider text-gray-500">Quên sau 24 giờ</div>
-  </div>
-  <div class="glass-card !p-4 !rounded-xl border-orange-50" v-click>
-    <div class="text-[var(--lv-primary)] font-black text-2xl leading-none mb-1">90%</div>
-    <div class="text-[10px] font-bold uppercase tracking-wider text-gray-500">Quên sau 1 tuần</div>
-  </div>
-</div>
 </div>
 
 <BrandFooter section="Vấn đề" />
@@ -373,59 +359,39 @@ The <span class="bg-blue-100 text-blue-800 px-1 rounded select-none cursor-point
 transition: fade
 ---
 
-<div class="h-full flex flex-col p-10">
-<div class="badge badge-primary mb-2 animate-fade-up">CLIENT 2</div>
-<div class="grid grid-cols-[1.2fr_1fr] gap-16 items-center flex-grow">
+<div class="h-full flex flex-col px-8 py-4 overflow-hidden">
+<div class="badge badge-primary mb-1 animate-fade-up">CLIENT 2</div>
+<h1 class="animate-fade-up animate-delay-1 mb-2 text-2xl">Mobile App: Trải nghiệm Native</h1>
+<div class="grid grid-cols-2 gap-8 items-center flex-grow min-h-0">
 
 <div class="animate-fade-up animate-delay-2">
-  <h2 class="text-4xl font-black text-gray-900 mb-8 leading-tight">Học tập liền mạch,<br/><span class="text-orange-500">Mọi lúc mọi nơi.</span></h2>
-  
-  <div class="grid grid-cols-1 gap-8">
-    <div class="flex gap-5 items-start">
-      <div class="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 shrink-0 shadow-sm">
-        <div class="i-lucide-zap text-xl"></div>
-      </div>
-      <div>
-        <h4 class="font-bold text-gray-900 text-lg">Đồng bộ Real-time</h4>
-        <p class="text-sm text-gray-400 mt-1">Dữ liệu đồng bộ tức thì với Cloud thông thông qua Core API Service.</p>
-      </div>
+  <h2 class="text-2xl font-black text-gray-900 mb-4 leading-tight">Học tập liền mạch,<br/><span class="text-orange-500">Mọi lúc mọi nơi.</span></h2>
+  <div class="space-y-3">
+    <div class="flex gap-3 items-center">
+      <div class="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center text-orange-500 shrink-0"><div class="i-lucide-zap text-sm"></div></div>
+      <div><h4 class="font-bold text-gray-900 text-sm">Đồng bộ Real-time</h4><p class="text-[11px] text-gray-400">Dữ liệu đồng bộ tức thì với Cloud.</p></div>
     </div>
-    <div class="flex gap-5 items-start">
-      <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 shrink-0 shadow-sm">
-        <div class="i-lucide-bell text-xl"></div>
-      </div>
-      <div>
-        <h4 class="font-bold text-gray-900 text-lg">Nhắc nhở SRS Thông Minh</h4>
-        <p class="text-sm text-gray-400 mt-1">Thuật toán Spaced Repetition gửi thông báo đúng "thời điểm vàng" để ghi nhớ.</p>
-      </div>
-    </div>
-    <div class="flex gap-5 items-start">
-      <div class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-green-500 shrink-0 shadow-sm">
-        <div class="i-lucide-layout text-xl"></div>
-      </div>
-      <div>
-        <h4 class="font-bold text-gray-900 text-lg">Bento UI Modern</h4>
-        <p class="text-sm text-gray-400 mt-1">Giao diện hiện đại, tối ưu cho trải nghiệm một tay và đa nền tảng.</p>
-      </div>
+    <div class="flex gap-3 items-center">
+      <div class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-500 shrink-0"><div class="i-lucide-bell text-sm"></div></div>
+      <div><h4 class="font-bold text-gray-900 text-sm">Nhắc nhở SRS Thông Minh</h4><p class="text-[11px] text-gray-400">Spaced Repetition gửi thông báo đúng "thời điểm vàng".</p></div>
     </div>
   </div>
 </div>
-<div class="flex justify-center animate-fade-up animate-delay-3 relative order-first lg:order-last">
-  <div class="relative w-[300px] h-[600px] scale-[0.8] lg:scale-[0.9] origin-center">
-    <div class="absolute inset-0 bg-gray-900 rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.2)] p-2">
-      <div class="w-full h-full bg-white rounded-[42px] overflow-hidden relative border-[6px] border-gray-900">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-gray-900 rounded-b-3xl z-20 flex items-center justify-center">
-          <div class="w-10 h-1 bg-gray-800 rounded-full"></div>
-        </div>
+
+<div class="flex justify-center animate-fade-up animate-delay-3 relative">
+  <div class="relative" style="width: 180px; height: 360px;">
+    <div class="absolute inset-0 bg-gray-900 rounded-[30px] shadow-[0_15px_40px_rgba(0,0,0,0.25)] p-1">
+      <div class="w-full h-full bg-white rounded-[24px] overflow-hidden relative border-[3px] border-gray-900">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-4 bg-gray-900 rounded-b-xl z-20"></div>
         <img src="/mobile_ui.png" class="w-full h-full object-cover" alt="LexiVocab Mobile UI" />
       </div>
     </div>
-    <div class="absolute -right-12 top-1/3 bg-white shadow-2xl rounded-2xl p-4 border border-gray-100 animate-bounce animate-duration-3000">
-      <div class="flex items-center gap-2 mb-1">
-        <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">LIVE DATA</span>
+    <div class="absolute -right-2 bottom-12 bg-white shadow-lg rounded-lg p-2 border border-gray-100 z-30">
+      <div class="flex items-center gap-1.5">
+        <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+        <span class="text-[8px] font-bold text-gray-400 uppercase">LIVE</span>
       </div>
-      <div class="text-sm font-black text-gray-900">100% Synced</div>
+      <div class="text-xs font-black text-gray-900">Synced</div>
     </div>
   </div>
 </div>
@@ -438,68 +404,43 @@ transition: fade
 transition: slide-up
 ---
 
-<div class="h-full flex flex-col justify-center">
-<div class="badge badge-primary mb-6 animate-fade-up">CLIENT 3</div>
-<h1 class="animate-fade-up animate-delay-1 mb-2">Web Dashboard</h1>
-<p class="text-gray-500 mb-8 max-w-2xl animate-fade-up animate-delay-2">Next.js 14 App Router với Server Components tối ưu SEO và Analytics.</p>
-
-<div class="grid-2 gap-8 items-center">
-<div class="space-y-6 animate-fade-up animate-delay-3">
-<div class="flex gap-4 items-start">
-<div class="w-10 h-10 rounded-lg bg-[#FF6B00]/10 flex items-center justify-center text-[#FF6B00] shrink-0"><div class="i-lucide-bar-chart-3 text-xl"></div></div>
+<div class="h-full flex flex-col p-8 bg-slate-50/50 overflow-hidden">
+<div class="flex items-center justify-between mb-8 animate-fade-up">
 <div>
-<h3 class="text-[#1D2235] font-bold text-sm mb-1">Analytics Reports</h3>
-<p class="text-xs text-gray-500 leading-relaxed">Sử dụng Recharts trực quan hóa: Tỷ lệ ghi nhớ, Streak days, Heatmap.</p>
+<div class="badge badge-primary badge-outline text-[10px] mb-2">SYSTEM ARCHITECTURE</div>
+<h1 class="text-3xl font-black text-slate-900 tracking-tight">Web <span class="text-blue-600">Dashboard</span></h1>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Client 03</p>
+<p class="text-xs font-medium text-slate-600 italic">Central Management System</p>
 </div>
 </div>
-
-<div class="flex gap-4 items-start">
-<div class="w-10 h-10 rounded-lg bg-[#FF6B00]/10 flex items-center justify-center text-[#FF6B00] shrink-0"><div class="i-lucide-credit-card text-xl"></div></div>
-<div>
-<h3 class="text-[#1D2235] font-bold text-sm mb-1">Thanh toán tự động</h3>
-<p class="text-xs text-gray-500 leading-relaxed">Tích hợp Webhook SePay chống duplicate events bằng Idempotency.</p>
+<div class="grid grid-cols-[1fr_2.2fr] gap-10 flex-grow min-h-0">
+<div class="flex flex-col gap-4 animate-fade-up animate-delay-2">
+<div class="p-4 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center gap-4 group hover:border-blue-200 transition-all">
+<div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform"><div class="i-lucide-bar-chart-3"></div></div>
+<div><p class="font-bold text-slate-900 text-xs">Analytics</p><p class="text-[10px] text-slate-400 leading-tight">Recharts & Heatmap Engine</p></div>
+</div>
+<div class="p-4 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center gap-4 group hover:border-orange-200 transition-all">
+<div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 group-hover:scale-110 transition-transform"><div class="i-lucide-webhook"></div></div>
+<div><p class="font-bold text-slate-900 text-xs">Automation</p><p class="text-[10px] text-slate-400 leading-tight">SePay Webhooks Synchronization</p></div>
+</div>
+<div class="p-4 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center gap-4 group hover:border-green-200 transition-all">
+<div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-green-600 group-hover:scale-110 transition-transform"><div class="i-lucide-globe"></div></div>
+<div><p class="font-bold text-slate-900 text-xs">SEO & i18n</p><p class="text-[10px] text-slate-400 leading-tight">Multi-language Optimized Routing</p></div>
 </div>
 </div>
-
-<div class="flex gap-4 items-start">
-<div class="w-10 h-10 rounded-lg bg-[#FF6B00]/10 flex items-center justify-center text-[#FF6B00] shrink-0"><div class="i-lucide-globe text-xl"></div></div>
-<div>
-<h3 class="text-[#1D2235] font-bold text-sm mb-1">Đa ngôn ngữ (i18n)</h3>
-<p class="text-xs text-gray-500 leading-relaxed">Hỗ trợ 4 ngôn ngữ UI, mở rộng quy mô quốc tế dễ dàng.</p>
+<div class="relative animate-fade-up animate-delay-3 h-full min-h-0">
+<div class="absolute inset-0 bg-blue-500/5 blur-[100px] rounded-full translate-x-12 translate-y-12"></div>
+<div class="h-[95%] bg-white rounded-2xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.12)] border border-slate-200 overflow-hidden flex flex-col relative">
+<div class="h-9 bg-slate-50 flex items-center px-6 gap-3 border-b border-slate-100">
+<div class="flex gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-slate-200"></div><div class="w-2.5 h-2.5 rounded-full bg-slate-200"></div><div class="w-2.5 h-2.5 rounded-full bg-slate-200"></div></div>
+<div class="flex-grow flex justify-center"><div class="bg-white px-4 py-1 rounded-full text-[9px] text-slate-400 border border-slate-100 font-mono">lexivocab.com/dashboard</div></div>
+</div>
+<div class="flex-grow overflow-hidden relative">
+<img src="/web_ui.png" class="w-full h-full object-cover object-top" alt="LexiVocab Dashboard" />
 </div>
 </div>
-</div>
-
-<div class="relative animate-fade-up animate-delay-4">
-<div class="glass-card p-1 shadow-2xl relative z-10 overflow-hidden border border-gray-200">
-<div class="bg-[#FAFAFA] rounded-xl overflow-hidden aspect-video flex">
-<div class="w-1/4 bg-white border-r border-gray-200 p-4 flex flex-col gap-3">
-<div class="w-full h-6 bg-orange-100 rounded mb-4"></div>
-<div class="w-3/4 h-3 bg-gray-200 rounded"></div>
-<div class="w-2/3 h-3 bg-gray-200 rounded"></div>
-<div class="w-5/6 h-3 bg-gray-200 rounded"></div>
-</div>
-<div class="flex-1 p-6 flex flex-col gap-4">
-<div class="w-1/3 h-6 bg-gray-200 rounded"></div>
-<div class="flex gap-4">
-<div class="flex-1 h-20 bg-white border border-gray-200 rounded-lg p-3">
-<div class="w-8 h-8 bg-orange-100 rounded-full mb-2"></div>
-<div class="w-1/2 h-4 bg-gray-200 rounded"></div>
-</div>
-<div class="flex-1 h-20 bg-white border border-gray-200 rounded-lg p-3">
-<div class="w-8 h-8 bg-blue-100 rounded-full mb-2"></div>
-<div class="w-1/2 h-4 bg-gray-200 rounded"></div>
-</div>
-<div class="flex-1 h-20 bg-white border border-gray-200 rounded-lg p-3">
-<div class="w-8 h-8 bg-green-100 rounded-full mb-2"></div>
-<div class="w-1/2 h-4 bg-gray-200 rounded"></div>
-</div>
-</div>
-<div class="w-full flex-1 bg-white border border-gray-200 rounded-lg"></div>
-</div>
-</div>
-</div>
-<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
 </div>
 </div>
 </div>
@@ -644,19 +585,63 @@ style Res fill:#10B981,stroke:#059669,color:#fff
 </div>
 </div>
 
-<BrandFooter section="Backend" />
-
 ---
 transition: fade
 ---
 
-<div class="h-full flex flex-col justify-center">
-<div class="badge badge-primary mb-6 animate-fade-up">BẢO MẬT</div>
-<h1 class="animate-fade-up animate-delay-1 mb-2">Stateful Identity</h1>
-<p class="text-gray-500 mb-12 max-w-2xl animate-fade-up animate-delay-2">Cơ chế xác thực kép chống tấn công XSS hiệu quả, UX liền mạch.</p>
+<div class="h-full flex flex-col p-8 bg-slate-50/50 overflow-hidden">
+<div class="flex items-center justify-between mb-8 animate-fade-up">
+<div>
+<div class="badge badge-primary badge-outline text-[10px] mb-2">SECURITY MODEL</div>
+<h1 class="text-3xl font-black text-slate-900 tracking-tight">Refresh Token <span class="text-blue-600">Rotation</span></h1>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-xl border border-blue-100">
+<p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest leading-none mb-1">Protection Level</p>
+<p class="text-xs font-black text-blue-800">Advanced XSS Defense</p>
+</div>
+</div>
+<div class="grid grid-cols-[1.2fr_1.8fr] gap-8 flex-grow min-h-0">
+<div class="flex flex-col gap-4 animate-fade-up animate-delay-2">
+<div class="p-4 rounded-2xl bg-white border border-slate-100 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2 h-full bg-blue-500"></div>
+<h3 class="font-bold text-slate-900 text-xs mb-3 flex items-center gap-2"><div class="i-lucide-key text-blue-500"></div> Access Token (JWT)</h3>
+<ul class="text-[10px] text-slate-500 space-y-2 list-disc pl-4">
+<li>Lưu tại <strong>Application Memory</strong> (RAM).</li>
+<li>Hết hạn sau <strong>15 phút</strong>.</li>
+<li>Dùng cho mọi Request (Bearer Header).</li>
+</ul>
+</div>
+<div class="p-4 rounded-2xl bg-white border border-slate-100 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2 h-full bg-green-500"></div>
+<h3 class="font-bold text-slate-900 text-xs mb-3 flex items-center gap-2"><div class="i-lucide-cookie text-green-500"></div> Refresh Token</h3>
+<ul class="text-[10px] text-slate-500 space-y-2 list-disc pl-4">
+<li>Lưu trong <strong>HttpOnly Cookie</strong>.</li>
+<li>JS không thể đọc → <strong>Chống XSS 100%</strong>.</li>
+<li>Thời hạn dài (7 ngày), dùng để cấp lại Access Token.</li>
+</ul>
+</div>
+<div class="p-4 rounded-xl bg-orange-50 border border-orange-100 flex items-start gap-3">
+<div class="i-lucide-info text-orange-500 mt-1 shrink-0"></div>
+<p class="text-[9px] text-orange-800 leading-relaxed font-medium"><strong>Rotation Strategy:</strong> Cấp mới cả 2 token mỗi khi Refresh để vô hiệu hóa các token cũ đã bị rò rỉ.</p>
+</div>
+</div>
+<div class="animate-fade-up animate-delay-3 bg-white rounded-3xl shadow-[0_20px_40px_-12px_rgba(0,0,0,0.05)] border border-slate-100 p-6 flex flex-col items-center justify-center relative">
+<p class="text-[10px] font-bold text-slate-400 mb-6 uppercase tracking-widest">Silent Refresh Flow</p>
+<div class="w-full scale-110">
 
-<div class="flex justify-center animate-fade-up animate-delay-3">
-<TokenFlow />
+```mermaid
+sequenceDiagram
+participant Client
+participant Server
+Note over Client: Access Token Expired
+Client->>Server: POST /refresh-token (Cookie Attached)
+Server->>Server: Verify & Rotate Token
+Server-->>Client: Set-Cookie (New RT) + JSON (New AT)
+Note over Client: Seamless Session Continued
+```
+
+</div>
+</div>
 </div>
 </div>
 
@@ -706,10 +691,8 @@ datetime NextReview
 <div><strong>EF Core 9:</strong> ORM mạnh mẽ nhất hệ sinh thái .NET.</div>
 </div>
 <div class="flex gap-3 items-start">
-<div class="i-lucide-trash-2 text-[#FF6B00] text-xl mt-[-2px]"></div>
-<div><strong>Soft Delete:</strong> Dữ liệu không bị xóa vật lý (IsDeleted cờ). Đảm bảo toàn vẹn dữ liệu.</div>
-</div>
-</div>
+
+</div></div>
 </div>
 </div>
 </div>
@@ -863,7 +846,6 @@ transition: slide-up
 </div>
 </div>
 
-<BrandFooter section="Use Cases" />
 
 ---
 transition: fade
@@ -902,45 +884,64 @@ transition: fade
 transition: slide-up
 ---
 
-<div class="h-full flex flex-col justify-center">
-<div class="badge badge-primary mb-6 animate-fade-up">PAYMENT & JOBS</div>
-<div class="grid-2 gap-12 items-center">
-
+<div class="h-full flex flex-col p-8 bg-slate-50/50 overflow-hidden">
+<div class="flex items-center justify-between mb-8 animate-fade-up">
 <div>
-<h1 class="animate-fade-up animate-delay-1 mb-2">SePay & Idempotency</h1>
-<p class="mb-4 animate-fade-up animate-delay-2 text-sm text-gray-600">Xử lý webhook thanh toán an toàn, chống Duplicate Transaction.</p>
-
-<div class="bg-orange-50 p-4 rounded-lg border border-orange-200 animate-fade-up animate-delay-3 mb-8">
-<h3 class="font-bold text-sm text-[#FF6B00] mb-2 flex items-center gap-2"><div class="i-lucide-shield-check"></div> Idempotency Pattern</h3>
-<p class="text-xs text-gray-700 leading-relaxed">
-Đánh <code>UNIQUE KEY</code> cột <code>TransactionId</code>. Khi SePay gửi trùng webhook do timeout, DB văng lỗi <code>23505</code>. <strong>Tuyệt đối không cộng VIP 2 lần.</strong>
-</p>
+<div class="badge badge-primary badge-outline text-[10px] mb-2">OPERATIONS</div>
+<h1 class="text-3xl font-black text-slate-900 tracking-tight">Payment <span class="text-blue-600">& Automation</span></h1>
 </div>
-
-<h2 class="animate-fade-up animate-delay-3 text-lg font-bold mb-2 flex items-center gap-2"><div class="i-lucide-clock"></div> Hangfire Background Jobs</h2>
-<ul class="text-xs text-gray-600 space-y-2 animate-fade-up animate-delay-4 pl-4 list-disc">
-<li><strong>SendReviewReminder:</strong> Push notification ôn bài.</li>
-<li><strong>ProcessExpiredVIP:</strong> Hạ cấp account hết hạn.</li>
-</ul>
+<div class="flex gap-4">
+<div class="flex flex-col items-end">
+<div class="i-lucide-shield-check text-orange-500 text-xl"></div>
+<span class="text-[10px] font-bold text-slate-400">IDEMPOTENCY</span>
 </div>
-
-<div class="animate-fade-up animate-delay-3 bg-white p-4 rounded-xl border border-gray-200 shadow-sm text-sm flex justify-center">
+<div class="flex flex-col items-end">
+<div class="i-lucide-clock text-blue-500 text-xl"></div>
+<span class="text-[10px] font-bold text-slate-400">HANGFIRE</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-[1fr_1.5fr] gap-8 flex-grow min-h-0">
+<div class="flex flex-col gap-6 animate-fade-up animate-delay-2">
+<div class="p-5 rounded-2xl bg-white shadow-sm border border-slate-100 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-orange-500/5 rounded-full -translate-y-8 translate-x-8"></div>
+<h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2"><div class="i-lucide-shield text-orange-500"></div> SePay Webhook</h3>
+<p class="text-[11px] text-slate-500 leading-relaxed">Chống Duplicate Transaction bằng <code>Unique Key</code>. DB tự động reject các Webhook trùng lặp (Error 23505).</p>
+</div>
+<div class="p-5 rounded-2xl bg-white shadow-sm border border-slate-100 flex-grow group">
+<h3 class="font-bold text-slate-900 mb-4 flex items-center gap-2"><div class="i-lucide-cpu text-blue-500"></div> Background Jobs</h3>
+<div class="space-y-4">
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 shrink-0"><div class="i-lucide-bell"></div></div>
+<div><p class="text-[11px] font-bold text-slate-900">Review Reminders</p><p class="text-[10px] text-slate-400">Push notification định kỳ ôn bài.</p></div>
+</div>
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center text-red-600 shrink-0"><div class="i-lucide-user-minus"></div></div>
+<div><p class="text-[11px] font-bold text-slate-900">Account Management</p><p class="text-[10px] text-slate-400">Hạ cấp gói VIP khi hết hạn.</p></div>
+</div>
+</div>
+</div>
+</div>
+<div class="animate-fade-up animate-delay-3 flex items-center justify-center bg-white rounded-3xl shadow-[0_20px_40px_-12px_rgba(0,0,0,0.05)] border border-slate-100 p-8 relative overflow-hidden">
+<div class="absolute inset-0 bg-slate-50/50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none"></div>
+<div class="w-full h-full scale-110">
 
 ```mermaid
 stateDiagram-v2
-[*] --> Pending : QR Generated
-Pending --> Processing : Webhook Received
-Processing --> Completed : Valid Signature
-Processing --> Failed : Invalid Data
+direction LR
+[*] --> Pending : Webhook
+Pending --> Processing : Validate
+Processing --> Completed : Success
+Processing --> Failed : Signature Error
 Completed --> [*] : Grant VIP
-Failed --> [*] : Alert Admin
+Failed --> [*] : Log Admin
 ```
 
 </div>
 </div>
 </div>
+</div>
 
-<BrandFooter section="Use Cases" />
 
 ---
 transition: view-transition
@@ -1172,7 +1173,7 @@ class: text-center
 
 <div class="thanks-slide h-full w-full absolute inset-0">
 <div class="relative z-10 flex flex-col items-center justify-center h-full animate-fade-up">
-<div class="w-16 h-16 bg-gradient-to-br from-[#FF6B00] to-[#FFA63D] rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-2xl mb-8">L</div>
+<img src="/logo.png" class="w-16 h-16 rounded-2xl shadow-2xl mb-8" alt="LexiVocab Logo" />
 
 <h1 class="mb-4">Xin trân trọng cảm ơn!</h1>
 <p class="text-gray-400 max-w-lg mb-12">Cảm ơn Quý Thầy Cô Hội đồng đã dành thời gian lắng nghe.</p>
