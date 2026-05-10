@@ -701,6 +701,9 @@ sequenceDiagram
 
 <BrandFooter section="Bảo mật" />
 
+<!--
+Về cơ chế xác thực, em triển khai mô hình Refresh Token Rotation. Access Token được lưu trong Cookie với thời gian hết hạn ngắn, còn Refresh Token được lưu trong HttpOnly Cookie nhằm hạn chế tấn công XSS. Khi Refresh Token được sử dụng để cấp mới, token cũ sẽ bị vô hiệu hóa, giúp giảm thiểu rủi ro từ Replay Attack.
+-->
 
 ---
 transition: slide-up
@@ -1146,6 +1149,10 @@ Giảm dung lượng Image từ 1GB xuống 200MB (-80%)
 </div>
 
 <BrandFooter section="DevOps" />
+
+<!--
+Cuối cùng là phần triển khai. Em sử dụng Multi-stage Docker giúp giảm dung lượng image từ 1GB xuống còn 200MB. Hệ thống được triển khai trên nền tảng Railway với quy trình CI/CD tự động và cơ chế Health check hỗ trợ giám sát, khởi động lại service khi xảy ra lỗi.
+-->
 
 ---
 layout: cover
