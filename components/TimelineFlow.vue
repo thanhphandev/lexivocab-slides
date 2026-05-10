@@ -3,14 +3,14 @@ import { ref, onMounted } from 'vue'
 
 const fill = ref(0)
 const steps = [
-  { label: 'Học mới', time: 'Day 0', offset: 0 },
+  { label: 'Mới', time: 'Day 0', offset: 0 },
   { label: 'Ôn lần 1', time: '1-3 Day', offset: 20 },
   { label: 'Ôn lần 2', time: '1 Week', offset: 45 },
   { label: 'Nhớ dài hạn', time: '1-4 Month', offset: 90 },
 ]
 
 onMounted(() => {
-  setTimeout(() => { fill.value = 100 }, 500)
+  setTimeout(() => { fill.value = 100 }, 1500)
 })
 </script>
 
