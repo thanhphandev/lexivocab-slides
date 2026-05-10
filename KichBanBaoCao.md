@@ -27,7 +27,7 @@
 
 ### SLIDE 3: Rào cản #1 - Context Switching
 **Lời thoại:**
-"Một trong những rào cản lớn là việc chuyển đổi ngữ cảnh (**Context Switching**) làm gián đoạn luồng đọc. Khi người học đang đọc một tài liệu tiếng Anh và gặp từ mới, việc phải chuyển tab sang từ điển sẽ làm đứt đoạn luồng tư duy. Theo nghiên cứu của Gloria Mark tại UC Irvine, người dùng mất trung bình 23 phút để quay lại task bị gián đoạn. Điều này làm suy giảm đáng kể hiệu suất học tập."
+"Một trong những rào cản lớn là việc chuyển đổi ngữ cảnh (**Context Switching**) làm gián đoạn luồng đọc. Khi người học đang đọc một tài liệu tiếng Anh và gặp từ mới, việc phải chuyển tab sang từ điển sẽ làm đứt đoạn luồng tư duy. Theo nghiên cứu của Gloria Mark tại UC Irvine, người dùng mất trung bình 23 phút để quay lại task bị gián đoạn. Điều này làm gián đoạn quá trình đọc và ghi nhớ từ vựng."
 
 ### SLIDE 4: Rào cản #2 - Đường cong quên lãng
 **Lời thoại:**
@@ -47,7 +47,7 @@
 
 ### SLIDE 7: Kiến trúc Hub & Spoke
 **Lời thoại:**
-"Hệ thống sử dụng **Core API (ASP.NET Core)** làm trung tâm, kết nối và đồng bộ dữ liệu giữa 3 nền tảng Client: Chrome Extension, Mobile App và Web Dashboard. Điểm đặc biệt là cả 3 nền tảng này đều hỗ trợ đa ngôn ngữ (i18n), hỗ trợ trải nghiệm bản địa hóa cho nhiều ngôn ngữ. Cấu trúc này hỗ trợ người dùng có thể lưu từ vựng trên máy tính và tiếp tục ôn tập trên thiết bị di động một cách thống nhất."
+"Hệ thống sử dụng **Core API (ASP.NET Core)** làm trung tâm, kết nối và đồng bộ dữ liệu giữa 3 nền tảng Client: Chrome Extension, Mobile App và Web Dashboard. Điểm đặc biệt là cả 3 nền tảng này đều hỗ trợ cả 3 nền tảng đều hỗ trợ đa ngôn ngữ (i18n) nhằm cải thiện trải nghiệm bản địa hóa. Cấu trúc này hỗ trợ người dùng có thể lưu từ vựng trên máy tính và tiếp tục ôn tập trên thiết bị di động một cách thống nhất."
 
 ### SLIDE 8: Chrome Extension - Bắt từ ngay khi đang đọc
 **Lời thoại:**
@@ -99,7 +99,7 @@
 
 ### SLIDE 18: Thuật toán Spaced Repetition (SM-2)
 **Lời thoại:**
-"Trái tim của hệ thống là thuật toán **SuperMemo-2**. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm **Fuzz Factor (lệch ±5%)** để tránh hiện tượng 'Review Hell' - khi quá nhiều thẻ dồn vào cùng một ngày, giúp trải nghiệm học tập tự nhiên hơn."
+"Một thành phần cốt lõi của hệ thống là thuật toán **SuperMemo-2**. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm **Fuzz Factor (lệch ±5%)** để tránh hiện tượng 'Review Hell' - khi quá nhiều thẻ dồn vào cùng một ngày, giúp trải nghiệm học tập tự nhiên hơn."
 
 ### SLIDE 19: Tối ưu hiệu năng - Composite Index
 **Lời thoại:**
@@ -107,7 +107,7 @@
 
 ### SLIDE 20: Tích hợp AI - Kiến trúc Streaming SSE
 **Lời thoại:**
-"Chức năng tra cứu ngữ cảnh AI sử dụng cơ chế **Streaming qua Server-Sent Events (SSE)**. Việc trả về từng phần dữ liệu giúp giảm độ trễ (latency) ở Client và sử dụng kết nối HTTP 1 chiều nhẹ hơn WebSockets. Hệ thống cũng được thiết kế theo hướng **Provider-Agnostic**, hỗ trợ cấu hình chuyển đổi giữa các API cung cấp LLM (như OpenAI, Gemini) thông qua Interface chung."
+"Chức năng tra cứu ngữ cảnh AI sử dụng cơ chế **Streaming qua Server-Sent Events (SSE)**. Việc trả về từng phần dữ liệu giúp giảm độ trễ (latency) ở Client và sử dụng kết nối HTTP 1 chiều nhẹ hơn WebSockets. Hệ thống được thiết kế theo hướng abstraction layer cho AI Provider, cho phép chuyển đổi giữa OpenAI hoặc Gemini mà không ảnh hưởng logic chính."
 
 ### SLIDE 21: Tự động hóa & Webhook
 **Lời thoại:**
@@ -149,7 +149,7 @@
 1. **Tại sao dùng Clean Architecture?** -> Tách biệt logic, dễ test, không phụ thuộc DB.
 2. **SSE khác gì WebSocket?** -> SSE 1 chiều, nhẹ, dùng HTTP thuần, tối ưu cho streaming text.
 3. **Xử lý trùng lặp thanh toán thế nào?** -> Dùng Unique Key (Idempotency) trong Database.
-4. **Tại sao dùng ASP.NET Core?** -> Hiệu năng cao, Type-safety mạnh, hệ sinh thái ổn định.
+4. **Tại sao dùng ASP.NET Core?** -> Hiệu năng cao, cơ chế kiểm tra kiểu dữ liệu chặt chẽ giúp hạn chế lỗi runtime, hệ sinh thái ổn định.
 5. **Shadow DOM có tác dụng gì?** -> Cách ly CSS, bảo vệ UI của Extension không bị vỡ.
 6. **Nếu có 100k user thì sao?** -> Hiện tại hệ thống mới benchmark ở quy mô nhỏ. Tuy nhiên kiến trúc đã chuẩn bị các hướng mở rộng như caching, queue processing và horizontal scaling.
 7. **Em benchmark như thế nào?** -> Đây là benchmark nội bộ trên dữ liệu mô phỏng khoảng 10,000 bản ghi trong môi trường local. Mục tiêu chính là so sánh tương đối giữa truy vấn có index và không có index, chưa phải benchmark production-scale.

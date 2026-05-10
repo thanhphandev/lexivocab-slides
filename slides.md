@@ -130,8 +130,8 @@ Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đ
 <div class="i-lucide-brain text-xl"></div>
 </div>
 <div>
-<p class="font-bold text-sm text-gray-800 mb-1">Mất trung bình 23 phút</p>
-<p class="text-xs text-gray-500 leading-relaxed">thời gian để quay lại task ban đầu sau khi bị gián đoạn.</p>
+<p class="font-bold text-sm text-gray-800 mb-1">Làm tăng đáng kể thời gian</p>
+<p class="text-xs text-gray-500 leading-relaxed">để quay lại công việc đang thực hiện sau khi bị gián đoạn.</p>
 <p class="text-[10px] text-gray-400 mt-2 uppercase tracking-wide">— Gloria Mark, ĐH UC Irvine</p>
 </div>
 </div>
@@ -159,7 +159,7 @@ Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đ
 <BrandFooter section="Vấn đề" />
 
 <!--
-Một trong những rào cản lớn là việc chuyển đổi ngữ cảnh (Context Switching) làm gián đoạn luồng đọc. Khi người học đang đọc một tài liệu tiếng Anh và gặp từ mới, việc phải chuyển tab sang từ điển sẽ làm đứt đoạn luồng tư duy. Theo nghiên cứu của Gloria Mark tại UC Irvine, người dùng mất trung bình 23 phút để quay lại task bị gián đoạn. Điều này làm suy giảm đáng kể hiệu suất học tập.
+Một trong những rào cản lớn là việc chuyển đổi ngữ cảnh (Context Switching) làm gián đoạn luồng đọc. Khi người học đang đọc một tài liệu tiếng Anh và gặp từ mới, việc phải chuyển tab sang từ điển sẽ làm đứt đoạn luồng tư duy. Theo nghiên cứu của Gloria Mark tại UC Irvine, việc bị gián đoạn làm tăng đáng kể thời gian để người dùng quay lại công việc đang thực hiện.
 -->
 
 ---
@@ -842,7 +842,7 @@ EF' = EF + (0.1 - (5-q) × (0.08 + (5-q) × 0.02))<br/>
 <div class="bg-orange-50 text-orange-500 w-7 h-7 rounded-lg flex items-center justify-center shrink-0"><div class="i-lucide-shuffle text-sm"></div></div>
 <div>
 <h4 class="font-bold text-[11px] text-slate-800">Fuzz Factor</h4>
-<p class="text-[9px] text-slate-500 mt-0.5">Lệch ±5% chu kỳ, tránh hiện tượng Review Hell.</p>
+<p class="text-[9px] text-slate-500 mt-0.5">Lệch ±5% chu kỳ, tránh bị dồn thẻ (Review Hell).</p>
 </div>
 </div>
 <!-- Optimization 2 -->
@@ -889,7 +889,7 @@ EF' = EF + (0.1 - (5-q) × (0.08 + (5-q) × 0.02))<br/>
 <BrandFooter section="Use Cases" />
 
 <!--
-Một thành phần cốt lõi của hệ thống là thuật toán SuperMemo-2. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm Fuzz Factor (lệch ±5%) để tránh hiện tượng 'Review Hell' - khi quá nhiều thẻ dồn vào cùng một ngày, giúp trải nghiệm học tập tự nhiên hơn.
+Một thành phần cốt lõi của hệ thống là thuật toán SuperMemo-2. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm Fuzz Factor (lệch ±5%) để tránh hiện tượng quá nhiều thẻ ôn tập bị dồn vào cùng một ngày (hay còn gọi là 'Review Hell'), giúp trải nghiệm học tập tự nhiên hơn.
 -->
 
 ---
@@ -965,7 +965,7 @@ transition: slide-up
 </div>
 <div>
 <h3 class="font-bold text-slate-800 text-xs mb-0.5">Provider-Agnostic</h3>
-<p class="text-[10px] text-slate-500 leading-relaxed">Kiến trúc độc lập (không vendor lock-in). Dễ dàng chuyển đổi giữa OpenAI, Gemini, Claude qua Interface tiêu chuẩn.</p>
+<p class="text-[10px] text-slate-500 leading-relaxed">Thiết kế abstraction layer cho phép thay đổi nhà cung cấp AI mà không ảnh hưởng logic chính.</p>
 </div>
 </div>
 </div>
@@ -986,7 +986,7 @@ transition: slide-up
 <BrandFooter section="Use Cases" />
 
 <!--
-Chức năng tra cứu ngữ cảnh AI sử dụng cơ chế Streaming qua Server-Sent Events (SSE). Việc trả về từng phần dữ liệu giúp giảm độ trễ (latency) ở Client và sử dụng kết nối HTTP 1 chiều nhẹ hơn WebSockets. Hệ thống cũng được thiết kế theo hướng Provider-Agnostic, hỗ trợ cấu hình chuyển đổi giữa các API cung cấp LLM (như OpenAI, Gemini) thông qua Interface chung.
+Chức năng tra cứu ngữ cảnh AI sử dụng cơ chế Streaming qua Server-Sent Events (SSE). Việc trả về từng phần dữ liệu giúp giảm độ trễ (latency) ở Client và sử dụng kết nối HTTP 1 chiều nhẹ hơn WebSockets. Hệ thống cũng được thiết kế theo hướng Provider-Agnostic - thiết kế một abstraction layer cho phép thay đổi nhà cung cấp AI (như OpenAI, Gemini) mà không ảnh hưởng đến logic chính.
 -->
 ---
 transition: slide-up
