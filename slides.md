@@ -452,19 +452,19 @@ transition: fade
 
 <div class="h-full flex flex-col px-8 py-4 justify-center">
 <div class="badge badge-primary badge-outline text-[10px] mb-2 uppercase tracking-widest animate-fade-up w-max">DESIGN PATTERN</div>
-<h1 class="text-4xl font-black text-slate-900 tracking-tight mb-2 animate-fade-up animate-delay-1 flex items-baseline gap-1">
-C<span class="text-slate-400 font-medium text-3xl">ommand</span>
-Q<span class="text-slate-400 font-medium text-3xl">uery</span>
-R<span class="text-slate-400 font-medium text-3xl">esponsibility</span>
-S<span class="text-slate-400 font-medium text-3xl">egregation</span>
+<h1 class="text-4xl font-black text-slate-900 tracking-tight mb-2 flex items-baseline gap-1">
+<span class="animate-fade-up animate-delay-1 inline-flex items-baseline">C<span class="text-slate-400 font-medium text-3xl">ommand</span></span>
+<span class="animate-fade-up animate-delay-2 inline-flex items-baseline">Q<span class="text-slate-400 font-medium text-3xl">uery</span></span>
+<span class="animate-fade-up animate-delay-3 inline-flex items-baseline">R<span class="text-slate-400 font-medium text-3xl">esponsibility</span></span>
+<span class="animate-fade-up animate-delay-4 inline-flex items-baseline">S<span class="text-slate-400 font-medium text-3xl">egregation</span></span>
 </h1>
 <p class="text-slate-500 text-[14px] mb-8 max-w-2xl animate-fade-up animate-delay-2 leading-relaxed">
 Phân tách hoàn toàn luồng xử lý <strong class="text-[#FF6B00] font-semibold">Ghi (Command)</strong> và <strong class="text-blue-500 font-semibold">Đọc (Query)</strong> để tối ưu hóa hiệu năng độc lập và khả năng mở rộng hệ thống.
 </p>
 
-<div class="grid grid-cols-2 gap-8 items-stretch animate-fade-up animate-delay-3 flex-grow min-h-0">
+<div class="grid grid-cols-2 gap-8 items-stretch flex-grow min-h-0">
 <!-- Command Side -->
-<div class="relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-orange-200 transition-all duration-300 flex flex-col overflow-hidden group">
+<div class="animate-fade-right animate-delay-3 relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-orange-200 transition-all duration-300 flex flex-col overflow-hidden group">
 <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-orange-100/50 to-transparent rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
 
 <div class="flex items-center gap-4 mb-6">
@@ -495,7 +495,7 @@ Thực thi business logic và validation phức tạp. Ghi trực tiếp vào Pr
 </div>
 
 <!-- Query Side -->
-<div class="relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex flex-col overflow-hidden group">
+<div class="animate-fade-left animate-delay-3 relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex flex-col overflow-hidden group">
 <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-100/50 to-transparent rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
 
 <div class="flex items-center gap-4 mb-6">
@@ -659,7 +659,9 @@ transition: slide-up
 <h2 class="text-slate-500 text-xs mb-6">Tối ưu truy vấn hàng triệu bản ghi.</h2>
 <div class="space-y-4">
 <div class="p-4 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 hover:border-blue-200 transition-colors">
-<div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-500 flex items-center justify-center shrink-0"><div class="i-logos-postgresql text-2xl"></div></div>
+<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center shrink-0 p-1.5 hover:scale-110 transition-transform duration-300">
+  <img src="/postgresql_elephant.png" class="w-full h-full object-contain" alt="PostgreSQL Logo" />
+</div>
 <div>
 <h3 class="font-bold text-slate-800 text-[12px] mb-0.5">PostgreSQL (B-Tree Index)</h3>
 <p class="text-[10px] text-slate-500 leading-relaxed">Đánh chỉ mục (Index) trên trường <code>Word</code> và <code>NextReview</code>, giúp hệ thống truy vấn lịch ôn tập siêu tốc.</p>
@@ -711,9 +713,8 @@ transition: slide-up
 </svg>
 </div>
 <div class="bg-white rounded-xl shadow-lg border border-slate-200 w-[240px] overflow-hidden transform hover:-translate-y-1 transition-transform duration-300 z-20 relative mt-1">
-<div class="absolute -top-3 -right-3 text-[50px] text-orange-50 opacity-50 pointer-events-none"><div class="i-lucide-heart"></div></div>
 <div class="bg-orange-500 text-white text-[10px] font-bold px-3 py-2 flex justify-between items-center">
-<span class="flex items-center gap-1.5"><div class="i-lucide-book-open text-orange-100"></div> UserVocabs (Trái tim hệ thống)</span>
+<span class="flex items-center gap-1.5"><div class="i-lucide-book-open text-orange-100"></div> UserVocabs</span>
 </div>
 <div class="p-3 flex flex-col gap-1.5 text-[9px] font-mono text-slate-600 bg-slate-50/50">
 <div class="flex justify-between items-center"><span class="font-bold text-amber-600 flex items-center gap-1"><div class="i-lucide-key text-[8px]"></div> Id</span><span class="text-slate-400">uuid</span></div>
@@ -1028,8 +1029,8 @@ transition: fade
 
 <div class="grid-2 gap-8 items-center animate-fade-up animate-delay-3">
 <div class="glass-card">
-<h3 class="font-bold text-[#1D2235] mb-4 flex items-center gap-2">
-<div class="i-logos-docker-icon text-2xl"></div> Multi-stage Docker
+<h3 class="font-bold text-[#1D2235] mb-4 flex items-center gap-3">
+<img src="/docker_logo.png" class="w-8 h-8 object-contain" /> Multi-stage Docker
 </h3>
 <div class="space-y-3 text-sm text-gray-600">
 <p><strong>Stage 1 (Build):</strong> .NET SDK (~800MB) biên dịch code.</p>
@@ -1041,8 +1042,8 @@ Giảm dung lượng Image từ 1GB xuống 200MB (-80%)
 </div>
 
 <div class="glass-card">
-<h3 class="font-bold text-[#1D2235] mb-4 flex items-center gap-2">
-<div class="i-lucide-train text-2xl text-purple-600"></div> Railway PaaS
+<h3 class="font-bold text-[#1D2235] mb-4 flex items-center gap-3">
+<img src="/railway_logo.png" class="w-8 h-8 object-contain" /> Railway PaaS
 </h3>
 <div class="space-y-3 text-sm text-gray-600">
 <div class="flex gap-2 items-start">
