@@ -28,7 +28,7 @@ Xây dựng hệ thống học từ vựng đa nền tảng tích hợp <br/> <s
 </h1>
 
 <p class="cover-sub text-left mt-4" v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1, transition: { delay: 600, duration: 800 } }">
-Ứng dụng thuật toán Spaced Repetition SuperMemo-2 và AI sinh tạo để mang lại trải nghiệm liền mạch, tập trung.
+Ứng dụng thuật toán Spaced Repetition SuperMemo-2 và AI sinh tạo để hỗ trợ quá trình học và ôn tập từ vựng trên nhiều thiết bị.
 </p>
 
 <div class="cover-meta flex justify-between items-end border-t border-gray-200 pt-6 mt-12 text-left" v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1, transition: { delay: 900, duration: 800 } }">
@@ -44,7 +44,7 @@ Xây dựng hệ thống học từ vựng đa nền tảng tích hợp <br/> <s
 </div>
 
 <!--
-Kính chào quý thầy cô trong Hội đồng. Em là Phan Văn Thành, mã sinh viên DTH225766. Hôm nay em rất vinh dự được trình bày đồ án tốt nghiệp với đề tài: LexiVocab - Hệ sinh thái học từ vựng đa nền tảng tích hợp thuật toán lặp lại ngắt quãng. Dự án ứng dụng thuật toán SuperMemo-2 và AI sinh tạo để mang lại trải nghiệm học tập tập trung và liền mạch.
+Kính chào quý thầy cô trong Hội đồng. Em là Phan Văn Thành, mã sinh viên DTH225766. Hôm nay em xin được trình bày đồ án tốt nghiệp với đề tài: Xây dựng hệ thống học từ vựng đa nền tảng tích hợp thuật toán lặp lại ngắt quãng. Dự án hướng tới việc ứng dụng thuật toán SuperMemo-2 và AI tạo sinh để hỗ trợ quá trình học và ôn tập từ vựng trên nhiều thiết bị.
 -->
 
 ---
@@ -97,7 +97,7 @@ transition: slide-up
     </div>
     <div>
       <h3 class="font-bold text-gray-900 mb-0.5 text-sm">Triển khai thực tế</h3>
-      <p class="text-xs text-gray-500 leading-snug">Hệ thống Production-ready, chạy mượt mà trên môi trường thật.</p>
+      <p class="text-xs text-gray-500 leading-snug">Được thiết kế theo định hướng dễ triển khai trên môi trường thật.</p>
     </div>
   </div>
 </div>
@@ -106,7 +106,7 @@ transition: slide-up
 <BrandFooter section="Mở đầu" />
 
 <!--
-Mục tiêu cốt lõi của đồ án không chỉ là một ứng dụng học tập, mà là xây dựng một sản phẩm hoàn thiện (Production-ready). Giải quyết triệt để bài toán học từ vựng qua 4 phương diện: Trải nghiệm đa nền tảng liền mạch; Thuật toán SuperMemo-2 cá nhân hóa; Tích hợp AI sinh tạo để hiểu sâu ngữ cảnh; và triển khai thực tế trên môi trường Production.
+Mục tiêu của đồ án là xây dựng một hệ thống học từ vựng, tập trung vào 4 phương diện: Trải nghiệm người dùng trên đa nền tảng; Tích hợp thuật toán SuperMemo-2 cá nhân hóa thời gian ôn tập; Ứng dụng AI tạo sinh để hỗ trợ ngữ cảnh học; và thiết kế kiến trúc hệ thống theo định hướng dễ triển khai thực tế.
 -->
 
 ---
@@ -130,9 +130,9 @@ Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đ
 <div class="i-lucide-brain text-xl"></div>
 </div>
 <div>
-<p class="font-bold text-sm text-gray-800 mb-1">Mất 23 phút</p>
-<p class="text-xs text-gray-500 leading-relaxed">để não bộ lấy lại sự tập trung và quay về trạng thái "Flow" sau mỗi lần gián đoạn.</p>
-<p class="text-[10px] text-gray-400 mt-2 uppercase tracking-wide">— Nghiên cứu từ ĐH UC Irvine</p>
+<p class="font-bold text-sm text-gray-800 mb-1">Mất trung bình 23 phút</p>
+<p class="text-xs text-gray-500 leading-relaxed">thời gian để quay lại task ban đầu sau khi bị gián đoạn.</p>
+<p class="text-[10px] text-gray-400 mt-2 uppercase tracking-wide">— Gloria Mark, ĐH UC Irvine</p>
 </div>
 </div>
 </div>
@@ -146,9 +146,9 @@ Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đ
 <div class="absolute bottom-3 left-3 z-20 hover:scale-105 transition-transform">
 <div class="glass-card !p-4 !rounded-xl border-red-100 bg-white/95 text-center shadow-2xl backdrop-blur-xl">
 <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-1.5 text-red-500">
-<div class="i-lucide-arrow-left-right text-lg"></div>
+<div class="i-lucide-trending-down text-lg"></div>
 </div>
-<div class="text-red-500 font-black text-xl leading-none mb-0.5">-40%</div>
+<div class="text-red-500 font-black text-lg leading-none mb-0.5">Giảm sút</div>
 <div class="text-[8px] font-bold uppercase tracking-widest text-gray-500">Hiệu suất</div>
 </div>
 </div>
@@ -159,7 +159,7 @@ Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đ
 <BrandFooter section="Vấn đề" />
 
 <!--
-Rào cản lớn nhất là Context Switching - kẻ thù của sự tập trung. Khi đọc bài báo tiếng Anh gặp từ mới, phải chuyển tab sang từ điển làm đứt đoạn luồng tư duy. Theo nghiên cứu từ ĐH UC Irvine, não bộ mất tới 23 phút để lấy lại trạng thái Flow, làm giảm 40% hiệu suất học tập.
+Một trong những rào cản lớn là việc chuyển đổi ngữ cảnh (Context Switching) làm gián đoạn luồng đọc. Khi người học đang đọc một tài liệu tiếng Anh và gặp từ mới, việc phải chuyển tab sang từ điển sẽ làm đứt đoạn luồng tư duy. Theo nghiên cứu của Gloria Mark tại UC Irvine, người dùng mất trung bình 23 phút để quay lại task bị gián đoạn. Điều này làm suy giảm đáng kể hiệu suất học tập.
 -->
 
 ---
@@ -180,7 +180,7 @@ transition: fade
 <BrandFooter section="Vấn đề" />
 
 <!--
-Rào cản thứ hai là Đường cong quên lãng Ebbinghaus. Nếu không có cơ chế ôn tập đúng thời điểm, não bộ sẽ tự động loại bỏ 80% thông tin mới chỉ sau 24 giờ. Việc học vẹt mà không có sự nhắc nhở khoa học dẫn đến lãng phí rất lớn công sức của người học.
+Rào cản thứ hai liên quan đến Đường cong quên lãng Ebbinghaus. Theo lý thuyết này, thông tin mới nếu không được ôn tập sẽ bị suy giảm nhanh chóng theo thời gian. Điều này đặc biệt đúng với việc học từ vựng riêng lẻ, không có ngữ cảnh, dẫn đến việc ghi nhớ kém hiệu quả.
 -->
 
 ---
@@ -262,7 +262,7 @@ transition: fade
 <BrandFooter section="Hệ sinh thái" />
 
 <!--
-Hệ thống lấy Core API (.NET 10) làm trung tâm, kết nối đồng nhất dữ liệu giữa 3 nền tảng Client: Chrome Extension, Mobile App và Web Dashboard. Điều này đảm bảo người dùng có thể bắt từ trên máy tính tại văn phòng và ôn tập ngay trên điện thoại khi đang di chuyển.
+Hệ thống sử dụng Core API (ASP.NET Core) làm trung tâm, kết nối và đồng bộ dữ liệu giữa 3 nền tảng Client: Chrome Extension, Mobile App và Web Dashboard. Điểm đặc biệt là cả 3 nền tảng này đều hỗ trợ đa ngôn ngữ (i18n), mang lại trải nghiệm bản địa hóa tốt nhất. Cấu trúc này hỗ trợ người dùng có thể lưu từ vựng trên máy tính và tiếp tục ôn tập trên thiết bị di động một cách thống nhất.
 -->
 
 ---
@@ -282,19 +282,19 @@ transition: slide-up
 </div>
 <div class="grid grid-cols-[1fr_1.3fr] gap-8 items-center flex-grow min-h-0">
 <div class="animate-fade-up animate-delay-2">
-<h2 class="text-2xl font-black text-gray-900 mb-4 leading-tight">Bắt từ vựng tức thì,<br/><span class="text-[#FF6B00]">Không gián đoạn.</span></h2>
+<h2 class="text-2xl font-black text-gray-900 mb-4 leading-tight">Bắt từ vựng ngay khi đang đọc,<br/><span class="text-[#FF6B00]">Không gián đoạn.</span></h2>
 <div class="space-y-3 text-xs">
 <div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
 <div class="text-[#FF6B00] font-black shrink-0">01</div>
-<div><strong>Manifest V3:</strong> Chuẩn bảo mật mới nhất, tối ưu hiệu năng và quyền riêng tư.</div>
+<div><strong>Công nghệ Shadow DOM:</strong> Cách ly CSS, ngăn xung đột style với trang host, duy trì tính toàn vẹn của UI.</div>
 </div>
 <div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
 <div class="text-[#FF6B00] font-black shrink-0">02</div>
-<div><strong>Shadow DOM:</strong> Cô lập hoàn toàn UI popup khỏi CSS của website hiện tại.</div>
+<div><strong>Xử lý ngầm (Background):</strong> Lưu từ vựng tức thì mà không cần tải lại trang, giữ nguyên luồng tập trung.</div>
 </div>
 <div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
 <div class="text-[#FF6B00] font-black shrink-0">03</div>
-<div><strong>Service Worker:</strong> Xử lý ngầm hiệu quả, tiết kiệm tài nguyên hệ thống.</div>
+<div><strong>Hiệu năng cao:</strong> Áp dụng chuẩn Manifest V3 mới nhất, siêu nhẹ và bảo mật dữ liệu người dùng.</div>
 </div>
 </div>
 </div>
@@ -329,7 +329,7 @@ The <span class="bg-orange-100 text-[#FF6B00] px-1 rounded-sm font-bold select-n
 <BrandFooter section="Hệ sinh thái" />
 
 <!--
-Chrome Extension là công cụ bắt từ chủ lực. Manifest V3 mới nhất tối ưu hiệu năng. Shadow DOM cô lập hoàn toàn UI, popup hiển thị đẹp trên mọi website. Service Worker xử lý đồng bộ ngầm tiết kiệm tài nguyên.
+Thành phần đầu tiên là Chrome Extension, hỗ trợ tra cứu và lưu từ vựng trên trình duyệt. Về mặt kỹ thuật, extension sử dụng Shadow DOM để cách ly CSS, ngăn xung đột style của popup với trang web đang xem. Các tác vụ lưu từ vựng được xử lý ngầm (background script) nhằm hạn chế việc gián đoạn trải nghiệm đọc.
 -->
 
 ---
@@ -471,7 +471,7 @@ transition: slide-up
 <div class="grid grid-cols-[1.2fr_1fr] gap-8 items-center flex-grow min-h-0">
 <div class="animate-fade-up animate-delay-1">
 <h1 class="text-3xl font-black text-slate-900 tracking-tight mb-1">Clean Architecture</h1>
-<h2 class="text-[#FF6B00] text-lg font-bold mb-4 animate-fade-up animate-delay-2">Core API .NET 10</h2>
+<h2 class="text-[#FF6B00] text-lg font-bold mb-4 animate-fade-up animate-delay-2">ASP.NET Core</h2>
 <p class="mb-6 animate-fade-up animate-delay-3 text-sm leading-relaxed text-slate-600">Tách biệt logic cốt lõi khỏi framework và cơ sở dữ liệu để tối ưu tính linh hoạt và bảo trì.</p>
 
 <div class="space-y-4 animate-fade-up animate-delay-4 text-xs mt-6">
@@ -491,7 +491,7 @@ transition: slide-up
 <BrandFooter section="Backend" />
 
 <!--
-Backend được thiết kế theo Clean Architecture, tách biệt hoàn toàn Business Logic khỏi Framework và Database. Lớp Domain ở trung tâm chứa các quy tắc cốt lõi, giúp hệ thống cực kỳ linh hoạt. Chúng ta có thể thay đổi Database hoặc tích hợp thêm các dịch vụ bên thứ ba mà không cần sửa đổi Logic nghiệp vụ chính.
+Backend được thiết kế theo Clean Architecture, tách biệt Business Logic khỏi Framework và Database. Lớp Domain ở trung tâm chứa các quy tắc cốt lõi, giúp hệ thống dễ mở rộng và dễ bảo trì hơn. Chúng ta có thể thay đổi Database hoặc tích hợp thêm các dịch vụ bên thứ ba mà không cần sửa đổi Logic nghiệp vụ chính.
 -->
 
 ---
@@ -578,7 +578,7 @@ Truy vấn tốc độ cao, không có side-effects. Có thể scale mạnh mẽ
 <BrandFooter section="Backend" />
 
 <!--
-Em kết hợp mẫu thiết kế CQRS để phân tách hoàn toàn luồng Ghi (Command) và luồng Đọc (Query). Luồng Ghi xử lý các logic phức tạp và validation, trong khi luồng Đọc được tối ưu hóa để truy vấn dữ liệu với tốc độ cao nhất, không gây side-effect, giúp hệ thống dễ dàng scale theo chiều ngang.
+Em kết hợp mẫu thiết kế CQRS để phân tách luồng Ghi (Command) và luồng Đọc (Query). Luồng Ghi xử lý các logic phức tạp và validation, trong khi luồng Đọc được tối ưu cho nhu cầu truy vấn đọc, không gây side-effect, giúp hệ thống dễ dàng scale theo chiều ngang.
 -->
 
 ---
@@ -640,7 +640,7 @@ style Res fill:#10B981,stroke:#059669,color:#fff
 </div>
 
 <!--
-Để điều phối CQRS, em sử dụng thư viện MediatR. Mọi yêu cầu đều đi qua một Pipeline Middleware tập trung, nơi xử lý các vấn đề như: Logging tự động, Validation dữ liệu bằng FluentValidation, và Transaction Management. Điều này giúp code sạch hơn và dễ bảo trì hơn rất nhiều.
+Để điều phối CQRS, em sử dụng thư viện MediatR. Mọi yêu cầu đều đi qua một Pipeline Middleware tập trung, nơi xử lý các vấn đề như: Logging tự động, Validation dữ liệu bằng FluentValidation, và Transaction Management. Điều này giúp giảm lặp code và tăng khả năng bảo trì.
 -->
 
 ---
@@ -663,8 +663,8 @@ transition: fade
 <div class="group">
 <div class="text-[9px] font-black text-blue-500 mb-1 tracking-[0.2em] opacity-40 group-hover:opacity-100 transition-opacity uppercase">01 • Access Token (JWT)</div>
 <div class="space-y-0.5">
-<p class="text-[11px] font-bold text-slate-800 leading-none">Application Memory (RAM)</p>
-<p class="text-[10px] text-slate-500 leading-relaxed italic">Hết hạn sau 15 phút — Cô lập hoàn toàn.</p>
+<p class="text-[11px] font-bold text-slate-800 leading-none">Cookie</p>
+<p class="text-[10px] text-slate-500 leading-relaxed italic">Hết hạn sau 15 phút — Tự động gửi qua mỗi request.</p>
 </div>
 </div>
 <div class="group">
@@ -675,7 +675,7 @@ transition: fade
 </div>
 </div>
 <div class="mt-1 p-2 rounded-xl bg-orange-50/50">
-<p class="text-[9px] text-orange-800 leading-relaxed"><strong>Rotation:</strong> Token cũ bị vô hiệu hóa ngay khi cấp mới, ngăn chặn tuyệt đối Replay Attack.</p>
+<p class="text-[9px] text-orange-800 leading-relaxed"><strong>Rotation:</strong> Khi token mới được cấp, token cũ sẽ bị vô hiệu hóa để giảm thiểu rủi ro Replay Attack.</p>
 </div>
 </div>
 <div class="animate-fade-up animate-delay-3 bg-white rounded-3xl shadow-[0_20px_40px_-12px_rgba(0,0,0,0.05)] border border-slate-100 p-3 flex flex-col items-center justify-center relative overflow-hidden">
@@ -889,7 +889,7 @@ EF' = EF + (0.1 - (5-q) × (0.08 + (5-q) × 0.02))<br/>
 <BrandFooter section="Use Cases" />
 
 <!--
-Trái tim của hệ thống là thuật toán SuperMemo-2. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm Fuzz Factor (lệch ±5%) để tránh hiện tượng 'Review Hell' - khi quá nhiều thẻ dồn vào cùng một ngày, giúp trải nghiệm học tập tự nhiên hơn.
+Một thành phần cốt lõi của hệ thống là thuật toán SuperMemo-2. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm Fuzz Factor (lệch ±5%) để tránh hiện tượng 'Review Hell' - khi quá nhiều thẻ dồn vào cùng một ngày, giúp trải nghiệm học tập tự nhiên hơn.
 -->
 
 ---
@@ -917,7 +917,7 @@ WHERE "NextReviewDate" <= NOW()
 
 <!-- After -->
 <div class="glass-card border-2 border-[#FF6B00] relative overflow-hidden">
-<div class="absolute top-0 right-0 bg-[#FF6B00] text-white text-[9px] font-bold px-2 py-1 rounded-bl-lg">99.9% FASTER</div>
+<div class="absolute top-0 right-0 bg-[#FF6B00] text-white text-[9px] font-bold px-2 py-1 rounded-bl-lg">~100x FASTER</div>
 <h3 class="font-bold text-[#1D2235] mb-2 text-center text-green-500">Thêm Composite Index</h3>
 <div class="bg-[#1D2235] text-blue-300 rounded-lg p-4 font-mono text-[10px] mb-4 overflow-x-auto">
 CREATE INDEX IX_NextReview <br/>
@@ -925,7 +925,7 @@ ON "Flashcards" ("UserId", "NextReviewDate")
 </div>
 <div class="flex items-center justify-between border-t border-gray-200 pt-4">
 <div class="text-xs text-gray-500">Thời gian (10K user)</div>
-<div class="text-xl font-bold text-green-500">&lt; 1 µs</div>
+<div class="text-xl font-bold text-green-500">~ 5 ms</div>
 </div>
 </div>
 </div>
@@ -934,7 +934,7 @@ ON "Flashcards" ("UserId", "NextReviewDate")
 <BrandFooter section="Use Cases" />
 
 <!--
-Để giải quyết bài toán truy vấn thẻ cần ôn của hàng vạn người dùng cùng lúc, em đã thay thế Full Scan bằng Composite Index trên cặp (UserId, NextReviewDate). Kết quả thực tế cho thấy thời gian truy vấn giảm từ 500ms xuống dưới 1 micro-giây, tức là nhanh hơn gấp hàng nghìn lần.
+Để tối ưu câu truy vấn thẻ cần ôn, em áp dụng Composite Index trên cặp (UserId, NextReviewDate). Benchmark mô phỏng với khoảng 10,000 bản ghi cho thấy thời gian truy vấn giảm đáng kể từ ~500ms (khi full table scan) xuống khoảng ~5ms, cải thiện hiệu năng rõ rệt cho endpoint này.
 -->
 
 ---
@@ -955,7 +955,7 @@ transition: slide-up
 </div>
 <div>
 <h3 class="font-bold text-slate-800 text-xs mb-0.5">Thiết kế Streaming (SSE)</h3>
-<p class="text-[10px] text-slate-500 leading-relaxed">Đẩy từng token về client liên tục (1 chiều), mang lại trải nghiệm Zero-delay với chi phí tài nguyên thấp hơn WebSockets.</p>
+<p class="text-[10px] text-slate-500 leading-relaxed">Trả về từng phần dữ liệu tới client, giúp giảm độ trễ (latency) và tiêu thụ ít tài nguyên kết nối hơn WebSockets.</p>
 </div>
 </div>
 
@@ -984,6 +984,10 @@ transition: slide-up
 </div>
 
 <BrandFooter section="Use Cases" />
+
+<!--
+Chức năng tra cứu ngữ cảnh AI sử dụng cơ chế Streaming qua Server-Sent Events (SSE). Việc trả về từng phần dữ liệu giúp giảm độ trễ (latency) ở Client và sử dụng kết nối HTTP 1 chiều nhẹ hơn WebSockets. Hệ thống cũng được thiết kế theo hướng Provider-Agnostic, hỗ trợ cấu hình chuyển đổi giữa các API cung cấp LLM (như OpenAI, Gemini) thông qua Interface chung.
+-->
 ---
 transition: slide-up
 ---
@@ -1003,7 +1007,7 @@ transition: slide-up
 </div>
 <div>
 <h3 class="font-bold text-slate-800 text-[13px] mb-0.5">Idempotent Webhook (SePay)</h3>
-<p class="text-[10px] text-slate-500 leading-relaxed">Chống Duplicate Transaction bằng <code>Unique Key</code> (Postgres). Database tự động reject webhook bị trùng lặp (Mã 23505), đảm bảo không cộng dư VIP.</p>
+<p class="text-[10px] text-slate-500 leading-relaxed">Sử dụng <code>Unique Key</code> ở Database nhằm giảm thiểu lỗi xử lý trùng lặp giao dịch (Mã 23505), tránh cấp quyền nhiều lần.</p>
 </div>
 </div>
 
@@ -1077,7 +1081,7 @@ Signature & Idem.
 <BrandFooter section="Vận hành" />
 
 <!--
-Về vận hành, em sử dụng cơ chế Idempotency cho Webhooks thanh toán SePay để đảm bảo một giao dịch không bao giờ bị xử lý trùng lặp. Đồng thời, thư viện Hangfire được dùng để tự động hóa các tác vụ ngầm như gửi Email nhắc nhở học tập và dọn dẹp dữ liệu rác định kỳ mỗi đêm.
+Hệ thống tích hợp Webhook của SePay để tự động cập nhật gói thành viên. Để xử lý an toàn, em áp dụng cơ chế Idempotency thông qua Unique Key ở Database nhằm giảm thiểu lỗi xử lý trùng lặp giao dịch. Bên cạnh đó, các tác vụ định kỳ như gửi email nhắc nhở hay dọn dẹp dữ liệu được quản lý thông qua thư viện Hangfire.
 -->
 
 ---
@@ -1093,7 +1097,7 @@ desc="Tối ưu Docker Image và triển khai trên hạ tầng Cloud."
 />
 
 <!--
-Cuối cùng là phần triển khai. Em sử dụng Multi-stage Docker giúp giảm dung lượng image từ 1GB xuống còn 200MB. Hệ thống được triển khai trên nền tảng Railway với đầy đủ quy trình CI/CD tự động, cơ chế Health check tự khởi động lại khi có sự cố, đảm bảo tính sẵn sàng cao.
+Cuối cùng là phần triển khai. Em sử dụng Multi-stage Docker giúp giảm dung lượng image từ 1GB xuống còn 200MB. Hệ thống được triển khai trên nền tảng Railway với quy trình CI/CD tự động và cơ chế Health check hỗ trợ giám sát, khởi động lại service khi xảy ra lỗi.
 -->
 
 ---
@@ -1286,14 +1290,14 @@ transition: slide-up
 </div>
 
 <div class="mt-8 bg-green-50 border border-green-200 text-green-700 p-4 rounded-xl text-center font-bold text-sm animate-fade-up animate-delay-3" v-click>
-<div class="i-lucide-trophy text-yellow-500 inline-block text-lg mb-[-4px] mr-1"></div> LexiVocab đã đạt chuẩn Production-Ready với khả năng mở rộng mạnh mẽ.
+<div class="i-lucide-trophy text-yellow-500 inline-block text-lg mb-[-4px] mr-1"></div> LexiVocab đã hoàn thiện hệ sinh thái và có thể triển khai thử nghiệm.
 </div>
 </div>
 
 <BrandFooter section="Kết luận" />
 
 <!--
-Tổng kết lại, đồ án LexiVocab đã đạt được 3 giá trị lớn: Một kiến trúc Backend hiện đại, bảo mật; Một trải nghiệm người dùng thông minh nhờ AI và thuật toán SM-2; Và một hệ sinh thái sản phẩm hoàn chỉnh, sẵn sàng cho người dùng thực tế.
+Tổng kết lại, đồ án LexiVocab đã đạt được 3 giá trị lớn: Một kiến trúc Backend hiện đại, bảo mật; Một trải nghiệm người dùng thông minh nhờ AI và thuật toán SM-2; Và một hệ sinh thái sản phẩm hoàn chỉnh, có thể triển khai thử nghiệm trong môi trường thực tế.
 -->
 
 ---
