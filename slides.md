@@ -43,6 +43,10 @@ Xây dựng hệ thống học từ vựng đa nền tảng tích hợp <br/> <s
 </div>
 </div>
 
+<!--
+Kính chào quý thầy cô trong Hội đồng. Em là Phan Văn Thành, mã sinh viên DTH225766. Hôm nay em rất vinh dự được trình bày đồ án tốt nghiệp với đề tài: LexiVocab - Hệ sinh thái học từ vựng đa nền tảng tích hợp thuật toán lặp lại ngắt quãng. Dự án ứng dụng thuật toán SuperMemo-2 và AI sinh tạo để mang lại trải nghiệm học tập tập trung và liền mạch.
+-->
+
 ---
 transition: slide-up
 ---
@@ -101,6 +105,10 @@ transition: slide-up
 
 <BrandFooter section="Mở đầu" />
 
+<!--
+Mục tiêu cốt lõi của đồ án không chỉ là một ứng dụng học tập, mà là xây dựng một sản phẩm hoàn thiện (Production-ready). Giải quyết triệt để bài toán học từ vựng qua 4 phương diện: Trải nghiệm đa nền tảng liền mạch; Thuật toán SuperMemo-2 cá nhân hóa; Tích hợp AI sinh tạo để hiểu sâu ngữ cảnh; và triển khai thực tế trên môi trường Production.
+-->
+
 ---
 transition: slide-up
 ---
@@ -150,6 +158,10 @@ Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đ
 
 <BrandFooter section="Vấn đề" />
 
+<!--
+Rào cản lớn nhất là Context Switching - kẻ thù của sự tập trung. Khi đọc bài báo tiếng Anh gặp từ mới, phải chuyển tab sang từ điển làm đứt đoạn luồng tư duy. Theo nghiên cứu từ ĐH UC Irvine, não bộ mất tới 23 phút để lấy lại trạng thái Flow, làm giảm 40% hiệu suất học tập.
+-->
+
 ---
 transition: fade
 ---
@@ -166,6 +178,10 @@ transition: fade
 </div>
 
 <BrandFooter section="Vấn đề" />
+
+<!--
+Rào cản thứ hai là Đường cong quên lãng Ebbinghaus. Nếu không có cơ chế ôn tập đúng thời điểm, não bộ sẽ tự động loại bỏ 80% thông tin mới chỉ sau 24 giờ. Việc học vẹt mà không có sự nhắc nhở khoa học dẫn đến lãng phí rất lớn công sức của người học.
+-->
 
 ---
 transition: slide-up
@@ -211,6 +227,10 @@ delay="800"
 
 <BrandFooter section="Giải pháp" />
 
+<!--
+LexiVocab ra đời dựa trên 3 trụ cột: Capture (Bắt từ) - Chrome Extension lưu từ trực tiếp không gián đoạn; Remember (Nhớ lâu) - thuật toán SM-2 chuyển thông tin vào bộ nhớ dài hạn; Understand (Hiểu sâu) - AI tạo ngữ cảnh ví dụ thực tế giúp hiểu cặn kẽ mọi tầng nghĩa của từ.
+-->
+
 ---
 layout: cover
 class: "!p-0 bg-[#09090B] text-white"
@@ -221,6 +241,10 @@ number="02"
 title="Hệ Sinh Thái 4 Mảnh Ghép" 
 desc="Kiến trúc Hub & Spoke kết nối đa nền tảng, bao phủ 100% không gian thiết bị." 
 />
+
+<!--
+Chuyển phần: Hệ sinh thái 4 mảnh ghép, thiết kế theo kiến trúc Hub & Spoke để bao phủ 100% không gian thiết bị của người dùng.
+-->
 
 ---
 transition: fade
@@ -236,6 +260,10 @@ transition: fade
 </div>
 
 <BrandFooter section="Hệ sinh thái" />
+
+<!--
+Hệ thống lấy Core API (.NET 10) làm trung tâm, kết nối đồng nhất dữ liệu giữa 3 nền tảng Client: Chrome Extension, Mobile App và Web Dashboard. Điều này đảm bảo người dùng có thể bắt từ trên máy tính tại văn phòng và ôn tập ngay trên điện thoại khi đang di chuyển.
+-->
 
 ---
 transition: slide-up
@@ -300,6 +328,10 @@ The <span class="bg-orange-100 text-[#FF6B00] px-1 rounded-sm font-bold select-n
 
 <BrandFooter section="Hệ sinh thái" />
 
+<!--
+Chrome Extension là công cụ bắt từ chủ lực. Manifest V3 mới nhất tối ưu hiệu năng. Shadow DOM cô lập hoàn toàn UI, popup hiển thị đẹp trên mọi website. Service Worker xử lý đồng bộ ngầm tiết kiệm tài nguyên.
+-->
+
 ---
 transition: fade
 ---
@@ -359,6 +391,10 @@ transition: fade
 
 <BrandFooter section="Hệ sinh thái" />
 
+<!--
+Mobile App được xây dựng bằng React Native, mang lại trải nghiệm mượt mà. Điểm nhấn là tính năng SRS Notification - gửi thông báo nhắc ôn bài đúng vào 'thời điểm vàng' mà thuật toán tính toán. Dữ liệu được đồng bộ Real-time qua Cloud, giúp người dùng luôn cập nhật được những từ vựng mới nhất mình vừa bắt được trên trình duyệt.
+-->
+
 ---
 transition: slide-up
 ---
@@ -406,6 +442,10 @@ transition: slide-up
 
 <BrandFooter section="Hệ sinh thái" />
 
+<!--
+Web Dashboard trên Next.js, tích hợp SePay Webhooks tự động hóa nâng cấp VIP qua QR code. Biểu đồ Analytics trực quan theo dõi tiến độ và hiệu quả ghi nhớ theo thời gian.
+-->
+
 ---
 layout: cover
 class: "!p-0 bg-[#09090B] text-white"
@@ -417,6 +457,10 @@ number="03"
 title="Kiến trúc Backend & Bảo mật" 
 desc="Clean Architecture, CQRS, và cơ chế xác thực kép đảm bảo hiệu năng cốt lõi." 
 />
+
+<!--
+Chuyển phần: Kiến trúc Backend & Bảo mật. Đằng sau sự liền mạch đó là một nền tảng Backend vững chắc và bảo mật mà em sẽ trình bày ngay sau đây.
+-->
 
 ---
 transition: slide-up
@@ -445,6 +489,10 @@ transition: slide-up
 </div>
 
 <BrandFooter section="Backend" />
+
+<!--
+Backend được thiết kế theo Clean Architecture, tách biệt hoàn toàn Business Logic khỏi Framework và Database. Lớp Domain ở trung tâm chứa các quy tắc cốt lõi, giúp hệ thống cực kỳ linh hoạt. Chúng ta có thể thay đổi Database hoặc tích hợp thêm các dịch vụ bên thứ ba mà không cần sửa đổi Logic nghiệp vụ chính.
+-->
 
 ---
 transition: fade
@@ -529,6 +577,10 @@ Truy vấn tốc độ cao, không có side-effects. Có thể scale mạnh mẽ
 
 <BrandFooter section="Backend" />
 
+<!--
+Em kết hợp mẫu thiết kế CQRS để phân tách hoàn toàn luồng Ghi (Command) và luồng Đọc (Query). Luồng Ghi xử lý các logic phức tạp và validation, trong khi luồng Đọc được tối ưu hóa để truy vấn dữ liệu với tốc độ cao nhất, không gây side-effect, giúp hệ thống dễ dàng scale theo chiều ngang.
+-->
+
 ---
 transition: slide-up
 ---
@@ -586,6 +638,10 @@ style Res fill:#10B981,stroke:#059669,color:#fff
 </div>
 </div>
 </div>
+
+<!--
+Để điều phối CQRS, em sử dụng thư viện MediatR. Mọi yêu cầu đều đi qua một Pipeline Middleware tập trung, nơi xử lý các vấn đề như: Logging tự động, Validation dữ liệu bằng FluentValidation, và Transaction Management. Điều này giúp code sạch hơn và dễ bảo trì hơn rất nhiều.
+-->
 
 ---
 transition: fade
@@ -734,6 +790,10 @@ transition: slide-up
 
 <BrandFooter section="Backend" />
 
+<!--
+Về tầng dữ liệu, em sử dụng PostgreSQL. Để tối ưu cho hàng triệu bản ghi, em đánh chỉ mục B-Tree trên các trường quan trọng như Word và NextReview. Đặc biệt, em sử dụng kỹ thuật Khử chuẩn (Denormalization) - lưu sẵn WordText tại bảng UserVocabs để tăng tốc độ render UI, tránh các lệnh JOIN phức tạp làm chậm hệ thống.
+-->
+
 ---
 layout: cover
 class: "!p-0 bg-[#09090B] text-white"
@@ -745,6 +805,10 @@ number="04"
 title="Use-Cases & Xử lý tải" 
 desc="Thuật toán lõi, tối ưu truy vấn Database, và kỹ thuật Streaming AI." 
 />
+
+<!--
+Chuyển phần: Use-Cases & Xử lý tải. Sau đây là cách hệ thống xử lý các tác vụ thông minh và tối ưu hóa hiệu năng thực tế.
+-->
 
 ---
 transition: slide-up
@@ -824,6 +888,10 @@ EF' = EF + (0.1 - (5-q) × (0.08 + (5-q) × 0.02))<br/>
 
 <BrandFooter section="Use Cases" />
 
+<!--
+Trái tim của hệ thống là thuật toán SuperMemo-2. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm Fuzz Factor (lệch ±5%) để tránh hiện tượng 'Review Hell' - khi quá nhiều thẻ dồn vào cùng một ngày, giúp trải nghiệm học tập tự nhiên hơn.
+-->
+
 ---
 transition: fade
 ---
@@ -864,6 +932,10 @@ ON "Flashcards" ("UserId", "NextReviewDate")
 </div>
 
 <BrandFooter section="Use Cases" />
+
+<!--
+Để giải quyết bài toán truy vấn thẻ cần ôn của hàng vạn người dùng cùng lúc, em đã thay thế Full Scan bằng Composite Index trên cặp (UserId, NextReviewDate). Kết quả thực tế cho thấy thời gian truy vấn giảm từ 500ms xuống dưới 1 micro-giây, tức là nhanh hơn gấp hàng nghìn lần.
+-->
 
 ---
 transition: slide-up
@@ -1004,7 +1076,9 @@ Signature & Idem.
 
 <BrandFooter section="Vận hành" />
 
-
+<!--
+Về vận hành, em sử dụng cơ chế Idempotency cho Webhooks thanh toán SePay để đảm bảo một giao dịch không bao giờ bị xử lý trùng lặp. Đồng thời, thư viện Hangfire được dùng để tự động hóa các tác vụ ngầm như gửi Email nhắc nhở học tập và dọn dẹp dữ liệu rác định kỳ mỗi đêm.
+-->
 
 ---
 layout: cover
@@ -1017,6 +1091,10 @@ number="05"
 title="Triển khai & DevOps" 
 desc="Tối ưu Docker Image và triển khai trên hạ tầng Cloud." 
 />
+
+<!--
+Cuối cùng là phần triển khai. Em sử dụng Multi-stage Docker giúp giảm dung lượng image từ 1GB xuống còn 200MB. Hệ thống được triển khai trên nền tảng Railway với đầy đủ quy trình CI/CD tự động, cơ chế Health check tự khởi động lại khi có sự cố, đảm bảo tính sẵn sàng cao.
+-->
 
 ---
 transition: fade
@@ -1076,6 +1154,10 @@ number="06"
 title="Live Demo" 
 desc="Trải nghiệm thực tế hệ sinh thái LexiVocab qua 4 kịch bản sử dụng." 
 />
+
+<!--
+Chuyển phần: Live Demo. Bây giờ, em xin phép bắt đầu phần Demo thực tế qua 4 bước: Bắt từ vựng 'Serendipity' trên trình duyệt; Ôn tập trên Mobile; Sử dụng AI Streaming; và Quản lý trên Web Dashboard.
+-->
 
 ---
 transition: slide-up
@@ -1143,6 +1225,14 @@ transition: slide-up
 
 <BrandFooter section="Live Demo" />
 
+<!--
+Thực hiện Demo theo kịch bản:
+1. Bắt từ vựng 'Serendipity' ngay trên trang báo New York Times qua Chrome Extension.
+2. Kiểm tra việc đồng bộ và ôn tập thẻ này trên Mobile App.
+3. Sử dụng AI Streaming để giải thích cặn kẽ và tạo câu chuyện cho từ vừa học.
+4. Cuối cùng là quản lý tiến độ và xem biểu đồ phân tích trên Web Dashboard.
+-->
+
 ---
 layout: cover
 class: "!p-0 bg-[#09090B] text-white"
@@ -1154,6 +1244,10 @@ number="07"
 title="Kết Luận" 
 desc="Tổng kết đóng góp, định hướng phát triển và phần hỏi đáp Hội đồng." 
 />
+
+<!--
+Chuyển phần: Kết luận. Tổng kết lại, đồ án LexiVocab đã đạt được 3 giá trị lớn: Một kiến trúc Backend hiện đại; Một trải nghiệm người dùng thông minh; Và một hệ sinh thái sản phẩm hoàn chỉnh.
+-->
 
 ---
 transition: slide-up
@@ -1197,6 +1291,10 @@ transition: slide-up
 </div>
 
 <BrandFooter section="Kết luận" />
+
+<!--
+Tổng kết lại, đồ án LexiVocab đã đạt được 3 giá trị lớn: Một kiến trúc Backend hiện đại, bảo mật; Một trải nghiệm người dùng thông minh nhờ AI và thuật toán SM-2; Và một hệ sinh thái sản phẩm hoàn chỉnh, sẵn sàng cho người dùng thực tế.
+-->
 
 ---
 transition: fade
@@ -1245,6 +1343,10 @@ Tự host Fine-tuned model nhỏ (Llama 3B) giảm chi phí.
 
 <BrandFooter section="Kết luận" />
 
+<!--
+Tất nhiên hệ thống vẫn còn những hạn chế như chưa hỗ trợ Offline Mode hoàn toàn hay chi phí API AI còn cao. Trong tương lai, em sẽ phát triển Offline Mode với IndexedDB và tự host các Model AI nhỏ như Llama 3B để tối ưu chi phí và tăng tính riêng tư.
+-->
+
 ---
 layout: center
 class: text-center
@@ -1272,3 +1374,8 @@ class: text-center
 </div>
 </div>
 </div>
+
+<!--
+Phần trình bày của em đến đây là kết thúc. Em xin chân thành cảm ơn Quý Thầy Cô Hội đồng đã dành thời gian lắng nghe. Em rất mong nhận được những câu hỏi và góp ý từ Quý Thầy Cô để hoàn thiện dự án hơn nữa. Em xin cảm ơn ạ!
+-->
+
