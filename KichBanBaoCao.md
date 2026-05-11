@@ -79,11 +79,11 @@
 
 ### SLIDE 14: MediatR & Middleware Pipeline
 **Lời thoại:**
-"Để điều phối mô hình CQRS, em sử dụng thư viện **MediatR**. Mọi yêu cầu từ phía Client đều được xử lý qua một **Pipeline Middleware** tập trung. Tại đây, hệ thống sẽ tự động thực thi các tác vụ xuyên suốt như: Ghi nhật ký hệ thống (Logging) và Kiểm tra tính hợp lệ của dữ liệu đầu vào (Validation). Cơ chế này giúp mã nguồn trở nên sạch sẽ hơn, triệt tiêu việc lặp lại logic và nâng cao khả năng bảo trì lâu dài cho hệ thống."
+"Để điều phối mô hình CQRS, em sử dụng thư viện **MediatR**. Mọi yêu cầu đều được xử lý tập trung qua một **Pipeline Middleware**. Tại đây, hệ thống sẽ tự động thực thi các tác vụ xuyên suốt như: Ghi nhật ký hệ thống (Logging) và Kiểm tra tính hợp lệ của dữ liệu (Validation). Cơ chế này giúp mã nguồn trở nên sạch sẽ hơn, loại bỏ việc lặp lại logic và nâng cao khả năng bảo trì hệ thống."
 
 ### SLIDE 15: Bảo mật - Refresh Token Rotation
 **Lời thoại:**
-"Về cơ chế xác thực, em triển khai mô hình **Refresh Token Rotation**. Access Token được lưu trong **Cookie** với thời gian hết hạn ngắn, còn Refresh Token được lưu trong **HttpOnly Cookie** nhằm hạn chế tấn công XSS. Khi Refresh Token được sử dụng để cấp mới, token cũ sẽ bị vô hiệu hóa, giúp giảm thiểu rủi ro từ Replay Attack."
+"Hệ thống sử dụng cơ chế xác thực dựa trên **JSON Web Token (JWT)** với bộ đôi **Access và Refresh Token**. Access Token đóng vai trò là 'chìa khóa' truy cập tạm thời cho mỗi yêu cầu. Khi Access Token hết hạn, hệ thống sẽ tự động sử dụng Refresh Token để cấp lại chìa khóa mới mà không yêu cầu người dùng phải đăng nhập lại. Cơ chế này giúp cân bằng hoàn hảo giữa tính bảo mật cao và trải nghiệm người dùng mượt mà."
 
 ### SLIDE 16: Database Design (PostgreSQL)
 **Lời thoại:**
@@ -101,45 +101,37 @@
 **Lời thoại:**
 "Một thành phần cốt lõi của hệ thống là thuật toán **SuperMemo-2**. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm **Fuzz Factor (lệch ±5%)** để tránh hiện tượng 'Review Hell' - khi quá nhiều thẻ dồn vào cùng một ngày, giúp trải nghiệm học tập tự nhiên hơn."
 
-### SLIDE 19: Tối ưu hiệu năng - Composite Index
-**Lời thoại:**
-"Để tối ưu câu truy vấn thẻ cần ôn, em áp dụng **Composite Index** trên cặp (UserId, NextReviewDate). Benchmark mô phỏng với khoảng 10,000 bản ghi cho thấy thời gian truy vấn giảm đáng kể từ ~500ms (khi full table scan) xuống khoảng ~5ms, cải thiện hiệu năng rõ rệt cho endpoint này."
 
-### SLIDE 20: Tích hợp AI - Kiến trúc Streaming SSE
+### SLIDE 19: Tích hợp AI - Kiến trúc Streaming SSE
 **Lời thoại:**
 "Chức năng tra cứu ngữ cảnh AI sử dụng cơ chế **Streaming qua Server-Sent Events (SSE)**. Việc trả về từng phần dữ liệu giúp giảm độ trễ (latency) ở Client và sử dụng kết nối HTTP 1 chiều nhẹ hơn WebSockets. Hệ thống được thiết kế theo hướng abstraction layer cho AI Provider, cho phép chuyển đổi giữa OpenAI hoặc Gemini mà không ảnh hưởng logic chính."
 
-### SLIDE 21: Tự động hóa & Webhook
+### SLIDE 20: Đóng gói & Triển khai (Docker & Railway)
 **Lời thoại:**
-"Hệ thống tích hợp Webhook của SePay để tự động cập nhật gói thành viên. Để xử lý an toàn, em áp dụng cơ chế **Idempotency** thông qua Unique Key ở Database nhằm giảm thiểu lỗi xử lý trùng lặp giao dịch. Bên cạnh đó, các tác vụ định kỳ như gửi email nhắc nhở hay dọn dẹp dữ liệu được quản lý thông qua thư viện **Hangfire**."
-
-### SLIDE 22: Triển khai & DevOps (Docker & Railway)
-**Lời thoại:**
-"Cuối cùng là phần triển khai. Em sử dụng **Multi-stage Docker** giúp giảm dung lượng image từ 1GB xuống còn 200MB. Hệ thống được triển khai trên nền tảng **Railway** với quy trình CI/CD tự động và cơ chế Health check hỗ trợ giám sát, khởi động lại service khi xảy ra lỗi."
+"Về phần triển khai, em sử dụng **Docker** để đóng gói toàn bộ ứng dụng. Bằng cách áp dụng kỹ thuật **Multi-stage Docker**, em đã tối ưu tối đa dung lượng image, đảm bảo hệ thống có tính linh hoạt cực cao và sẵn sàng triển khai nhanh chóng trên mọi môi trường. Hiện tại, em đang triển khai thực tế trên nền tảng **Railway** để tận dụng quy trình CI/CD tự động, giúp việc cập nhật tính năng trở nên an toàn hơn."
 
 ---
 
 ## PHẦN 5: DEMO & KẾT LUẬN
 
-### SLIDE 23 & 24: Kịch bản Demo thực chiến
+### SLIDE 21 & 22: Kịch bản Demo thực chiến
 **Lời thoại:**
-"Bây giờ, em xin phép bắt đầu phần Demo thực tế qua 4 bước: 
-1. Bắt từ vựng 'Serendipity' ngay trên trang báo New York Times qua Chrome Extension.
-2. Kiểm tra việc đồng bộ và ôn tập thẻ này trên Mobile App.
-3. Sử dụng AI Streaming để giải thích chi tiết và tạo câu chuyện cho từ vừa học.
-4. Cuối cùng là quản lý tiến độ và xem biểu đồ phân tích trên Web Dashboard."
+"Bây giờ, em xin phép bắt đầu phần Demo thực tế qua 3 giai đoạn chính: 
+1. **Omnichannel Capture (Extension):** Bắt từ 'Serendipity' trực tiếp trên trình duyệt.
+2. **Management & AI (Web Dashboard):** Kiểm tra đồng bộ, i18n, thanh toán SePay và trải nghiệm **AI Streaming SSE** siêu tốc.
+3. **Scientific Learning (Mobile):** Ôn tập Flashcard SM-2 và học tập thụ động qua Widget."
 
 **(Thực hiện Demo theo kịch bản này)**
 
-### SLIDE 25 & 26: Tổng kết đóng góp
+### SLIDE 23 & 24: Tổng kết đóng góp
 **Lời thoại:**
 "Tổng kết lại, đồ án LexiVocab đã đạt được 3 giá trị lớn: Một kiến trúc Backend hiện đại, bảo mật; Một trải nghiệm người dùng được hỗ trợ bởi AI và thuật toán SM-2; Và một hệ sinh thái sản phẩm tích hợp, có thể triển khai thử nghiệm trong môi trường thực tế."
 
-### SLIDE 27: Hạn chế & Hướng phát triển
+### SLIDE 25: Hạn chế & Hướng phát triển
 **Lời thoại:**
 "Tất nhiên hệ thống vẫn còn những hạn chế như chưa hỗ trợ đầy đủ Offline Mode hay chi phí API AI còn cao. Trong tương lai, em sẽ phát triển Offline Mode với IndexedDB và tự host các Model AI nhỏ như Llama 3B để tối ưu chi phí và tăng tính riêng tư."
 
-### SLIDE 28: Cảm ơn & Hỏi đáp
+### SLIDE 26: Cảm ơn & Hỏi đáp
 **Lời thoại:**
 "Phần trình bày của em đến đây là kết thúc. Em xin chân thành cảm ơn Quý Thầy Cô Hội đồng đã dành thời gian lắng nghe. Em rất mong nhận được những câu hỏi và góp ý từ Quý Thầy Cô để hoàn thiện dự án hơn nữa. Em xin cảm ơn ạ!"
 

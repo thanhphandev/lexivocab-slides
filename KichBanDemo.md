@@ -1,68 +1,49 @@
-# Kịch Bản Demo LexiVocab (Detailed Flow)
-
-Tài liệu này cung cấp các bước thao tác chi tiết (Click-by-click) trong buổi bảo vệ để đảm bảo quá trình Demo diễn ra mượt mà, khớp 100% với kịch bản lời thoại và source code hiện tại.
-
----
-
-## 🛠 Chuẩn bị trước khi Demo
-1. **Môi trường:** 
-   - Đảm bảo Backend (LexiVocabAPI) đang chạy hoặc đã deploy trên Railway.
-   - Cài sẵn trên điện thoại preview cho ứng dụng Mobile.
-   - Mở sẵn trình duyệt Chrome đã cài đặt `lexivocab-extension`.
-   - Mở một trang web tiếng Anh (Ví dụ: The New York Times, Medium) có chứa từ "Serendipity" hoặc đoạn văn bản khó.
-2. **Tài khoản:** Đăng nhập sẵn một tài khoản test trên cả 3 nền tảng (Extension, Web, Mobile).
-3. **Data:** Chuẩn bị sẵn một vài từ vựng trong danh sách để phần biểu đồ (Web) và flashcard (Mobile) trông sinh động.
+# KỊCH BẢN DEMO HỆ SINH THÁI LEXIVOCAB (TỐI ƯU)
+> **Chiến thuật:** Demo theo thiết bị để giảm thiểu việc chuyển đổi cửa sổ. Khoe tính năng Cloud Sync và AI ngay trên Web.
 
 ---
 
-## 🎬 Các bước Demo Chi Tiết
-
-### 🟢 BƯỚC 1: Bắt từ trên trình duyệt (Chrome Extension)
-*Mục tiêu: Khoe tính năng Shadow DOM, popup không gián đoạn (smart-bubble) và đồng bộ.*
-
-1. **Thao tác:** Mở tab chứa bài báo tiếng Anh (vd: Medium).
-2. **Thao tác:** Dùng chuột bôi đen từ **"Serendipity"** (hoặc một từ bất kỳ).
-3. **Hiệu ứng:** Lúc này `smart-bubble` sẽ tự động pop-up ngay trên đoạn text vừa bôi đen.
-4. **Thao tác:** Click vào icon LexiVocab trên popup bubble.
-5. **Hiệu ứng:** Khung `save-popup` hiện ra (hiển thị mượt mà nhờ Shadow DOM, không bị vỡ layout bởi CSS của trang gốc).
-6. **Thao tác:** Nhấn nút **Save / Lưu từ**.
-7. **Lời thoại (khớp slide):** *"Như thầy cô thấy, em có thể bôi đen và lưu từ vựng ngay lập tức. Khung popup này được bọc trong Shadow DOM giúp nó độc lập hoàn toàn với giao diện của trang báo, đảm bảo trải nghiệm không bị gián đoạn."*
-
-### 🟢 BƯỚC 2: Học & Nhớ (Mobile App)
-*Mục tiêu: Khoe thuật toán SuperMemo-2, UI mượt mà, và tính năng đồng bộ đa nền tảng.*
-
-1. **Thao tác:** Chuyển màn hình sang Simulator/Emulator của Mobile App.
-2. **Thao tác:** Ở màn hình Home (`index.tsx`), vuốt xuống để refresh hoặc chờ hệ thống tự sync. Cho hội đồng thấy từ **"Serendipity"** vừa lưu ở Bước 1 đã xuất hiện.
-3. **Thao tác:** Chuyển sang tab **Review / Ôn tập** (`review.tsx`).
-4. **Thao tác:** Bắt đầu phiên ôn tập flashcard.
-5. **Thao tác:** Lật thẻ (Tap) để xem nghĩa. Hiển thị 3 nút đánh giá: **Khó (0-2) / Vừa / Dễ (3-5)**.
-6. **Thao tác:** Bấm chọn nút **Dễ**.
-7. **Lời thoại (khớp slide):** *"Sau khi lưu trên máy tính, từ vựng lập tức được đồng bộ xuống Mobile App. Khi em thực hiện lật thẻ và đánh giá 'Dễ', thuật toán SuperMemo-2 ở Backend sẽ tự động tính toán lại EF (Easiness Factor) và cộng thêm Fuzz Factor để đẩy lịch ôn tập của thẻ này ra xa hơn, giúp tránh tình trạng học dồn."*
-
-### 🟢 BƯỚC 3: Hiểu sâu (AI Streaming)
-*Mục tiêu: Khoe kiến trúc SSE (Server-Sent Events) giúp stream text realtime giống ChatGPT, không bị timeout.*
-
-1. **Thao tác:** Trên Web Dashboard, mở chi tiết từ vựng **"Serendipity"**.
-2. **Thao tác:** Click vào nút **"Giải thích bằng AI" (Explain with AI)**.
-3. **Hiệu ứng:** Nội dung giải thích từ vựng và câu chuyện ngữ cảnh sẽ được in ra từng chữ một (streaming) ngay lập tức.
-4. **Lời thoại (khớp slide):** *"Để người dùng hiểu sâu ngữ cảnh, em đã tích hợp AI tạo sinh. Điểm đặc biệt là thay vì chờ AI sinh xong toàn bộ văn bản mất đến 5-10 giây, em dùng cơ chế Streaming qua SSE. Chữ sẽ hiện ra ngay lập tức (Zero-delay về mặt cảm giác), giúp trải nghiệm cực kỳ mượt mà. Ngoài ra kiến trúc Provider-Agnostic cho phép dễ dàng switch qua lại giữa OpenAI hay Gemini tuỳ nhu cầu."*
-
-### 🟢 BƯỚC 4: Quản lý & Vận hành (Web Dashboard & Android Widget)
-*Mục tiêu: Khoe tính năng i18n, các biểu đồ thống kê, thanh toán tự động (nếu có hỏi) và Widget.*
-
-1. **Thao tác:** Mở tab trình duyệt, truy cập vào Web Dashboard (`lexivocab-webapp`).
-2. **Thao tác:** Vào mục **Analytics / Thống kê**. Rê chuột qua các biểu đồ (Charts) cho thấy hệ thống track tiến trình học tập rõ ràng.
-3. **Thao tác:** Click vào góc trên đổi ngôn ngữ (Toggle Language) từ Tiếng Việt sang Tiếng Anh (Khoe tính năng i18n).
-4. **Thao tác:** Nếu đang cast màn hình Android thật, vuốt ra màn hình chính, chỉ vào **Android Widget** hiển thị mục tiêu từ vựng trong ngày.
-5. **Lời thoại (khớp slide):** *"Cuối cùng, người dùng có thể quản lý lộ trình học thông qua Web Dashboard với đa ngôn ngữ (i18n) tích hợp sẵn, cũng như theo dõi mục tiêu mỗi ngày ngay từ màn hình chính qua Android Widget."*
+## 🛠 CHUẨN BỊ TRƯỚC KHI BẮT ĐẦU
+1.  **Thiết bị:** Mở sẵn Chrome (Extension), Mobile Emulator, và Web Dashboard.
+2.  **Tab nội dung:** Mở sẵn một bài báo tiếng Anh trên **The New York Times**.
+3.  **Thanh toán:** Dùng tài khoản Standard.
 
 ---
 
-## 🆘 Kế hoạch dự phòng (Backup Plan)
+## 🎬 LUỒNG DEMO CHI TIẾT (3 GIAI ĐOẠN)
 
-Trong quá trình bảo vệ, có thể xảy ra các sự cố mạng hoặc API bên thứ 3 (đặc biệt là API LLM). Hãy chuẩn bị sẵn:
-1. **Quay sẵn 1 video Demo 3 phút:** Lưu ở định dạng MP4 chất lượng cao. Nếu server Railway down, mạng lag, hoặc OpenAI/Gemini timeout, lập tức mở video lên và thuyết minh đè vào.
-2. **Lỗi Sync:** Nếu ấn lưu trên Extension mà Mobile chưa hiện, hãy bình tĩnh nói *"Hệ thống đang đồng bộ ngầm, em xin phép vuốt để Pull-to-refresh cập nhật lại dữ liệu"*.
-3. **Lỗi SePay Webhook (nếu hội đồng yêu cầu test thanh toán):** Hãy chuẩn bị sẵn 1 script test bằng Postman/Insomnia để giả lập Webhook bắn vào endpoint của mình thay vì chờ ngân hàng.
+### 🟢 GIAI ĐOẠN 1: CHROME EXTENSION (CAPTURE)
+*Khoe tính năng bôi đen tra từ, Shadow DOM, và Auto-highlight.*
 
-Chúc bạn Demo thật trơn tru và thuyết phục!
+| Thao tác | Lời thoại & Hiệu ứng |
+| :--- | :--- |
+| **1. Bôi đen từ "Serendipity"** | "Em bắt đầu bằng việc đọc báo. Khi bôi đen một từ, **Smart Bubble** hiện ra ngay lập tức để hỗ trợ tra cứu mà không làm gián đoạn việc đọc." |
+| **2. Lưu từ vựng** | "Em chọn lưu từ. Nhờ công nghệ **Shadow DOM**, popup của extension hiển thị cực kỳ ổn định, không bị vỡ giao diện bởi CSS của trang gốc. Sau khi lưu, từ vựng sẽ được **Auto-highlight** - lần sau em gặp lại, chỉ cần hover là thấy nghĩa ngay." |
+
+Chọn trang web nào có input, nhấn 3 cái để dịch ngôn ngữ đích
+
+---
+
+### 🟢 GIAI ĐOẠN 2: WEB DASHBOARD (SYNC, PAYMENT & AI)
+*Khoe Cloud Sync, đa ngôn ngữ, Thanh toán SePay và đặc biệt là AI Streaming SSE.*
+
+| Thao tác | Lời thoại & Hiệu ứng |
+| :--- | :--- |
+| **1. Chuyển sang Web App** | "Ngay khi vừa lưu ở Extension, em sang Web Dashboard và thấy từ **Serendipity** đã được đồng bộ lên Cloud ngay lập tức." |
+| **2. Đổi ngôn ngữ & Thanh toán** | "Hệ thống hỗ trợ **i18n** đa ngôn ngữ. Tại đây, em có thể nâng cấp gói VIP qua **SePay**, hệ thống sẽ tự động xác nhận qua Webhook để kích hoạt tính năng AI Pro." |
+| **3. Nhấn "AI Explain"** | "Điểm nhấn công nghệ ở đây là **AI Streaming**. Thay vì chờ AI phản hồi lâu, em sử dụng kỹ thuật **Streaming qua SSE**. Thầy cô thấy chữ được in ra từng từ một theo thời gian thực, giúp giảm độ trễ về mặt cảm nhận xuống mức 0." |
+
+---
+
+### 🟢 GIAI ĐOẠN 3: MOBILE APP (LEARNING & WIDGET)
+*Khoe thuật toán SM-2 và trải nghiệm di động.*
+
+| Thao tác | Lời thoại & Hiệu ứng |
+| :--- | :--- |
+| **1. Mở Mobile App** | "Cuối cùng, dữ liệu đồng bộ xuống Mobile để em học tập mọi lúc. Phiên ôn tập Flashcard sẽ sử dụng thuật toán **SuperMemo-2** để tối ưu trí nhớ." |
+| **2. Đánh giá Flashcard** | "Nếu em chọn 'Dễ', thuật toán sẽ tự động giãn cách lịch ôn tập ra xa hơn. Hệ thống cũng gửi **Push Notification** và có **Widget** màn hình chính để em không bao giờ quên lịch học." |
+
+---
+
+## 🏁 KẾT THÚC DEMO
+"Hệ sinh thái LexiVocab đã bao phủ toàn bộ thiết bị của người dùng, kết hợp với AI để biến việc học từ vựng trở nên dễ dàng và khoa học hơn bao giờ hết. Em xin cảm ơn hội đồng."

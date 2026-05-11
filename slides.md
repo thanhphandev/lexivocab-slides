@@ -589,110 +589,102 @@ transition: slide-up
 <div class="grid grid-cols-[1.2fr_1fr] gap-8 items-center flex-grow min-h-0">
 <div class="animate-fade-up animate-delay-1">
 <h1 class="text-3xl font-black text-slate-900 tracking-tight mb-1">MediatR & Pipeline</h1>
-<h2 class="text-[#FF6B00] text-lg font-bold mb-4 animate-fade-up animate-delay-2">Xử lý Cross-cutting Concerns</h2>
-<p class="mb-4 animate-fade-up animate-delay-3 text-sm text-slate-600">Điều phối Command/Query đến đúng Handler tương ứng thông qua Middleware Pipeline.</p>
-
-<div class="space-y-3 animate-fade-up animate-delay-4 text-xs font-mono text-gray-600">
-<div class="flex items-center gap-3 bg-white p-2 rounded border border-gray-200">
-<div class="w-6 h-6 rounded bg-gray-100 flex items-center justify-center">1</div>
-<div>LoggingBehavior <span>→ Ghi log I/O</span></div>
+<h2 class="text-[#FF6B00] text-lg font-bold mb-4 animate-fade-up animate-delay-2">Xử lý các tác vụ xuyên suốt</h2>
+<p class="mb-4 animate-fade-up animate-delay-3 text-sm text-slate-600">Điều phối Command/Query đến đúng Handler tương ứng thông qua Middleware Pipeline tập trung.</p>
+<div class="space-y-4 animate-fade-up animate-delay-4 text-xs font-mono text-gray-600">
+<div class="flex items-center gap-3 bg-white p-3 rounded-xl border border-gray-100 shadow-sm">
+<div class="w-6 h-6 rounded bg-gray-100 flex items-center justify-center text-[#FF6B00] font-bold">1</div>
+<div><strong>LoggingBehavior:</strong> Tự động ghi nhật ký hệ thống (I/O) cho mọi yêu cầu.</div>
 </div>
-<div class="flex items-center gap-3 bg-white p-2 rounded border border-gray-200">
-<div class="w-6 h-6 rounded bg-gray-100 flex items-center justify-center">2</div>
-<div>ValidationBehavior <span>→ FluentValidation</span></div>
+<div class="flex items-center gap-3 bg-white p-3 rounded-xl border border-gray-100 shadow-sm">
+<div class="w-6 h-6 rounded bg-gray-100 flex items-center justify-center text-[#FF6B00] font-bold">2</div>
+<div><strong>ValidationBehavior:</strong> Kiểm tra tính hợp lệ của dữ liệu đầu vào.</div>
 </div>
-<div class="flex items-center gap-3 bg-white p-2 rounded border border-gray-200">
-<div class="w-6 h-6 rounded bg-gray-100 flex items-center justify-center">3</div>
-<div>TransactionBehavior <span>→ Auto Commit/Rollback</span></div>
-</div>
-<div class="flex items-center gap-3 bg-orange-50 text-[#FF6B00] p-2 rounded border border-orange-200 font-bold">
-<div class="w-6 h-6 rounded bg-orange-100 flex items-center justify-center">4</div>
-<div>CommandHandler / QueryHandler</div>
+<div class="flex items-center gap-3 bg-orange-50 text-[#FF6B00] p-3 rounded-xl border border-orange-200 font-bold">
+<div class="w-6 h-6 rounded bg-orange-100 flex items-center justify-center">3</div>
+<div><strong>Target Handler:</strong> Thực thi logic nghiệp vụ và xử lý dữ liệu.</div>
 </div>
 </div>
 </div>
-
-<div class="animate-fade-up animate-delay-3 flex justify-center">
-
-```mermaid
-graph TD
-Req[Request] --> MB1
-
-subgraph Pipeline
-MB1[Logging] --> MB2
-MB2[Validation] --> MB3
-MB3[Transaction] --> Handler[Target Handler]
-end
-
-Handler -.->|Response| MB3
-MB3 -.->|Commit/Rollback| MB2
-MB2 -.-> MB1
-MB1 -.-> Res[Response]
-
-style Handler fill:#FF6B00,stroke:#E55A00,color:#fff
-style Req fill:#1D2235,stroke:#141824,color:#fff
-style Res fill:#10B981,stroke:#059669,color:#fff
-```
-
+<div class="animate-fade-up animate-delay-3 flex flex-col items-center gap-1 scale-95 origin-top">
+  <!-- Request -->
+  <div class="px-4 py-1.5 bg-slate-800 text-white rounded shadow text-[10px] font-mono">Request</div>
+  <div class="text-slate-300 text-xs">↓</div>
+  
+  <!-- Pipeline -->
+  <div class="w-full max-w-[200px] border-2 border-dashed border-slate-200 rounded-2xl p-3 bg-slate-50/50">
+    <div class="text-center text-[8px] font-bold text-slate-400 uppercase tracking-widest mb-2">MediatR Pipeline</div>
+    <div class="space-y-1.5">
+      <div class="bg-white border border-slate-100 p-2 rounded-lg shadow-sm text-[10px] font-bold text-slate-600 flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Logging
+      </div>
+      <div class="bg-white border border-slate-100 p-2 rounded-lg shadow-sm text-[10px] font-bold text-slate-600 flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Validation
+      </div>
+      <div class="bg-[#FF6B00] p-2 rounded-lg shadow-md text-[10px] font-bold text-white flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-white"></span> Target Handler
+      </div>
+    </div>
+  </div>
+  
+  <div class="text-slate-300 text-xs">↓</div>
+  <!-- Response -->
+  <div class="px-4 py-1.5 bg-emerald-500 text-white rounded shadow text-[10px] font-mono">Response</div>
 </div>
 </div>
 </div>
 
 <!--
-Để điều phối CQRS, em sử dụng thư viện MediatR. Mọi yêu cầu đều đi qua một Pipeline Middleware tập trung, nơi xử lý các vấn đề như: Logging tự động, Validation dữ liệu bằng FluentValidation, và Transaction Management. Điều này giúp giảm lặp code và tăng khả năng bảo trì.
+Để điều phối mô hình CQRS, em sử dụng thư viện MediatR. Mọi yêu cầu đều được xử lý tập trung qua một Pipeline Middleware. Tại đây, hệ thống sẽ tự động thực thi các tác vụ xuyên suốt như: Logging và Validation. Cơ chế này giúp mã nguồn sạch sẽ, loại bỏ lặp lại logic và nâng cao khả năng bảo trì.
 -->
 
 ---
 transition: fade
 ---
 
-<div class="h-full flex flex-col px-8 py-2 bg-slate-50/50 justify-center overflow-hidden">
-<div class="flex items-center justify-between mb-1 animate-fade-up">
+<div class="h-full flex items-center justify-center bg-white px-16 py-10 overflow-hidden">
+<div class="grid grid-cols-2 gap-16 w-full items-center">
+<div class="space-y-6 animate-fade-in-left">
 <div>
-<div class="badge badge-primary badge-outline text-[10px] mb-1 tracking-[0.2em] uppercase">SECURITY MODEL</div>
-<h1 class="text-2xl font-black text-slate-900 tracking-tight">Refresh Token <span class="text-blue-600">Rotation</span></h1>
+<p class="text-orange-500 font-bold text-xs uppercase tracking-[0.2em] mb-1">Authentication Security</p>
+<h1 class="text-4xl font-black text-slate-900 leading-tight">
+Cơ chế <br/>
+<span class="text-blue-600">Access & Refresh Token</span>
+</h1>
+<div class="w-16 h-1.5 bg-blue-600 rounded-full mt-4"></div>
 </div>
-<div class="text-right">
-<div class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">Defense Level</div>
-<div class="text-xs font-bold text-slate-500 italic">Advanced XSS Protection</div>
-</div>
-</div>
-<div class="grid grid-cols-[1fr_1.4fr] gap-4 flex-grow min-h-0 items-stretch transform scale-90 origin-top">
-<div class="flex flex-col justify-center gap-2 animate-fade-up animate-delay-2 pr-4">
-<div class="group">
-<div class="text-[9px] font-black text-blue-500 mb-1 tracking-[0.2em] opacity-40 group-hover:opacity-100 transition-opacity uppercase">01 • Access Token (JWT)</div>
-<div class="space-y-0.5">
-<p class="text-[11px] font-bold text-slate-800 leading-none">Cookie</p>
-<p class="text-[10px] text-slate-500 leading-relaxed italic">Hết hạn sau 15 phút — Tự động gửi qua mỗi request.</p>
+<p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+Sử dụng chuẩn <strong>JWT</strong> để cân bằng giữa bảo mật nghiêm ngặt và trải nghiệm học tập mượt mà.
+</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-slate-100 rounded text-[9px] font-bold text-slate-400 uppercase">#Stateless</span>
+<span class="px-2 py-1 bg-slate-100 rounded text-[9px] font-bold text-slate-400 uppercase">#Security</span>
 </div>
 </div>
-<div class="group">
-<div class="text-[9px] font-black text-green-500 mb-1 tracking-[0.2em] opacity-40 group-hover:opacity-100 transition-opacity uppercase">02 • Refresh Token</div>
-<div class="space-y-0.5">
-<p class="text-[11px] font-bold text-slate-800 leading-none">HttpOnly Cookie</p>
-<p class="text-[10px] text-slate-500 leading-relaxed italic">Chống XSS 100%. JS không thể truy cập.</p>
-</div>
-</div>
-<div class="mt-1 p-2 rounded-xl bg-orange-50/50">
-<p class="text-[9px] text-orange-800 leading-relaxed"><strong>Rotation:</strong> Khi token mới được cấp, token cũ sẽ bị vô hiệu hóa để giảm thiểu rủi ro Replay Attack.</p>
-</div>
-</div>
-<div class="animate-fade-up animate-delay-3 bg-white rounded-3xl shadow-[0_20px_40px_-12px_rgba(0,0,0,0.05)] border border-slate-100 p-3 flex flex-col items-center justify-center relative overflow-hidden">
-<div class="absolute inset-0 bg-blue-500/5 [mask-image:radial-gradient(ellipse_at_center,black,transparent)] pointer-events-none"></div>
-<p class="text-[9px] font-black text-slate-400 mb-1 uppercase tracking-[0.3em]">Silent Refresh Flow</p>
-<div class="w-full transform scale-[0.65] origin-top -mb-16">
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant S as Auth Server
-    Note over C: AT Expired
-    C->>S: POST /refresh (Cookie)
-    S->>S: Verify & Rotate
-    S-->>C: New RT + New AT
-    Note over C: Session Extended
-```
+<div class="space-y-6 animate-fade-in-right">
+<div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+<div class="flex items-center gap-4 mb-3">
+<div class="p-2.5 bg-blue-600 text-white rounded-xl shadow-lg shadow-blue-100">
+<div class="i-lucide-key w-5 h-5"></div>
+</div>
+<h3 class="text-xl font-bold text-slate-800">Access Token</h3>
+</div>
+<p class="text-[11px] text-slate-500 leading-relaxed italic">
+"Chìa khóa" truy cập tạm thời cho mỗi yêu cầu. Hiệu lực ngắn (15 phút) để bảo vệ tài khoản tối đa.
+</p>
+</div>
 
+<div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+<div class="flex items-center gap-4 mb-3">
+<div class="p-2.5 bg-green-600 text-white rounded-xl shadow-lg shadow-green-100">
+<div class="i-lucide-refresh-cw w-5 h-5"></div>
+</div>
+<h3 class="text-xl font-bold text-slate-800">Refresh Token</h3>
+</div>
+<p class="text-[11px] text-slate-500 leading-relaxed italic">
+Dùng để tự động gia hạn chìa khóa mới khi hết hạn, giúp người học không phải đăng nhập lại nhiều lần.
+</p>
 </div>
 </div>
 </div>
@@ -701,8 +693,9 @@ sequenceDiagram
 <BrandFooter section="Bảo mật" />
 
 <!--
-Về cơ chế xác thực, em triển khai mô hình Refresh Token Rotation. Access Token được lưu trong Cookie với thời gian hết hạn ngắn, còn Refresh Token được lưu trong HttpOnly Cookie nhằm hạn chế tấn công XSS. Khi Refresh Token được sử dụng để cấp mới, token cũ sẽ bị vô hiệu hóa, giúp giảm thiểu rủi ro từ Replay Attack.
+Hệ thống sử dụng cơ chế xác thực dựa trên JSON Web Token (JWT) với bộ đôi Access và Refresh Token. Access Token đóng vai trò là 'chìa khóa' truy cập tạm thời cho mỗi yêu cầu. Khi Access Token hết hạn, hệ thống sẽ tự động sử dụng Refresh Token để cấp lại chìa khóa mới mà không yêu cầu người dùng phải đăng nhập lại. Cơ chế này giúp cân bằng hoàn hảo giữa tính bảo mật cao và trải nghiệm người dùng mượt mà.
 -->
+
 
 ---
 transition: slide-up
@@ -958,50 +951,54 @@ title="Triển khai & DevOps"
 desc="Tối ưu Docker Image và triển khai trên hạ tầng Cloud." 
 />
 
-<!--
-Cuối cùng là phần triển khai. Em sử dụng Multi-stage Docker giúp giảm dung lượng image từ 1GB xuống còn 200MB. Hệ thống được triển khai trên nền tảng Railway với quy trình CI/CD tự động và cơ chế Health check hỗ trợ giám sát, khởi động lại service khi xảy ra lỗi.
--->
-
 ---
 transition: fade
 ---
 
-<div class="h-full flex flex-col justify-center">
-<div class="badge badge-primary mb-6 animate-fade-up">DEPLOYMENT</div>
-<h1 class="animate-fade-up animate-delay-1 mb-2">Docker & Railway Ecosystem</h1>
-<p class="text-gray-500 mb-8 max-w-2xl animate-fade-up animate-delay-2">Kiến trúc triển khai tự động hóa cao, tối ưu dung lượng.</p>
+<div class="h-full flex items-center justify-center bg-white px-16 py-10 overflow-hidden">
+<div class="grid grid-cols-2 gap-16 w-full items-center">
+<div class="space-y-8 animate-fade-in-left">
+<div>
+<p class="text-orange-500 font-bold text-xs uppercase tracking-[0.3em] mb-2">DevOps & Deployment</p>
+<h1 class="text-4xl font-black text-slate-900 leading-tight">
+Đóng gói & <br/>
+<span class="text-[#FF6B00]">Triển khai hệ thống</span>
+</h1>
+<div class="w-16 h-1.5 bg-[#FF6B00] rounded-full mt-4"></div>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+Sử dụng công nghệ Container hóa để đảm bảo hệ thống hoạt động ổn định trên mọi môi trường.
+</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-slate-100 rounded text-[9px] font-bold text-slate-400 uppercase">#Docker</span>
+<span class="px-2 py-1 bg-slate-100 rounded text-[9px] font-bold text-slate-400 uppercase">#Portability</span>
+<span class="px-2 py-1 bg-slate-100 rounded text-[9px] font-bold text-slate-400 uppercase">#CI_CD</span>
+</div>
+</div>
 
-<div class="grid-2 gap-8 items-center animate-fade-up animate-delay-3">
-<div class="glass-card">
-<h3 class="font-bold text-[#1D2235] mb-4 flex items-center gap-3">
-<img src="/docker_logo.png" class="w-8 h-8 object-contain" /> Multi-stage Docker
-</h3>
-<div class="space-y-3 text-sm text-gray-600">
-<p><strong>Stage 1 (Build):</strong> .NET SDK (~800MB) biên dịch code.</p>
-<p><strong>Stage 2 (Runtime):</strong> ASP.NET Runtime siêu nhẹ.</p>
-<div class="mt-4 bg-green-50 text-green-700 px-3 py-2 rounded text-xs font-bold text-center border border-green-200">
-Giảm dung lượng Image từ 1GB xuống 200MB (-80%)
+<div class="space-y-6 animate-fade-in-right">
+<div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+<div class="flex items-center gap-4 mb-3">
+<div class="p-2.5 bg-[#1D2235] text-white rounded-xl">
+<div class="i-lucide-container w-5 h-5"></div>
 </div>
+<h3 class="text-xl font-bold text-slate-800">Docker (Portable)</h3>
 </div>
+<p class="text-[11px] text-slate-500 leading-relaxed italic">
+Đóng gói toàn bộ hệ thống vào Container. Sẵn sàng triển khai nhanh chóng trên bất kỳ <strong>VPS</strong> hoặc Cloud Server nào mà không lo xung đột môi trường.
+</p>
 </div>
 
-<div class="glass-card">
-<h3 class="font-bold text-[#1D2235] mb-4 flex items-center gap-3">
-<img src="/railway_logo.png" class="w-8 h-8 object-contain" /> Railway PaaS
-</h3>
-<div class="space-y-3 text-sm text-gray-600">
-<div class="flex gap-2 items-start">
-<div class="text-[#FF6B00]"><div class="i-lucide-check"></div></div>
-<div><strong>CI/CD Tự động:</strong> Push code → Build & Deploy.</div>
+<div class="p-6 bg-orange-50/50 rounded-2xl border border-orange-100 shadow-sm ring-1 ring-orange-200/50">
+<div class="flex items-center gap-4 mb-3">
+<div class="p-2.5 bg-[#FF6B00] text-white rounded-xl">
+<div class="i-lucide-cloud-upload w-5 h-5"></div>
 </div>
-<div class="flex gap-2 items-start">
-<div class="text-[#FF6B00]"><div class="i-lucide-check"></div></div>
-<div><strong>Auto-provisioning:</strong> Khởi tạo Postgres & Redis.</div>
+<h3 class="text-xl font-bold text-slate-800">Railway (Active)</h3>
 </div>
-<div class="flex gap-2 items-start">
-<div class="text-[#FF6B00]"><div class="i-lucide-check"></div></div>
-<div><strong>Health checks:</strong> Auto-restart khi crash.</div>
-</div>
+<p class="text-[11px] text-slate-500 leading-relaxed italic">
+Nền tảng triển khai thực tế. Tích hợp quy trình CI/CD tự động: <strong>Push code → Build → Auto Deploy</strong> cùng cơ chế giám sát 24/7.
+</p>
 </div>
 </div>
 </div>
@@ -1010,7 +1007,7 @@ Giảm dung lượng Image từ 1GB xuống 200MB (-80%)
 <BrandFooter section="DevOps" />
 
 <!--
-Cuối cùng là phần triển khai. Em sử dụng Multi-stage Docker giúp giảm dung lượng image từ 1GB xuống còn 200MB. Hệ thống được triển khai trên nền tảng Railway với quy trình CI/CD tự động và cơ chế Health check hỗ trợ giám sát, khởi động lại service khi xảy ra lỗi.
+Cuối cùng là phần triển khai. Em sử dụng Multi-stage Docker giúp tối ưu tối đa dung lượng image, đảm bảo việc triển khai nhanh chóng. Hệ thống chạy trên Railway với quy trình CI/CD tự động và cơ chế Health check để giám sát hệ thống 24/7.
 -->
 
 ---
@@ -1022,87 +1019,12 @@ transition: view-transition
 <SectionDivider 
 number="06" 
 title="Live Demo" 
-desc="Trải nghiệm thực tế hệ sinh thái LexiVocab qua 4 kịch bản sử dụng." 
+desc="Trải nghiệm thực tế hệ sinh thái LexiVocab." 
 />
 
 <!--
 Chuyển phần: Live Demo. Bây giờ, em xin phép bắt đầu phần Demo thực tế qua 4 bước: Bắt từ vựng 'Serendipity' trên trình duyệt; Ôn tập trên Mobile; Sử dụng AI Streaming; và Quản lý trên Web Dashboard.
 -->
-
----
-transition: slide-up
----
-
-<div class="h-full flex flex-col justify-center">
-<div class="badge badge-primary mb-2 animate-fade-up w-max !text-[9px] !py-1">DEMONSTRATION</div>
-<h1 class="text-3xl font-black text-slate-900 tracking-tight mb-2 animate-fade-up animate-delay-1">DEMO</h1>
-<p class="text-slate-500 text-sm mb-6 animate-fade-up animate-delay-2">Trải nghiệm thực tế hệ sinh thái LexiVocab qua User Journey.</p>
-
-<div class="grid grid-cols-2 gap-4 animate-fade-up animate-delay-3 flex-grow min-h-0">
-
-<!-- Step 1 -->
-<div class="bg-white/80 p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3 hover:border-orange-200 transition-all items-start">
-<div class="w-10 h-10 bg-orange-50 border border-orange-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-<div class="i-lucide-chrome text-lg text-orange-500"></div>
-</div>
-<div>
-<h3 class="font-bold text-slate-800 text-sm mb-1">1. Bắt từ (Chrome Ext)</h3>
-<p class="text-xs text-slate-500 leading-tight">Bôi đen & lưu từ khó trực tiếp qua Shadow DOM, không cần chuyển tab.</p>
-</div>
-</div>
-
-<!-- Step 2 -->
-<div class="bg-white/80 p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3 hover:border-blue-200 transition-all items-start">
-<div class="w-10 h-10 bg-blue-50 border border-blue-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-<div class="i-lucide-smartphone text-lg text-blue-500"></div>
-</div>
-<div>
-<h3 class="font-bold text-slate-800 text-sm mb-1">2. Học & Nhớ (Mobile App)</h3>
-<p class="text-xs text-slate-500 leading-tight">Vuốt flashcard. Hệ thống chạy SuperMemo-2 tính ngày ôn tập realtime.</p>
-</div>
-</div>
-
-<!-- Step 3 -->
-<div class="bg-white/80 p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3 hover:border-purple-200 transition-all items-start">
-<div class="w-10 h-10 bg-purple-50 border border-purple-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-<div class="i-lucide-sparkles text-lg text-purple-500"></div>
-</div>
-<div>
-<h3 class="font-bold text-slate-800 text-sm mb-1">3. Hiểu sâu (AI Streaming)</h3>
-<p class="text-xs text-slate-500 leading-tight">Dùng "Explain with AI" để tạo ví dụ. Trải nghiệm Zero-delay nhờ SSE.</p>
-</div>
-</div>
-
-<!-- Step 4 -->
-<div class="bg-white/80 p-3 rounded-xl shadow-sm border border-slate-100 flex gap-3 hover:border-green-200 transition-all items-start">
-<div class="w-10 h-10 bg-green-50 border border-green-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-<div class="i-lucide-layout-dashboard text-lg text-green-500"></div>
-</div>
-<div>
-<h3 class="font-bold text-slate-800 text-sm mb-1">4. Quản lý (Web/Widget)</h3>
-<p class="text-xs text-slate-500 leading-tight">Xem biểu đồ phân tích trên Web và theo dõi mục tiêu qua Android Widget.</p>
-</div>
-</div>
-
-</div>
-
-<div class="mt-6 text-center animate-fade-up animate-delay-4" v-click>
-<button class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-2.5 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
-<div class="i-lucide-play-circle text-orange-500 text-lg"></div> Bắt đầu trình diễn
-</button>
-</div>
-</div>
-
-<BrandFooter section="Live Demo" />
-
-<!--
-Thực hiện Demo theo kịch bản:
-1. Bắt từ vựng 'Serendipity' ngay trên trang báo New York Times qua Chrome Extension.
-2. Kiểm tra việc đồng bộ và ôn tập thẻ này trên Mobile App.
-3. Sử dụng AI Streaming để giải thích cặn kẽ và tạo câu chuyện cho từ vừa học.
-4. Cuối cùng là quản lý tiến độ và xem biểu đồ phân tích trên Web Dashboard.
--->
-
 ---
 layout: cover
 class: "!p-0 bg-[#09090B] text-white"
@@ -1125,14 +1047,14 @@ transition: slide-up
 
 <div class="h-full flex flex-col justify-center">
 <div class="badge badge-primary mb-6 animate-fade-up">SUMMARY</div>
-<h1 class="animate-fade-up animate-delay-1 mb-8">Tổng kết đóng góp</h1>
+<h1 class="animate-fade-up animate-delay-1 mb-8">Tổng kết</h1>
 
 <div class="grid-3 gap-6 animate-fade-up animate-delay-2">
 <div class="glass-card !p-5">
 <div class="text-[#FF6B00] font-bold text-sm mb-2 border-b border-gray-100 pb-2 flex items-center gap-2"><div class="i-lucide-server"></div> Về Kiến trúc</div>
 <ul class="text-xs space-y-2 text-gray-600 list-disc pl-4">
 <li>Clean Architecture, CQRS (MediatR).</li>
-<li>Bảo mật Stateful Identity (HttpOnly Cookie).</li>
+<li>Bảo mật Stateless.</li>
 </ul>
 </div>
 
@@ -1140,8 +1062,8 @@ transition: slide-up
 <div class="text-[#FF6B00] font-bold text-sm mb-2 border-b border-gray-100 pb-2 flex items-center gap-2"><div class="i-lucide-zap"></div> Về Trải nghiệm</div>
 <ul class="text-xs space-y-2 text-gray-600 list-disc pl-4">
 <li>Cải tiến SuperMemo-2 + Fuzz Factor.</li>
-<li>Giao tiếp 1 chiều tối ưu SSE (AI Streaming).</li>
-<li>Shadow DOM bảo vệ UI Extension.</li>
+<li>Tích hợp hệ thống AI tạo sinh cho việc phân tích.</li>
+
 </ul>
 </div>
 
@@ -1149,7 +1071,7 @@ transition: slide-up
 <div class="text-[#FF6B00] font-bold text-sm mb-2 border-b border-gray-100 pb-2 flex items-center gap-2"><div class="i-lucide-package"></div> Về Sản phẩm</div>
 <ul class="text-xs space-y-2 text-gray-600 list-disc pl-4">
 <li>Hệ sinh thái đồng nhất Chrome, Mobile, Web.</li>
-<li>Tích hợp SePay tự động với Idempotency.</li>
+<li>Tích hợp SePay thanh toán tự động.</li>
 <li>Dashboard Analytics đa ngôn ngữ.</li>
 </ul>
 </div>
