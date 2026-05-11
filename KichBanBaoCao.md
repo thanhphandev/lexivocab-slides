@@ -27,11 +27,11 @@
 
 ### SLIDE 3: Rào cản #1 - Context Switching
 **Lời thoại:**
-"Một trong những rào cản lớn là việc chuyển đổi ngữ cảnh (**Context Switching**) làm gián đoạn luồng đọc. Khi người học đang đọc một tài liệu tiếng Anh và gặp từ mới, việc phải chuyển tab sang từ điển sẽ làm đứt đoạn luồng tư duy. Theo nghiên cứu của Gloria Mark tại UC Irvine, người dùng mất trung bình 23 phút để quay lại task bị gián đoạn. Điều này làm gián đoạn quá trình đọc và ghi nhớ từ vựng."
+"Rào cản đầu tiên là việc mất tập trung trong quá trình tra cứu. Khi đang đọc tài liệu, việc phải liên tục chuyển tab để tra từ điển sẽ làm đứt đoạn luồng tư duy. Theo nghiên cứu của Gloria Mark tại UC Irvine, mỗi quãng ngắt này khiến não bộ mất rất nhiều thời gian để tái tập trung, từ đó gây ra cảm giác mệt mỏi và dễ làm người học nản lòng."
 
 ### SLIDE 4: Rào cản #2 - Đường cong quên lãng
 **Lời thoại:**
-"Rào cản thứ hai liên quan đến **Đường cong quên lãng Ebbinghaus**. Theo lý thuyết này, thông tin mới nếu không được ôn tập sẽ bị suy giảm nhanh chóng theo thời gian. Điều này đặc biệt đúng với việc học từ vựng riêng lẻ, không có ngữ cảnh, dẫn đến việc ghi nhớ kém hiệu quả."
+"Rào cản thứ hai chính là sự quên lãng tự nhiên. Nếu không có kế hoạch ôn tập định kỳ, kiến thức mới sẽ rất nhanh chóng bị mai một. Điều này đặc biệt đúng khi chúng ta học từ vựng rời rạc, thiếu ngữ cảnh thực tế, dẫn đến việc ghi nhớ không hiệu quả và lãng phí công sức."
 
 ### SLIDE 5: Giải pháp - Ba Trụ Cột của LexiVocab
 **Lời thoại:**
@@ -39,27 +39,27 @@
 
 ---
 
-## PHẦN 2: HỆ SINH THÁI 4 MẢNH GHÉP
+## PHẦN 2: HỆ SINH THÁI ĐA NỀN TẢNG
 
-### SLIDE 6: Chuyển phần: Hệ Sinh Thái
+### SLIDE 6: Chuyển phần: Hệ sinh thái đa nền tảng
 **Lời thoại:**
-"Tiếp theo, em xin trình bày về kiến trúc tổng thể của dự án, bao gồm 4 thành phần chính được thiết kế theo mô hình Hub & Spoke."
+"Tiếp theo, em xin trình bày về kiến trúc tổng thể của hệ sinh thái, được thiết kế theo mô hình kết nối tập trung."
 
-### SLIDE 7: Kiến trúc Hub & Spoke
+### SLIDE 7: Kiến trúc kết nối tập trung
 **Lời thoại:**
-"Hệ thống sử dụng **Core API (ASP.NET Core)** làm trung tâm, kết nối và đồng bộ dữ liệu giữa 3 nền tảng Client: Chrome Extension, Mobile App và Web Dashboard. Điểm đặc biệt là cả 3 nền tảng này đều hỗ trợ cả 3 nền tảng đều hỗ trợ đa ngôn ngữ (i18n) nhằm cải thiện trải nghiệm bản địa hóa. Cấu trúc này hỗ trợ người dùng có thể lưu từ vựng trên máy tính và tiếp tục ôn tập trên thiết bị di động một cách thống nhất."
+"Hệ thống sử dụng **Core API (ASP.NET Core)** làm trung tâm, đóng vai trò là "bộ não" điều phối và đồng bộ dữ liệu giữa 3 ứng dụng vệ tinh: Chrome Extension, Mobile App và Web Dashboard. Cấu trúc kết nối tập trung này giúp người dùng có một trải nghiệm liền mạch: lưu từ vựng trên máy tính và ôn tập ngay trên điện thoại mà không gặp bất kỳ trở ngại nào."
 
 ### SLIDE 8: Chrome Extension - Bắt từ ngay khi đang đọc
 **Lời thoại:**
-"Thành phần đầu tiên là **Chrome Extension**, hỗ trợ tra cứu và lưu từ vựng trên trình duyệt. Về mặt kỹ thuật, extension sử dụng **Shadow DOM** để cách ly CSS, ngăn xung đột style của popup với trang web đang xem. Các tác vụ lưu từ vựng được xử lý ngầm (background script) nhằm hạn chế việc gián đoạn trải nghiệm đọc."
+"Thành phần đầu tiên là **Chrome Extension**, giúp chúng ta bắt từ và tra nghĩa trực tiếp ngay trên trình duyệt một cách cực kỳ dễ dàng. Điểm nổi bật là tính năng tự động nhận diện: Khi bạn gặp lại một từ đã lưu trong tương lai, Extension sẽ tự động highlight từ đó. Bạn chỉ cần di chuột qua là có thể xem lại ý nghĩa ngay lập tức, giúp củng cố trí nhớ một cách tự nhiên. Về kỹ thuật, em sử dụng **Shadow DOM** để đảm bảo giao diện luôn hiển thị ổn định trên mọi trang web."
 
 ### SLIDE 9: Mobile Application - Học tập mọi lúc
 **Lời thoại:**
-"Ứng dụng Mobile được phát triển bằng React Native. Ứng dụng tích hợp tính năng **SRS Notification** - gửi thông báo nhắc ôn bài dựa trên lịch trình của thuật toán. Dữ liệu được đồng bộ liên tục qua API, giúp người dùng theo dõi và học các từ vựng đã lưu từ Extension."
+"Ứng dụng Mobile giúp việc học tập trở nên linh hoạt hơn bao giờ hết. Hệ thống sẽ tự động đồng bộ kho từ vựng từ đám mây về điện thoại của bạn. Điểm nhấn là tính năng **Nhắc nhở thông minh** - gửi thông báo nhắc ôn bài đúng vào 'thời điểm vàng', cùng với **Widget** trên màn hình chính giúp bạn tiếp cận từ vựng một cách thụ động và hiệu quả ngay cả khi không mở ứng dụng."
 
 ### SLIDE 10: Web Dashboard - Hệ thống quản trị
 **Lời thoại:**
-"Web Dashboard được xây dựng trên **Next.js**, là nơi quản lý tập trung và phân tích dữ liệu. Hệ thống tích hợp **SePay Webhooks** để tự động hóa quy trình nâng cấp gói VIP qua QR code. Ngoài ra, Dashboard cung cấp các biểu đồ Analytics trực quan giúp người dùng theo dõi tiến độ và hiệu quả ghi nhớ theo thời gian."
+"Web Dashboard đóng vai trò là trung tâm quản trị và phân tích chuyên sâu của toàn hệ thống. Tại đây, người dùng có thể quản lý tập trung toàn bộ kho từ vựng và thực hiện các hiệu chỉnh chuyên nghiệp. Hệ thống cũng tối ưu hóa quy trình đăng ký các gói Subscription thông qua giải pháp thanh toán tự động SePay. Cuối cùng, thông qua các báo cáo thống kê và biểu đồ trực quan, người học có thể theo dõi chi tiết hiệu quả ghi nhớ của mình theo thời gian."
 
 ---
 
@@ -79,7 +79,7 @@
 
 ### SLIDE 14: MediatR & Middleware Pipeline
 **Lời thoại:**
-"Để điều phối CQRS, em sử dụng thư viện **MediatR**. Mọi yêu cầu đều đi qua một **Pipeline Middleware** tập trung, nơi xử lý các vấn đề như: Logging tự động, Validation dữ liệu bằng FluentValidation, và Transaction Management. Điều này giúp giảm lặp code và tăng khả năng bảo trì."
+"Để điều phối mô hình CQRS, em sử dụng thư viện **MediatR**. Mọi yêu cầu từ phía Client đều được xử lý qua một **Pipeline Middleware** tập trung. Tại đây, hệ thống sẽ tự động thực thi các tác vụ xuyên suốt như: Ghi nhật ký hệ thống (Logging) và Kiểm tra tính hợp lệ của dữ liệu đầu vào (Validation). Cơ chế này giúp mã nguồn trở nên sạch sẽ hơn, triệt tiêu việc lặp lại logic và nâng cao khả năng bảo trì lâu dài cho hệ thống."
 
 ### SLIDE 15: Bảo mật - Refresh Token Rotation
 **Lời thoại:**

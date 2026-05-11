@@ -44,7 +44,7 @@ Xây dựng hệ thống học từ vựng đa nền tảng tích hợp <br/> <s
 </div>
 
 <!--
-Kính chào quý thầy cô trong Hội đồng. Em là Phan Văn Thành, mã sinh viên DTH225766. Hôm nay em xin được trình bày đồ án tốt nghiệp với đề tài: Xây dựng hệ thống học từ vựng đa nền tảng tích hợp thuật toán lặp lại ngắt quãng. Dự án hướng tới việc ứng dụng thuật toán SuperMemo-2 và AI tạo sinh để hỗ trợ quá trình học và ôn tập từ vựng trên nhiều thiết bị.
+Kính chào các thầy trong Hội đồng. Em là Phan Văn Thành, mã sinh viên DTH225766. Hôm nay em xin được trình bày đồ án tốt nghiệp với đề tài: Xây dựng hệ thống học từ vựng đa nền tảng tích hợp thuật toán lặp lại ngắt quãng. Dự án hướng tới việc ứng dụng thuật toán SuperMemo-2 và AI tạo sinh để hỗ trợ quá trình học và ôn tập từ vựng trên nhiều thiết bị.
 -->
 
 ---
@@ -118,10 +118,10 @@ transition: slide-up
 <div class="grid-2 items-center gap-12">
 <!-- Left Side -->
 <div>
-<h1 class="animate-fade-up animate-delay-1 text-4xl leading-tight mb-2">Context Switching</h1>
-<h2 class="text-[var(--lv-primary)] mb-6 animate-fade-up animate-delay-2 text-xl font-semibold">Kẻ thù của sự tập trung</h2>
+<h1 class="animate-fade-up animate-delay-1 text-4xl leading-tight mb-2">Mất tập trung khi tra từ</h1>
+<h2 class="text-[var(--lv-primary)] mb-6 animate-fade-up animate-delay-2 text-xl font-semibold">Rào cản lớn nhất khi đọc tài liệu</h2>
 <p class="mb-6 animate-fade-up animate-delay-3 text-gray-500 text-sm leading-relaxed">
-Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đứt đoạn luồng tư duy, tạo ra cảm giác nản chí khi đọc tài liệu ngoại ngữ.
+Khi đang đọc một bài báo hay tài liệu ngoại ngữ, việc phải liên tục chuyển sang tab khác để tra từ điển sẽ làm đứt đoạn luồng tư duy và dễ sinh ra cảm giác nản chí.
 </p>
 
 <div class="highlight-box mt-8 animate-fade-up animate-delay-4">
@@ -130,9 +130,8 @@ Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đ
 <div class="i-lucide-brain text-xl"></div>
 </div>
 <div>
-<p class="font-bold text-sm text-gray-800 mb-1">Làm tăng đáng kể thời gian</p>
-<p class="text-xs text-gray-500 leading-relaxed">để quay lại công việc đang thực hiện sau khi bị gián đoạn.</p>
-<p class="text-[10px] text-gray-400 mt-2 uppercase tracking-wide">— Gloria Mark, ĐH UC Irvine</p>
+<p class="font-bold text-sm text-gray-800 mb-1">Suy giảm hiệu suất học tập</p>
+<p class="text-xs text-gray-500 leading-relaxed">Mỗi lần chuyển tab để tra từ, não bộ sẽ phải mất thêm rất nhiều thời gian để lấy lại sự tập trung vào bài đọc ban đầu.</p>
 </div>
 </div>
 </div>
@@ -159,7 +158,7 @@ Chuyển đổi qua lại giữa bài báo và ứng dụng từ điển làm đ
 <BrandFooter section="Vấn đề" />
 
 <!--
-Một trong những rào cản lớn là việc chuyển đổi ngữ cảnh (Context Switching) làm gián đoạn luồng đọc. Khi người học đang đọc một tài liệu tiếng Anh và gặp từ mới, việc phải chuyển tab sang từ điển sẽ làm đứt đoạn luồng tư duy. Theo nghiên cứu của Gloria Mark tại UC Irvine, việc bị gián đoạn làm tăng đáng kể thời gian để người dùng quay lại công việc đang thực hiện.
+Rào cản đầu tiên là việc mất tập trung trong quá trình tra cứu. Khi đang đọc tài liệu, việc phải liên tục chuyển tab để tra từ điển sẽ làm đứt đoạn luồng tư duy. Những quãng ngắt này khiến não bộ mất nhiều thời gian hơn để tái tập trung, từ đó gây ra cảm giác mệt mỏi và dễ làm người học nản lòng.
 -->
 
 ---
@@ -180,7 +179,7 @@ transition: fade
 <BrandFooter section="Vấn đề" />
 
 <!--
-Rào cản thứ hai liên quan đến Đường cong quên lãng Ebbinghaus. Theo lý thuyết này, thông tin mới nếu không được ôn tập sẽ bị suy giảm nhanh chóng theo thời gian. Điều này đặc biệt đúng với việc học từ vựng riêng lẻ, không có ngữ cảnh, dẫn đến việc ghi nhớ kém hiệu quả.
+Rào cản thứ hai chính là sự quên lãng tự nhiên. Nếu không có kế hoạch ôn tập định kỳ, kiến thức mới sẽ rất nhanh chóng bị mai một. Điều này đặc biệt đúng khi chúng ta học từ vựng rời rạc, thiếu ngữ cảnh thực tế, dẫn đến việc ghi nhớ không hiệu quả và lãng phí công sức.
 -->
 
 ---
@@ -896,51 +895,6 @@ Một thành phần cốt lõi của hệ thống là thuật toán SuperMemo-2.
 -->
 
 ---
-transition: fade
----
-
-<div class="h-full flex flex-col justify-center">
-<div class="badge badge-primary mb-6 animate-fade-up">PERFORMANCE OPTIMIZATION</div>
-<h1 class="animate-fade-up animate-delay-1 mb-2">B-Tree Indexing</h1>
-<p class="text-gray-500 mb-8 max-w-2xl animate-fade-up animate-delay-2">Tối ưu hóa câu truy vấn: "Lấy thẻ cần ôn hôm nay".</p>
-
-<div class="grid-2 gap-8 items-center animate-fade-up animate-delay-3">
-<!-- Before -->
-<div class="glass-card">
-<h3 class="font-bold text-[#1D2235] mb-2 text-center text-red-500">Trước khi tối ưu (Full Scan)</h3>
-<div class="bg-gray-100 rounded-lg p-4 font-mono text-[10px] text-gray-700 mb-4 overflow-x-auto">
-SELECT * FROM "Flashcards"<br/>
-WHERE "NextReviewDate" <= NOW()
-</div>
-<div class="flex items-center justify-between border-t border-gray-200 pt-4">
-<div class="text-xs text-gray-500">Thời gian (10K user)</div>
-<div class="text-xl font-bold text-red-500">~500 ms</div>
-</div>
-</div>
-
-<!-- After -->
-<div class="glass-card border-2 border-[#FF6B00] relative overflow-hidden">
-<div class="absolute top-0 right-0 bg-[#FF6B00] text-white text-[9px] font-bold px-2 py-1 rounded-bl-lg">~100x FASTER</div>
-<h3 class="font-bold text-[#1D2235] mb-2 text-center text-green-500">Thêm Composite Index</h3>
-<div class="bg-[#1D2235] text-blue-300 rounded-lg p-4 font-mono text-[10px] mb-4 overflow-x-auto">
-CREATE INDEX IX_NextReview <br/>
-ON "Flashcards" ("UserId", "NextReviewDate")
-</div>
-<div class="flex items-center justify-between border-t border-gray-200 pt-4">
-<div class="text-xs text-gray-500">Thời gian (10K user)</div>
-<div class="text-xl font-bold text-green-500">~ 5 ms</div>
-</div>
-</div>
-</div>
-</div>
-
-<BrandFooter section="Use Cases" />
-
-<!--
-Để tối ưu câu truy vấn thẻ cần ôn, em áp dụng Composite Index trên cặp (UserId, NextReviewDate). Benchmark mô phỏng với khoảng 10,000 bản ghi cho thấy thời gian truy vấn giảm đáng kể từ ~500ms (khi full table scan) xuống khoảng ~5ms, cải thiện hiệu năng rõ rệt cho endpoint này.
--->
-
----
 transition: slide-up
 ---
 
@@ -990,101 +944,6 @@ transition: slide-up
 
 <!--
 Chức năng tra cứu ngữ cảnh AI sử dụng cơ chế Streaming qua Server-Sent Events (SSE). Việc trả về từng phần dữ liệu giúp giảm độ trễ (latency) ở Client và sử dụng kết nối HTTP 1 chiều nhẹ hơn WebSockets. Hệ thống cũng được thiết kế theo hướng Provider-Agnostic - thiết kế một abstraction layer cho phép thay đổi nhà cung cấp AI (như OpenAI, Gemini) mà không ảnh hưởng đến logic chính.
--->
----
-transition: slide-up
----
-
-<div class="h-full flex flex-col px-8 py-0 pt-4 justify-start">
-<div class="badge badge-primary mb-1 animate-fade-up w-max !text-[9px] !py-1">OPERATIONS</div>
-<div class="grid grid-cols-[1.35fr_1fr] gap-6 items-start flex-grow min-h-0 scale-[0.9] origin-top">
-<div class="animate-fade-up">
-<div class="text-4xl font-black mb-1 text-slate-900 tracking-tight whitespace-nowrap">Payment <span class="text-blue-600">& Automation</span></div>
-<h2 class="text-slate-500 text-xs mb-4">Xử lý thanh toán an toàn và tự động hóa tác vụ ngầm.</h2>
-
-<div class="space-y-3">
-<!-- SePay Webhook & Idempotency -->
-<div class="p-3 rounded-xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex gap-3 items-start hover:border-orange-200 transition-all">
-<div class="w-8 h-8 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center shrink-0 mt-0.5">
-<div class="i-lucide-shield-check text-lg"></div>
-</div>
-<div>
-<h3 class="font-bold text-slate-800 text-[13px] mb-0.5">Idempotent Webhook (SePay)</h3>
-<p class="text-[10px] text-slate-500 leading-relaxed">Sử dụng <code>Unique Key</code> ở Database nhằm giảm thiểu lỗi xử lý trùng lặp giao dịch (Mã 23505), tránh cấp quyền nhiều lần.</p>
-</div>
-</div>
-
-<!-- Hangfire Automation -->
-<div class="p-3 rounded-xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex gap-3 items-start hover:border-blue-200 transition-all">
-<div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-500 flex items-center justify-center shrink-0 mt-0.5">
-<div class="i-lucide-clock text-lg"></div>
-</div>
-<div>
-<h3 class="font-bold text-slate-800 text-[13px] mb-0.5">Background Jobs (Hangfire)</h3>
-<p class="text-[10px] text-slate-500 leading-relaxed">Tự động hóa gửi Email nhắc nhở (SRS) và dọn dẹp dữ liệu rác (Soft Delete) định kỳ mỗi đêm mà không ảnh hưởng tới luồng người dùng.</p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="animate-fade-up animate-delay-2 flex flex-col items-center justify-center bg-white rounded-3xl shadow-[0_20px_40px_-12px_rgba(0,0,0,0.05)] border border-slate-100 p-6 relative overflow-hidden">
-<div class="absolute inset-0 bg-slate-50/50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none"></div>
-<div class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1 z-10 flex items-center gap-1.5">
-<div class="i-lucide-git-merge text-xs"></div> Payment Flow
-</div>
-<div class="flex flex-col gap-1.5 w-full max-w-[240px] mt-2 z-10">
-<!-- Pending -->
-<div class="bg-white border border-slate-200 rounded-xl p-2.5 flex items-center justify-between shadow-[0_2px_10px_rgba(0,0,0,0.02)]">
-<div class="flex items-center gap-2 text-[11px] font-bold text-slate-700">
-<div class="w-7 h-7 rounded bg-slate-100 flex items-center justify-center text-slate-500"><div class="i-lucide-webhook text-sm"></div></div>
-Receive Webhook
-</div>
-<div class="bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider">Pending</div>
-</div>
-
-<div class="flex justify-center text-slate-300 -my-1"><div class="i-lucide-arrow-down text-base"></div></div>
-
-<!-- Validate -->
-<div class="bg-white border border-blue-200 rounded-xl p-2.5 flex items-center justify-between shadow-[0_4px_15px_rgba(59,130,246,0.1)] relative ring-2 ring-blue-50">
-<div class="flex items-center gap-2 text-[11px] font-bold text-slate-700">
-<div class="w-7 h-7 rounded bg-blue-50 flex items-center justify-center text-blue-500"><div class="i-lucide-shield-check text-sm"></div></div>
-Signature & Idem.
-</div>
-<div class="bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider animate-pulse">Processing</div>
-</div>
-
-<!-- SVG Split Arrows -->
-<div class="w-full flex justify-center -my-1.5 h-6">
-<svg width="120" height="24" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M60 0 C 60 12, 30 12, 30 24" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="2 2"/>
-<path d="M60 0 C 60 12, 90 12, 90 24" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="2 2"/>
-</svg>
-</div>
-
-<div class="grid grid-cols-2 gap-3 mt-0">
-<!-- Success -->
-<div class="bg-white border border-green-200 rounded-xl p-3 flex flex-col items-center text-center shadow-[0_2px_10px_rgba(16,185,129,0.05)] hover:border-green-300 transition-colors group">
-<div class="text-green-500 mb-1 group-hover:scale-110 transition-transform"><div class="i-lucide-check-circle text-xl"></div></div>
-<div class="text-[9px] font-bold text-slate-800 uppercase tracking-wide">Success</div>
-<div class="text-[8px] text-slate-400 mt-0.5">+ Grant VIP</div>
-</div>
-
-<!-- Failed -->
-<div class="bg-white border border-red-200 rounded-xl p-3 flex flex-col items-center text-center shadow-[0_2px_10px_rgba(239,68,68,0.05)] hover:border-red-300 transition-colors group">
-<div class="text-red-400 mb-1 group-hover:scale-110 transition-transform"><div class="i-lucide-x-circle text-xl"></div></div>
-<div class="text-[9px] font-bold text-slate-800 uppercase tracking-wide">Invalid</div>
-<div class="text-[8px] text-slate-400 mt-0.5">Admin Alert</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<BrandFooter section="Vận hành" />
-
-<!--
-Hệ thống tích hợp Webhook của SePay để tự động cập nhật gói thành viên. Để xử lý an toàn, em áp dụng cơ chế Idempotency thông qua Unique Key ở Database nhằm giảm thiểu lỗi xử lý trùng lặp giao dịch. Bên cạnh đó, các tác vụ định kỳ như gửi email nhắc nhở hay dọn dẹp dữ liệu được quản lý thông qua thư viện Hangfire.
 -->
 
 ---
@@ -1389,4 +1248,5 @@ class: text-center
 <!--
 Phần trình bày của em đến đây là kết thúc. Em xin chân thành cảm ơn Quý Thầy Cô Hội đồng đã dành thời gian lắng nghe. Em rất mong nhận được những câu hỏi và góp ý từ Quý Thầy Cô để hoàn thiện dự án hơn nữa. Em xin cảm ơn ạ!
 -->
+
 
