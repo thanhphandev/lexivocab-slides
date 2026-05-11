@@ -5,7 +5,7 @@ highlighter: shiki
 lineNumbers: false
 info: |
   ## LexiVocab
-  Hệ sinh thái học từ vựng Omnichannel
+  Hệ thống học từ vựng Đa nền tảng
 drawings:
   persist: false
 transition: fade
@@ -47,67 +47,7 @@ Xây dựng hệ thống học từ vựng đa nền tảng tích hợp <br/> <s
 Kính chào các thầy trong Hội đồng. Em là Phan Văn Thành, mã sinh viên DTH225766. Hôm nay em xin được trình bày đồ án tốt nghiệp với đề tài: Xây dựng hệ thống học từ vựng đa nền tảng tích hợp thuật toán lặp lại ngắt quãng. Dự án hướng tới việc ứng dụng thuật toán SuperMemo-2 và AI tạo sinh để hỗ trợ quá trình học và ôn tập từ vựng trên nhiều thiết bị.
 -->
 
----
-transition: slide-up
----
 
-<div class="h-full flex flex-col justify-center">
-<div class="badge badge-primary mb-3 animate-fade-up">TẦM NHÌN DỰ ÁN</div>
-<h1 class="animate-fade-up animate-delay-1 mb-2 text-3xl">Mục tiêu đồ án</h1>
-<p class="text-gray-500 mb-6 max-w-2xl animate-fade-up animate-delay-2 text-[13px]">Xây dựng sản phẩm hoàn thiện, giải quyết triệt để bài toán học từ vựng của người dùng.</p>
-
-<div class="grid grid-cols-2 gap-3">
-  <!-- Card 1: Multi-platform -->
-  <div class="feature-card animate-fade-up animate-delay-1 relative overflow-hidden group !p-4 flex items-center gap-4 bg-gradient-to-r from-orange-50/40 to-transparent">
-    <div class="w-10 h-10 shrink-0 bg-white rounded shadow-sm border border-orange-100 flex items-center justify-center text-[var(--lv-primary)]">
-      <div class="i-lucide-laptop text-lg"></div>
-    </div>
-    <div>
-      <h3 class="font-bold text-gray-900 mb-0.5 text-sm">Hệ sinh thái Đa nền tảng</h3>
-      <p class="text-xs text-gray-500 leading-snug">Trải nghiệm liền mạch qua Extension, Web & Mobile.</p>
-    </div>
-  </div>
-
-  <!-- Card 2: Spaced Repetition -->
-  <div class="feature-card animate-fade-up animate-delay-2 relative overflow-hidden group !p-4 flex items-center gap-4 bg-gradient-to-r from-blue-50/40 to-transparent">
-    <div class="w-10 h-10 shrink-0 bg-white rounded shadow-sm border border-blue-100 flex items-center justify-center text-blue-500">
-      <div class="i-lucide-brain text-lg"></div>
-    </div>
-    <div>
-      <h3 class="font-bold text-gray-900 mb-0.5 text-sm">SuperMemo-2</h3>
-      <p class="text-xs text-gray-500 leading-snug">Thuật toán tính chu kỳ ôn tập khoa học, cá nhân hóa.</p>
-    </div>
-  </div>
-
-  <!-- Card 3: AI -->
-  <div class="feature-card animate-fade-up animate-delay-3 relative overflow-hidden group !p-4 flex items-center gap-4 bg-gradient-to-r from-purple-50/40 to-transparent">
-    <div class="w-10 h-10 shrink-0 bg-white rounded shadow-sm border border-purple-100 flex items-center justify-center text-purple-500">
-      <div class="i-lucide-sparkles text-lg"></div>
-    </div>
-    <div>
-      <h3 class="font-bold text-gray-900 mb-0.5 text-sm">AI Sinh tạo</h3>
-      <p class="text-xs text-gray-500 leading-snug">Tích hợp LLM tạo ngữ cảnh, dịch thuật tự động.</p>
-    </div>
-  </div>
-
-  <!-- Card 4: Production-Ready -->
-  <div class="feature-card animate-fade-up animate-delay-4 relative overflow-hidden group !p-4 flex items-center gap-4 bg-gradient-to-r from-green-50/40 to-transparent">
-    <div class="w-10 h-10 shrink-0 bg-white rounded shadow-sm border border-green-100 flex items-center justify-center text-green-500">
-      <div class="i-lucide-rocket text-lg"></div>
-    </div>
-    <div>
-      <h3 class="font-bold text-gray-900 mb-0.5 text-sm">Triển khai thực tế</h3>
-      <p class="text-xs text-gray-500 leading-snug">Được thiết kế theo định hướng dễ triển khai trên môi trường thật.</p>
-    </div>
-  </div>
-</div>
-</div>
-
-<BrandFooter section="Mở đầu" />
-
-<!--
-Mục tiêu của đồ án là xây dựng một hệ thống học từ vựng, tập trung vào 4 phương diện: Trải nghiệm người dùng trên đa nền tảng; Tích hợp thuật toán SuperMemo-2 cá nhân hóa thời gian ôn tập; Ứng dụng AI tạo sinh để hỗ trợ ngữ cảnh học; và thiết kế kiến trúc hệ thống theo định hướng dễ triển khai thực tế.
--->
 
 ---
 transition: slide-up
@@ -188,16 +128,16 @@ transition: slide-up
 
 <div class="h-full flex flex-col justify-center">
 <div class="badge badge-primary mb-6 animate-fade-up">GIẢI PHÁP</div>
-<h1 class="animate-fade-up animate-delay-1 mb-16 text-5xl font-black tracking-tight">Ba Trụ Cột của LexiVocab</h1>
+<h1 class="animate-fade-up animate-delay-1 mb-16 text-5xl font-black tracking-tight">Giải pháp cốt lõi</h1>
 
 <div class="grid grid-cols-3 divide-x divide-gray-100 relative z-10 animate-fade-up animate-delay-2">
 <div class="pr-10">
 <PillarCard 
 number="1" 
-title="Bắt từ" 
+title="Thu thập" 
 enTitle="Capture"
 icon="i-lucide-scan-line"
-desc="Chrome Extension bắt từ vựng trực tiếp trên trang web, không làm gián đoạn luồng đọc và tư duy của bạn."
+desc="Chrome Extension thu thập từ vựng trực tiếp trên trang web, không làm gián đoạn luồng đọc và tư duy của bạn."
 delay="400" 
 />
 </div>
@@ -217,7 +157,7 @@ number="3"
 title="Hiểu sâu" 
 enTitle="Understand"
 icon="i-lucide-sparkles"
-desc="Tận dụng sức mạnh của AI để tạo ngữ cảnh cá nhân hóa, ví dụ thực tế giúp bạn hiểu cặn kẽ mọi tầng nghĩa."
+desc="Tận dụng sức mạnh của AI để tạo ngữ cảnh cá nhân hóa, ví dụ thực tế giúp bạn hiểu rõ cách sử dụng từ vựng."
 delay="800" 
 />
 </div>
@@ -227,7 +167,7 @@ delay="800"
 <BrandFooter section="Giải pháp" />
 
 <!--
-LexiVocab ra đời dựa trên 3 trụ cột: Capture (Bắt từ) - Chrome Extension lưu từ trực tiếp không gián đoạn; Remember (Nhớ lâu) - thuật toán SM-2 chuyển thông tin vào bộ nhớ dài hạn; Understand (Hiểu sâu) - AI tạo ngữ cảnh ví dụ thực tế giúp hiểu cặn kẽ mọi tầng nghĩa của từ.
+LexiVocab được xây dựng dựa trên 3 giá trị cốt lõi: Thu thập - Chrome Extension lưu từ trực tiếp không gián đoạn; Remember (Nhớ lâu) - thuật toán SM-2 chuyển thông tin vào bộ nhớ dài hạn; Understand (Hiểu sâu) - AI tạo ngữ cảnh ví dụ thực tế giúp hiểu cặn kẽ mọi tầng nghĩa của từ.
 -->
 
 ---
@@ -237,12 +177,12 @@ class: "!p-0 bg-[#09090B] text-white"
 
 <SectionDivider 
 number="02" 
-title="Hệ Sinh Thái 4 Mảnh Ghép" 
-desc="Kiến trúc Hub & Spoke kết nối đa nền tảng, bao phủ 100% không gian thiết bị." 
+title="Trải nghiệm đa nền tảng" 
+desc="Mô hình kết nối tập trung giúp đồng bộ dữ liệu tức thì trên mọi thiết bị người dùng." 
 />
 
 <!--
-Chuyển phần: Hệ sinh thái 4 mảnh ghép, thiết kế theo kiến trúc Hub & Spoke để bao phủ 100% không gian thiết bị của người dùng.
+Chuyển phần: Trải nghiệm đa nền tảng, được thiết kế để bao phủ 100% không gian thiết bị của người dùng.
 -->
 
 ---
@@ -251,7 +191,7 @@ transition: fade
 
 <div class="h-full flex flex-col p-8">
 <div class="badge badge-primary mb-2 animate-fade-up">ARCHITECTURE</div>
-<h1 class="animate-fade-up animate-delay-1 mb-4 text-left">Kiến trúc Hub & Spoke</h1>
+<h1 class="animate-fade-up animate-delay-1 mb-4 text-left">Mô hình kết nối tập trung</h1>
 
 <div class="flex-grow flex items-center justify-center animate-fade-up animate-delay-2">
 <HubSpoke />
@@ -276,7 +216,7 @@ transition: slide-up
 </div>
 <div class="text-right">
 <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Client 01</p>
-<p class="text-xs font-medium text-slate-600 italic">Instant Capture Engine</p>
+<p class="text-xs font-medium text-slate-600 italic">Module thu thập từ vựng tức thì</p>
 </div>
 </div>
 <div class="grid grid-cols-[1fr_1.3fr] gap-8 items-center flex-grow min-h-0">
@@ -285,15 +225,15 @@ transition: slide-up
 <div class="space-y-3 text-xs">
 <div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
 <div class="text-[#FF6B00] font-black shrink-0">01</div>
-<div><strong>Công nghệ Shadow DOM:</strong> Cách ly CSS, ngăn xung đột style với trang host, duy trì tính toàn vẹn của UI.</div>
+<div><strong>Tra cứu dễ dàng:</strong> Thu thập từ và tra nghĩa trực tiếp ngay trên trình duyệt một cách cực kỳ dễ dàng.</div>
 </div>
 <div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
 <div class="text-[#FF6B00] font-black shrink-0">02</div>
-<div><strong>Xử lý ngầm (Background):</strong> Lưu từ vựng tức thì mà không cần tải lại trang, giữ nguyên luồng tập trung.</div>
+<div><strong>Tự động nhận diện:</strong> Khi bạn gặp lại một từ đã lưu trong tương lai, Extension sẽ tự động highlight từ đó.</div>
 </div>
 <div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
 <div class="text-[#FF6B00] font-black shrink-0">03</div>
-<div><strong>Hiệu năng cao:</strong> Áp dụng chuẩn Manifest V3 mới nhất, siêu nhẹ và bảo mật dữ liệu người dùng.</div>
+<div><strong>Ôn tập tức thì:</strong> Khi di chuột vào từ đã highlight thì hiện nghĩa ngay lập tức, giúp củng cố trí nhớ.</div>
 </div>
 </div>
 </div>
@@ -328,7 +268,7 @@ The <span class="bg-orange-100 text-[#FF6B00] px-1 rounded-sm font-bold select-n
 <BrandFooter section="Hệ sinh thái" />
 
 <!--
-Thành phần đầu tiên là Chrome Extension, hỗ trợ tra cứu và lưu từ vựng trên trình duyệt. Về mặt kỹ thuật, extension sử dụng Shadow DOM để cách ly CSS, ngăn xung đột style của popup với trang web đang xem. Các tác vụ lưu từ vựng được xử lý ngầm (background script) nhằm hạn chế việc gián đoạn trải nghiệm đọc.
+Thành phần đầu tiên là Chrome Extension, giúp chúng ta bắt từ và tra nghĩa trực tiếp ngay trên trình duyệt một cách cực kỳ dễ dàng. Điểm nổi bật là tính năng tự động nhận diện: Khi bạn gặp lại một từ đã lưu trong tương lai, Extension sẽ tự động highlight từ đó. Về kỹ thuật, em sử dụng Shadow DOM để đảm bảo giao diện luôn hiển thị ổn định trên mọi trang web.
 -->
 
 ---
@@ -343,24 +283,24 @@ transition: fade
 </div>
 <div class="text-right">
 <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Client 02</p>
-<p class="text-xs font-medium text-slate-600 italic">Native Experience Engine</p>
+<p class="text-xs font-medium text-slate-600 italic">Tối ưu hiệu năng ứng dụng di động</p>
 </div>
 </div>
 <div class="grid grid-cols-[1fr_1.3fr] gap-8 items-center flex-grow min-h-0">
 <div class="animate-fade-up animate-delay-2">
-<h2 class="text-2xl font-black text-gray-900 mb-4 leading-tight">Học tập liền mạch,<br/><span class="text-[#FF6B00]">Mọi lúc mọi nơi.</span></h2>
+<h2 class="text-2xl font-black text-gray-900 mb-4 leading-tight">Học tập linh hoạt,<br/><span class="text-[#FF6B00]">Trên thiết bị di động.</span></h2>
 <div class="space-y-3 text-xs">
 <div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
 <div class="text-[#FF6B00] font-black shrink-0">01</div>
-<div><strong>Đồng bộ Real-time:</strong> Dữ liệu từ Extension và Web được đồng bộ tức thì qua Cloud.</div>
+<div><strong>Đồng bộ đám mây:</strong> Tự động đồng bộ kho từ vựng từ đám mây về điện thoại của bạn một cách linh hoạt.</div>
 </div>
 <div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
 <div class="text-[#FF6B00] font-black shrink-0">02</div>
-<div><strong>SRS Notification:</strong> Thuật toán gửi thông báo ôn bài chính xác vào "thời điểm vàng".</div>
+<div><strong>Nhắc nhở thông minh:</strong> Gửi thông báo nhắc ôn bài đúng vào thời gian đã cài đặt, tối ưu hóa trí nhớ.</div>
 </div>
 <div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
 <div class="text-[#FF6B00] font-black shrink-0">03</div>
-<div><strong>Native Performance:</strong> Trải nghiệm vuốt chạm mượt mà, tối ưu cho cả Android và iOS.</div>
+<div><strong>Widget màn hình chính:</strong> Tiếp cận từ vựng thụ động và hiệu quả ngay cả khi không mở ứng dụng.</div>
 </div>
 </div>
 </div>
@@ -402,7 +342,7 @@ transition: slide-up
 <div class="flex items-center justify-between mb-1 animate-fade-up">
 <div>
 <div class="badge badge-primary badge-outline text-[10px] mb-1 uppercase tracking-widest">SYSTEM ARCHITECTURE</div>
-<h1 class="text-2xl font-black text-slate-900 tracking-tight">Web <span class="text-blue-600">Dashboard</span></h1>
+<h1 class="text-2xl font-black text-slate-900 tracking-tight">Web <span class="text-[#FF6B00]">Dashboard</span></h1>
 </div>
 <div class="text-right">
 <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Client 03</p>
@@ -411,21 +351,21 @@ transition: slide-up
 </div>
 <div class="grid grid-cols-[1fr_2fr] gap-6 items-center flex-grow min-h-0">
 <div class="flex flex-col gap-3 animate-fade-up animate-delay-2 pr-4">
-<div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-blue-200 transition-all">
-<div class="text-blue-600 font-black shrink-0">01</div>
-<div class="text-xs"><strong>Automation:</strong> SePay Webhooks Sync tự động hóa quy trình thanh toán.</div>
+<div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
+<div class="text-[#FF6B00] font-black shrink-0">01</div>
+<div class="text-xs"><strong>Quản lý chuyên nghiệp:</strong> Quản lý tập trung toàn bộ kho từ vựng và thực hiện các hiệu chỉnh chuyên sâu.</div>
 </div>
-<div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-blue-200 transition-all">
-<div class="text-blue-600 font-black shrink-0">02</div>
-<div class="text-xs"><strong>SEO & i18n:</strong> Routing đa ngôn ngữ chuẩn quốc tế, tối ưu tìm kiếm.</div>
+<div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
+<div class="text-[#FF6B00] font-black shrink-0">02</div>
+<div class="text-xs"><strong>Thanh toán tự động:</strong> Tối ưu hóa quy trình đăng ký các gói Subscription qua giải pháp SePay.</div>
 </div>
-<div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-blue-200 transition-all">
-<div class="text-blue-600 font-black shrink-0">03</div>
-<div class="text-xs"><strong>Analytics:</strong> Biểu đồ trực quan theo dõi tiến độ và hiệu quả ghi nhớ.</div>
+<div class="p-3 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 items-start group hover:border-orange-200 transition-all">
+<div class="text-[#FF6B00] font-black shrink-0">03</div>
+<div class="text-xs"><strong>Phân tích học tập:</strong> Theo dõi chi tiết hiệu quả ghi nhớ qua các báo cáo và biểu đồ trực quan.</div>
 </div>
 </div>
 <div class="relative animate-fade-up animate-delay-3 h-[280px] min-h-0">
-<div class="absolute inset-0 bg-blue-500/5 blur-[80px] rounded-full translate-x-8 translate-y-8"></div>
+<div class="absolute inset-0 bg-orange-500/5 blur-[80px] rounded-full translate-x-8 translate-y-8"></div>
 <div class="h-full bg-white rounded-2xl shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] border border-slate-200 overflow-hidden flex flex-col relative">
 <div class="h-6 bg-slate-50 flex items-center px-4 gap-2 border-b border-slate-100">
 <div class="flex gap-1"><div class="w-1.5 h-1.5 rounded-full bg-slate-200"></div><div class="w-1.5 h-1.5 rounded-full bg-slate-200"></div><div class="w-1.5 h-1.5 rounded-full bg-slate-200"></div></div>
@@ -442,7 +382,7 @@ transition: slide-up
 <BrandFooter section="Hệ sinh thái" />
 
 <!--
-Web Dashboard trên Next.js, tích hợp SePay Webhooks tự động hóa nâng cấp VIP qua QR code. Biểu đồ Analytics trực quan theo dõi tiến độ và hiệu quả ghi nhớ theo thời gian.
+Web Dashboard đóng vai trò là trung tâm quản trị và phân tích chuyên sâu. Tại đây, người dùng quản lý tập trung kho từ vựng, thực hiện thanh toán tự động SePay và theo dõi hiệu quả ghi nhớ qua biểu đồ Analytics trực quan.
 -->
 
 ---
@@ -451,10 +391,10 @@ class: "!p-0 bg-[#09090B] text-white"
 transition: view-transition
 ---
 
-<SectionDivider 
-number="03" 
-title="Kiến trúc Backend & Bảo mật" 
-desc="Clean Architecture, CQRS, và cơ chế xác thực kép đảm bảo hiệu năng cốt lõi." 
+<SectionDivider
+  number="03"
+  title="Kiến trúc & Bảo mật"
+  desc="Clean Architecture, CQRS, và cơ chế xác thực Access/Refresh Token đảm bảo hiệu năng cốt lõi." 
 />
 
 <!--
@@ -567,7 +507,7 @@ Thực thi business logic và validation phức tạp. Ghi trực tiếp vào Pr
 <div class="mt-6 p-4 rounded-xl bg-blue-50/80 border border-blue-100">
 <p class="text-xs text-blue-900/80 leading-relaxed">
 <strong class="text-blue-600 block mb-1">Nhiệm vụ:</strong>
-Truy vấn tốc độ cao, không có side-effects. Có thể scale mạnh mẽ thông qua Read Replica.
+Truy vấn dữ liệu, không có side-effects. Có khả năng mở rộng thông qua cơ chế Read Replica.
 </p>
 </div>
 </div>
@@ -654,7 +594,7 @@ Cơ chế <br/>
 <div class="w-16 h-1.5 bg-blue-600 rounded-full mt-4"></div>
 </div>
 <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
-Sử dụng chuẩn <strong>JWT</strong> để cân bằng giữa bảo mật nghiêm ngặt và trải nghiệm học tập mượt mà.
+Sử dụng chuẩn <strong>JWT</strong> để đảm bảo tính bảo mật và tối ưu hóa trải nghiệm học tập của người dùng.
 </p>
 <div class="flex gap-2">
 <span class="px-2 py-1 bg-slate-100 rounded text-[9px] font-bold text-slate-400 uppercase">#Stateless</span>
@@ -707,7 +647,7 @@ transition: slide-up
 <!-- Left Side: Shortened Text -->
 <div class="animate-fade-up">
 <div class="text-[2rem] leading-tight font-black mb-1 text-slate-900 tracking-tight whitespace-nowrap">Database Design</div>
-<h2 class="text-slate-500 text-xs mb-6">Tối ưu truy vấn hàng triệu bản ghi.</h2>
+<h2 class="text-slate-500 text-xs mb-6">Tối ưu truy vấn dữ liệu lớn.</h2>
 <div class="space-y-4">
 <div class="p-4 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 hover:border-blue-200 transition-colors">
 <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center shrink-0 p-1.5 hover:scale-110 transition-transform duration-300">
@@ -715,14 +655,14 @@ transition: slide-up
 </div>
 <div>
 <h3 class="font-bold text-slate-800 text-[12px] mb-0.5">PostgreSQL (B-Tree Index)</h3>
-<p class="text-[10px] text-slate-500 leading-relaxed">Đánh chỉ mục (Index) trên trường <code>Word</code> và <code>NextReview</code>, giúp hệ thống truy vấn lịch ôn tập siêu tốc.</p>
+<p class="text-[10px] text-slate-500 leading-relaxed">Đánh chỉ mục (Index) trên các trường <code>Word</code> và <code>NextReview</code>, giúp hệ thống truy vấn dữ liệu nhanh chóng.</p>
 </div>
 </div>
 <div class="p-4 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-3 hover:border-orange-200 transition-colors">
 <div class="w-10 h-10 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center shrink-0"><div class="i-lucide-zap text-xl"></div></div>
 <div>
 <h3 class="font-bold text-slate-800 text-[12px] mb-0.5">Khử Chuẩn (Denormalization)</h3>
-<p class="text-[10px] text-slate-500 leading-relaxed">Lưu sẵn <code>WordText</code> ở bảng cá nhân (UserVocab). Không cần lệnh JOIN phức tạp khi render UI.</p>
+<p class="text-[10px] text-slate-500 leading-relaxed">Lưu sẵn <code>WordText</code> ở bảng cá nhân (UserVocab). Giảm thiểu các lệnh JOIN phức tạp khi render UI.</p>
 </div>
 </div>
 </div>
@@ -837,15 +777,7 @@ EF' = EF + (0.1 - (5-q) × (0.08 + (5-q) × 0.02))<br/>
 <div class="bg-orange-50 text-orange-500 w-7 h-7 rounded-lg flex items-center justify-center shrink-0"><div class="i-lucide-shuffle text-sm"></div></div>
 <div>
 <h4 class="font-bold text-[11px] text-slate-800">Fuzz Factor</h4>
-<p class="text-[9px] text-slate-500 mt-0.5">Lệch ±5% chu kỳ, tránh bị dồn thẻ (Review Hell).</p>
-</div>
-</div>
-<!-- Optimization 2 -->
-<div class="p-2.5 rounded-xl bg-white shadow-sm border border-slate-100 flex gap-2.5 items-center hover:border-blue-200 transition-colors">
-<div class="bg-blue-50 text-blue-500 w-7 h-7 rounded-lg flex items-center justify-center shrink-0"><div class="i-lucide-shield-alert text-sm"></div></div>
-<div>
-<h4 class="font-bold text-[11px] text-slate-800">Cơ chế Phạt (Soft Reset)</h4>
-<p class="text-[9px] text-slate-500 mt-0.5">Giảm 80% Interval thay vì reset 0 khi lỡ quên từ.</p>
+<p class="text-[9px] text-slate-500 mt-0.5">Lệch ±5% chu kỳ, tránh tình trạng quá tải thẻ ôn tập (Review Hell).</p>
 </div>
 </div>
 </div>
@@ -905,7 +837,7 @@ transition: slide-up
 </div>
 <div>
 <h3 class="font-bold text-slate-800 text-xs mb-0.5">Thiết kế Streaming (SSE)</h3>
-<p class="text-[10px] text-slate-500 leading-relaxed">Trả về từng phần dữ liệu tới client, giúp giảm độ trễ (latency) và tiêu thụ ít tài nguyên kết nối hơn WebSockets.</p>
+<p class="text-[10px] text-slate-500 leading-relaxed">Trả về từng phần dữ liệu tới client, giúp giảm độ trễ (latency) và phù hợp cho luồng dữ liệu một chiều hơn WebSockets.</p>
 </div>
 </div>
 
@@ -914,7 +846,7 @@ transition: slide-up
 <div class="i-lucide-infinity text-lg"></div>
 </div>
 <div>
-<h3 class="font-bold text-slate-800 text-xs mb-0.5">Provider-Agnostic</h3>
+<h3 class="font-bold text-slate-800 text-xs mb-0.5">Provider linh hoạt</h3>
 <p class="text-[10px] text-slate-500 leading-relaxed">Thiết kế abstraction layer cho phép thay đổi nhà cung cấp AI mà không ảnh hưởng logic chính.</p>
 </div>
 </div>
@@ -925,7 +857,7 @@ transition: slide-up
 <div class="absolute inset-0 bg-gradient-to-tr from-orange-50/50 to-transparent rounded-3xl border border-orange-100/50"></div>
 <div class="relative z-10 w-full p-4">
 <div class="text-[9px] font-bold text-orange-400 uppercase tracking-widest mb-2 flex items-center gap-1.5">
-<div class="i-lucide-zap text-[10px]"></div> Live Demo Output
+<div class="i-lucide-zap text-[10px]"></div> Ví dụ kết quả xử lý AI
 </div>
 <StreamingText text='"Serendipity" — Sự tình cờ may mắn. Ví dụ, Alexander Fleming phát hiện ra Penicillin là một serendipity vĩ đại.' />
 </div>
@@ -985,7 +917,7 @@ Sử dụng công nghệ Container hóa để đảm bảo hệ thống hoạt �
 <h3 class="text-xl font-bold text-slate-800">Docker (Portable)</h3>
 </div>
 <p class="text-[11px] text-slate-500 leading-relaxed italic">
-Đóng gói toàn bộ hệ thống vào Container. Sẵn sàng triển khai nhanh chóng trên bất kỳ <strong>VPS</strong> hoặc Cloud Server nào mà không lo xung đột môi trường.
+Đóng gói toàn bộ hệ thống vào Container. Sẵn sàng triển khai nhanh chóng trên các môi trường <strong>hỗ trợ Docker</strong> mà không lo xung đột.
 </p>
 </div>
 
@@ -1023,7 +955,7 @@ desc="Trải nghiệm thực tế hệ sinh thái LexiVocab."
 />
 
 <!--
-Chuyển phần: Live Demo. Bây giờ, em xin phép bắt đầu phần Demo thực tế qua 4 bước: Bắt từ vựng 'Serendipity' trên trình duyệt; Ôn tập trên Mobile; Sử dụng AI Streaming; và Quản lý trên Web Dashboard.
+Chuyển phần: Live Demo. Bây giờ, em xin phép bắt đầu phần Demo thực tế qua 3 giai đoạn chính: Capture trên Extension; Quản trị & AI trên Web Dashboard; và Học tập trên Mobile App.
 -->
 ---
 layout: cover
@@ -1078,7 +1010,7 @@ transition: slide-up
 </div>
 
 <div class="mt-8 bg-green-50 border border-green-200 text-green-700 p-4 rounded-xl text-center font-bold text-sm animate-fade-up animate-delay-3" v-click>
-<div class="i-lucide-trophy text-yellow-500 inline-block text-lg mb-[-4px] mr-1"></div> LexiVocab đã hoàn thiện hệ sinh thái và có thể triển khai thử nghiệm.
+<div class="i-lucide-trophy text-yellow-500 inline-block text-lg mb-[-4px] mr-1"></div> Hệ thống đã đạt được các mục tiêu đề ra và sẵn sàng cho giai đoạn vận hành thử nghiệm.
 </div>
 </div>
 
@@ -1126,7 +1058,7 @@ Offline Mode với Service Worker + IndexedDB.
 Phát triển iOS Widget bằng Native Modules (SwiftUI).
 </div>
 <div class="bg-white p-3 rounded border-l-4 border-[#FF6B00] shadow-sm text-xs text-gray-700 font-medium">
-Tự host Fine-tuned model nhỏ (Llama 3B) giảm chi phí.
+Phát triển các mô hình ngôn ngữ nhỏ để tối ưu hóa chi phí và tính riêng tư.
 </div>
 </div>
 </div>
@@ -1168,7 +1100,7 @@ class: text-center
 </div>
 
 <!--
-Phần trình bày của em đến đây là kết thúc. Em xin chân thành cảm ơn Quý Thầy Cô Hội đồng đã dành thời gian lắng nghe. Em rất mong nhận được những câu hỏi và góp ý từ Quý Thầy Cô để hoàn thiện dự án hơn nữa. Em xin cảm ơn ạ!
+Phần trình bày của em đến đây là kết thúc. Em xin chân thành cảm ơn hai thầy đã dành thời gian lắng nghe. Em rất mong nhận được những câu hỏi và góp ý từ hai thầy để hoàn thiện dự án hơn nữa. Em xin cảm ơn ạ!
 -->
 
 
