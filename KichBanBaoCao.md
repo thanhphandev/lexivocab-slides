@@ -38,9 +38,9 @@ Sau đây, em xin phép bắt đầu bằng những rào cản thực tế mà n
 
 ### SLIDE 4: Giải pháp - Hệ giá trị cốt lõi
 **Lời thoại:**
-"Để giải quyết các vấn đề trên, LexiVocab tập trung vào 3 giá trị then chốt: **Capture (Bắt từ)** thông qua Chrome Extension; **Remember (Ghi nhớ)** sử dụng thuật toán SM-2 để sắp xếp lịch ôn tập; và **Understand (Hiểu sâu)** dùng AI để tạo ví dụ và ngữ cảnh thực tế."
+"Để giải quyết các vấn đề trên, Hệ thống tập trung vào 3 giá trị then chốt: **Thu thập** thông qua Chrome Extension; **Ghi nhớ** sử dụng thuật toán SM-2 để sắp xếp lịch ôn tập; và **Hiểu sâu** dùng AI để tạo ví dụ và ngữ cảnh thực tế."
 
-**Từ khóa:** 3 Giá trị: **Capture** (Extension), **Remember** (SM-2), **Understand** (AI).
+**Từ khóa:** 3 Giá trị: **Thu thập** (Extension), **Ghi nhớ** (SM-2), **Hiểu sâu** (AI).
 
 ---
 
@@ -48,17 +48,17 @@ Sau đây, em xin phép bắt đầu bằng những rào cản thực tế mà n
 
 ### SLIDE 5: Chuyển phần: Trải nghiệm đa nền tảng
 **Lời thoại:**
-"Tiếp theo, em xin trình bày về cách LexiVocab bao phủ các thiết bị của người dùng thông qua một mô hình kết nối tập trung."
+"Tiếp theo, em xin trình bày cách hệ thống hiện diện và đồng bộ hóa trên mọi thiết bị của người dùng thông qua một mô hình kết nối tập trung."
 
 ### SLIDE 6: Mô hình kết nối tập trung
 **Lời thoại:**
-"Hệ thống sử dụng **Core API (ASP.NET Core)** làm trung tâm, đóng vai trò là "bộ não" điều phối và đồng bộ dữ liệu giữa 3 ứng dụng vệ tinh: Chrome Extension, Mobile App và Web Dashboard. Cấu trúc kết nối tập trung này giúp người dùng có một trải nghiệm liền mạch: lưu từ vựng trên máy tính và ôn tập ngay trên điện thoại mà không gặp bất kỳ trở ngại nào."
+"Hệ thống sử dụng **Core API (ASP.NET Core)** làm trung tâm, đóng vai trò là "bộ não" điều phối và đồng bộ dữ liệu giữa 3 ứng dụng vệ tinh: Chrome Extension, Mobile App và Web Dashboard. Cấu trúc kết nối tập trung này giúp người dùng có một trải nghiệm liền mạch: lưu từ vựng trên máy tính và ôn tập ngay trên điện thoại mà không gặp bất kỳ trở ngại nào. Ngoài ra hệ thống còn hỗ trợ đa ngôn ngữ, giúp hỗ trợ bản địa hoá tốt hơn"
 
 **Từ khóa:** **Core API (ASP.NET Core)**, 3 vệ tinh, **Đồng bộ dữ liệu**, trải nghiệm liền mạch.
 
 ### SLIDE 7: Chrome Extension - Bắt từ ngay khi đang đọc
 **Lời thoại:**
-"Thành phần đầu tiên là **Chrome Extension**, giúp chúng ta bắt từ và tra nghĩa trực tiếp ngay trên trình duyệt một cách cực kỳ dễ dàng. Điểm nổi bật là tính năng **tự động nhận diện**: Khi bạn gặp lại một từ đã lưu trong tương lai, Extension sẽ tự động highlight từ đó để chúng ta ôn tập ngay lập tức. Về kỹ thuật, em sử dụng **Shadow DOM** để đảm bảo giao diện luôn hiển thị ổn định trên mọi trang web."
+"Thành phần đầu tiên là **Chrome Extension**, giúp chúng ta bắt từ và tra nghĩa trực tiếp ngay trên trình duyệt một cách cực kỳ dễ dàng. Điểm nổi bật là tính năng **tự động nhận diện**: Khi bạn gặp lại một từ đã lưu trong tương lai, Extension sẽ tự động highlight từ đó. Khi cần ôn tập, chúng ta chỉ cần di chuột vào từ được highlight, toàn bộ thông tin ngữ nghĩa sẽ hiển thị tức thì mà không cần phải chuyển tab."
 
 **Từ khóa:** Tra cứu dễ dàng, **Tự động nhận diện**, **Ôn tập tức thì (Hover)**.
 
@@ -116,7 +116,7 @@ Sau đây, em xin phép bắt đầu bằng những rào cản thực tế mà n
 
 ### SLIDE 17: Thuật toán Spaced Repetition (SM-2)
 **Lời thoại:**
-"Trái tim của LexiVocab chính là thuật toán **SuperMemo-2 (SM-2)**. Như các thầy thấy trên màn hình, hệ thống sẽ tính toán thời điểm ôn tập tối ưu dựa trên hai công thức chính:
+"Thành phần của hệ thống chính là thuật toán **SuperMemo-2 (SM-2)**. Như các thầy thấy trên màn hình, hệ thống sẽ tính toán thời điểm ôn tập tối ưu dựa trên hai công thức chính:
 
 Đầu tiên là việc cập nhật **EF (Easiness Factor)** - hay còn gọi là chỉ số độ dễ của từ. Dựa trên đánh giá **q** từ 0 đến 5 của người dùng sau mỗi lần học, thuật toán sẽ tự động điều chỉnh EF. Nếu người dùng đánh giá từ này dễ (q=4 hoặc 5), EF sẽ tăng lên; ngược lại nếu từ khó (q < 4), EF sẽ giảm xuống.
 
@@ -127,13 +127,13 @@ Ngoài ra, em có bổ sung thêm cơ chế **Fuzz Factor** (lệch ±5% chu k�
 **Từ khóa:** **SM-2**, Easiness Factor (**EF**), **Interval I(n)**, **Fuzz Factor**.
 
 
-"Chức năng tra cứu ngữ cảnh AI sử dụng cơ chế **Streaming qua Server-Sent Events (SSE)**. Việc trả về từng phần dữ liệu giúp giảm độ trễ (latency) ở Client. Hệ thống được thiết kế theo hướng **Lớp trung gian (Abstraction)** cho nhà cung cấp AI, cho phép chuyển đổi linh hoạt giữa OpenAI hoặc Gemini mà không ảnh hưởng logic chính."
+"Đối với chức năng AI, em áp dụng cơ chế **Streaming** giúp hiển thị kết quả ngay lập tức theo thời gian thực. Thay vì phải chờ đợi phản hồi toàn bộ, dữ liệu được 'đổ' về liên tục giúp người dùng có thể theo dõi ngữ cảnh ngay khi kết quả vừa được khởi tạo. Ngoài ra, hệ thống được thiết kế theo hướng **Lớp trung gian (Abstraction)**, cho phép chuyển đổi linh hoạt giữa OpenAI hoặc Gemini mà không ảnh hưởng đến logic cốt lõi."
 
 **Từ khóa:** AI Context, **Streaming SSE**, Giảm độ trễ, **Lớp trung gian AI**.
 
 ### SLIDE 19: Đóng gói & Triển khai (Docker & Railway)
 **Lời thoại:**
-"Về phần triển khai, em sử dụng **Docker** để đóng gói toàn bộ ứng dụng. Bằng cách áp dụng kỹ thuật **Multi-stage Docker**, em đã tối ưu tối đa dung lượng image, đảm bảo hệ thống có tính linh hoạt cực cao và sẵn sàng triển khai nhanh chóng trên mọi môi trường. Hiện tại, em đang triển khai thực tế trên nền tảng **Railway** để tận dụng quy trình CI/CD tự động, giúp việc cập nhật tính năng trở nên an toàn hơn."
+"Về phần triển khai, em sử dụng **Docker** để đóng gói ứng dụng, giúp loại bỏ hoàn toàn các lỗi phát sinh do khác biệt môi trường. Điều này đảm bảo LexiVocab có tính **di động (portability)** cực cao, sẵn sàng di chuyển hoặc mở rộng sang bất kỳ nền tảng cloud nào mà không cần cấu hình lại mã nguồn. Hiện tại, dự án đã được vận hành thực tế trên **Railway** với quy trình tự động hóa hoàn toàn, giúp việc cập nhật tính năng trở nên an toàn hơn."
 
 **Từ khóa:** **Docker**, **Multi-stage** (tối ưu dung lượng), **Railway**, CI/CD tự động.
 

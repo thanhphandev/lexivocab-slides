@@ -915,10 +915,10 @@ Sử dụng công nghệ Container hóa để đảm bảo hệ thống hoạt �
 </div>
 
 <div class="space-y-6 animate-fade-in-right">
-<div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-400 transition-all duration-300 group">
 <div class="flex items-center gap-4 mb-3">
-<div class="p-2.5 bg-[#1D2235] text-white rounded-xl">
-<img src="/docker_logo.png" class="w-5 h-5 object-contain" />
+<div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+<img src="/docker_logo.png" class="w-full h-full object-contain" alt="Docker Logo" />
 </div>
 <h3 class="text-xl font-bold text-slate-800">Docker (Portable)</h3>
 </div>
@@ -927,10 +927,10 @@ Sử dụng công nghệ Container hóa để đảm bảo hệ thống hoạt �
 </p>
 </div>
 
-<div class="p-6 bg-orange-50/50 rounded-2xl border border-orange-100 shadow-sm ring-1 ring-orange-200/50">
+<div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-orange-400 transition-all duration-300 group">
 <div class="flex items-center gap-4 mb-3">
-<div class="p-2.5 bg-[#FF6B00] text-white rounded-xl">
-<img src="/railway_logo.png" class="w-5 h-5 object-contain" />
+<div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
+<img src="/railway_logo.png" class="w-full h-full object-contain" alt="Railway Logo" />
 </div>
 <h3 class="text-xl font-bold text-slate-800">Railway (Active)</h3>
 </div>
