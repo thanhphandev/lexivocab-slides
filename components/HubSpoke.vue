@@ -9,8 +9,8 @@ onMounted(() => {
 
 const clients = [
   { label: 'Web Dashboard', sub: 'Next.js', img: '/nextjs_logo.png' },
-  { label: 'Chrome Extension', sub: 'Manifest V3', img: '/chrome_logo.png' },
-  { label: 'Mobile App', sub: 'React Native', img: '/expo_logo.png' },
+  { label: 'Chrome Extension', sub: 'Plasmo', img: '/chrome_logo.png' },
+  { label: 'Mobile App', sub: 'React Native - Expo', img: '/expo_logo.png' },
 ]
 </script>
 

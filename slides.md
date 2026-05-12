@@ -621,7 +621,7 @@ transition: slide-up
   <div class="flex items-center gap-4 mb-2">
     <span>EF' = EF + (0.1 - (5-q) × (0.08 + (5-q) × 0.02))</span>
     <div class="text-[8px] text-slate-400 font-sans italic border-l border-slate-700 pl-2">
-      <b>EF:</b> Độ dễ (Easiness Factor)<br/>
+      <b>EF:</b> Độ dễ (Mặc định: 2.5)<br/>
       <b>q:</b> Đánh giá của người dùng (0-5)
     </div>
   </div>
@@ -677,7 +677,7 @@ transition: slide-up
 <BrandFooter section="Use Cases" />
 
 <!--
-Một thành phần cốt lõi của hệ thống là thuật toán SuperMemo-2. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm Fuzz Factor (lệch ±5%) để tránh hiện tượng quá nhiều thẻ ôn tập bị dồn vào cùng một ngày (hay còn gọi là 'Review Hell'), giúp trải nghiệm học tập tự nhiên hơn.
+Một thành phần cốt lõi của hệ thống là thuật toán SuperMemo-2. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (với giá trị mặc định ban đầu là 2.5) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm Fuzz Factor (lệch ±5%) để tránh hiện tượng quá nhiều thẻ ôn tập bị dồn vào cùng một ngày (hay còn gọi là 'Review Hell'), giúp trải nghiệm học tập tự nhiên hơn.
 -->
 
 ---
