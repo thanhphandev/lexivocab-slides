@@ -110,9 +110,9 @@ Sau đây, em xin phép bắt đầu bằng những rào cản thực tế mà n
 
 ## PHẦN 4: USE-CASES LÕI & XỬ LÝ TẢI
 
-### SLIDE 16: Chuyển phần: Use-Cases & Xử lý tải
+### SLIDE 16: Chuyển phần: Công nghệ cốt lõi
 **Lời thoại:**
-"Sau đây là cách hệ thống xử lý các tác vụ thông minh và tối ưu hóa hiệu năng thực tế."
+"Sau đây, em xin trình bày về những công nghệ cốt lõi giúp LexiVocab trở nên thông minh và tối ưu hơn."
 
 ### SLIDE 17: Thuật toán Spaced Repetition (SM-2)
 **Lời thoại:**

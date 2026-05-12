@@ -737,8 +737,8 @@ transition: view-transition
 
 <SectionDivider 
 number="04" 
-title="Use-Cases & Xử lý tải" 
-desc="Thuật toán lõi, tối ưu truy vấn Database, và kỹ thuật Streaming AI." 
+title="Công nghệ cốt lõi" 
+desc="Thuật toán SM-2 tối ưu trí nhớ và giải pháp Streaming AI." 
 />
 
 <!--
