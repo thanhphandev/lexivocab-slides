@@ -28,7 +28,7 @@ Xây dựng hệ thống học từ vựng đa nền tảng tích hợp <br/> <s
 </h1>
 
 <p class="cover-sub text-left mt-4" v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1, transition: { delay: 600, duration: 800 } }">
-Ứng dụng thuật toán Spaced Repetition SuperMemo-2 và AI sinh tạo để hỗ trợ quá trình học và ôn tập từ vựng trên nhiều thiết bị.
+Ứng dụng thuật toán Spaced Repetition SuperMemo-2 và AI tạo sinh để hỗ trợ quá trình học và ôn tập từ vựng trên nhiều thiết bị.
 </p>
 
 <div class="cover-meta flex justify-between items-end border-t border-gray-200 pt-6 mt-12 text-left" v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1, transition: { delay: 900, duration: 800 } }">
