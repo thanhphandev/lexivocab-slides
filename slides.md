@@ -394,7 +394,7 @@ transition: view-transition
 <SectionDivider
   number="03"
   title="Kiến trúc & Bảo mật"
-  desc="Clean Architecture, CQRS, và cơ chế xác thực Access/Refresh Token đảm bảo hiệu năng cốt lõi." 
+  desc="Clean Architecture, và cơ chế xác thực Access/Refresh Token đảm bảo hiệu năng cốt lõi." 
 />
 
 <!--
@@ -431,151 +431,6 @@ transition: slide-up
 
 <!--
 Backend được thiết kế theo Clean Architecture, tách biệt Business Logic khỏi Framework và Database. Lớp Domain ở trung tâm chứa các quy tắc cốt lõi, giúp hệ thống dễ mở rộng và dễ bảo trì hơn. Chúng ta có thể thay đổi Database hoặc tích hợp thêm các dịch vụ bên thứ ba mà không cần sửa đổi Logic nghiệp vụ chính.
--->
-
----
-transition: fade
----
-
-<div class="h-full flex flex-col px-8 py-4 justify-center">
-<div class="badge badge-primary badge-outline text-[10px] mb-2 uppercase tracking-widest animate-fade-up w-max">DESIGN PATTERN</div>
-<h1 class="text-4xl font-black text-slate-900 tracking-tight mb-2 flex items-baseline gap-1">
-<span class="animate-fade-up animate-delay-1 inline-flex items-baseline">C<span class="text-slate-400 font-medium text-3xl">ommand</span></span>
-<span class="animate-fade-up animate-delay-2 inline-flex items-baseline">Q<span class="text-slate-400 font-medium text-3xl">uery</span></span>
-<span class="animate-fade-up animate-delay-3 inline-flex items-baseline">R<span class="text-slate-400 font-medium text-3xl">esponsibility</span></span>
-<span class="animate-fade-up animate-delay-4 inline-flex items-baseline">S<span class="text-slate-400 font-medium text-3xl">egregation</span></span>
-</h1>
-<p class="text-slate-500 text-[14px] mb-8 max-w-2xl animate-fade-up animate-delay-2 leading-relaxed">
-Phân tách hoàn toàn luồng xử lý <strong class="text-[#FF6B00] font-semibold">Ghi (Command)</strong> và <strong class="text-blue-500 font-semibold">Đọc (Query)</strong> để tối ưu hóa hiệu năng độc lập và khả năng mở rộng hệ thống.
-</p>
-
-<div class="grid grid-cols-2 gap-8 items-stretch flex-grow min-h-0">
-<!-- Command Side -->
-<div class="animate-fade-right animate-delay-3 relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-orange-200 transition-all duration-300 flex flex-col overflow-hidden group">
-<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-orange-100/50 to-transparent rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
-
-<div class="flex items-center gap-4 mb-6">
-<div class="w-12 h-12 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-[#FF6B00] shrink-0 shadow-sm group-hover:scale-110 transition-transform">
-<div class="i-lucide-pen-tool text-xl"></div>
-</div>
-<div>
-<h3 class="font-black text-xl text-slate-800 leading-tight">Command</h3>
-<p class="text-[10px] text-[#FF6B00] font-black uppercase tracking-widest">Luồng Ghi Dữ Liệu</p>
-</div>
-</div>
-
-<div class="flex-grow space-y-2.5">
-<div class="bg-white rounded-lg p-3 font-mono text-[11px] text-slate-600 border border-slate-100 shadow-sm flex items-center gap-3">
-<div class="w-1.5 h-1.5 rounded-full bg-[#FF6B00]"></div> CreateFlashcardCommand
-</div>
-<div class="bg-white rounded-lg p-3 font-mono text-[11px] text-slate-600 border border-slate-100 shadow-sm flex items-center gap-3">
-<div class="w-1.5 h-1.5 rounded-full bg-[#FF6B00]"></div> UpdateReviewResultCommand
-</div>
-</div>
-
-<div class="mt-6 p-4 rounded-xl bg-orange-50/80 border border-orange-100">
-<p class="text-xs text-orange-900/80 leading-relaxed">
-<strong class="text-[#FF6B00] block mb-1">Nhiệm vụ:</strong>
-Thực thi business logic và validation phức tạp. Ghi trực tiếp vào Primary Database.
-</p>
-</div>
-</div>
-
-<!-- Query Side -->
-<div class="animate-fade-left animate-delay-3 relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex flex-col overflow-hidden group">
-<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-100/50 to-transparent rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
-
-<div class="flex items-center gap-4 mb-6">
-<div class="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-500 shrink-0 shadow-sm group-hover:scale-110 transition-transform">
-<div class="i-lucide-search text-xl"></div>
-</div>
-<div>
-<h3 class="font-black text-xl text-slate-800 leading-tight">Query</h3>
-<p class="text-[10px] text-blue-500 font-black uppercase tracking-widest">Luồng Đọc Dữ Liệu</p>
-</div>
-</div>
-
-<div class="flex-grow space-y-2.5">
-<div class="bg-white rounded-lg p-3 font-mono text-[11px] text-slate-600 border border-slate-100 shadow-sm flex items-center gap-3">
-<div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> GetDueFlashcardsQuery
-</div>
-<div class="bg-white rounded-lg p-3 font-mono text-[11px] text-slate-600 border border-slate-100 shadow-sm flex items-center gap-3">
-<div class="w-1.5 h-1.5 rounded-full bg-blue-500"></div> GetUserStatisticsQuery
-</div>
-</div>
-
-<div class="mt-6 p-4 rounded-xl bg-blue-50/80 border border-blue-100">
-<p class="text-xs text-blue-900/80 leading-relaxed">
-<strong class="text-blue-600 block mb-1">Nhiệm vụ:</strong>
-Truy vấn dữ liệu, không có side-effects. Có khả năng mở rộng thông qua cơ chế Read Replica.
-</p>
-</div>
-</div>
-</div>
-</div>
-
-<BrandFooter section="Backend" />
-
-<!--
-Em kết hợp mẫu thiết kế CQRS để phân tách luồng Ghi (Command) và luồng Đọc (Query). Luồng Ghi xử lý các logic phức tạp và validation, trong khi luồng Đọc được tối ưu cho nhu cầu truy vấn đọc, không gây side-effect, giúp hệ thống dễ dàng scale theo chiều ngang.
--->
-
----
-transition: slide-up
----
-
-<div class="h-full flex flex-col px-8 py-2 justify-center overflow-hidden">
-<div class="badge badge-primary badge-outline text-[10px] mb-2 uppercase tracking-widest animate-fade-up">MEDIATR</div>
-<div class="grid grid-cols-[1.2fr_1fr] gap-8 items-center flex-grow min-h-0">
-<div class="animate-fade-up animate-delay-1">
-<h1 class="text-3xl font-black text-slate-900 tracking-tight mb-1">MediatR & Pipeline</h1>
-<h2 class="text-[#FF6B00] text-lg font-bold mb-4 animate-fade-up animate-delay-2">Xử lý các tác vụ xuyên suốt</h2>
-<p class="mb-4 animate-fade-up animate-delay-3 text-sm text-slate-600">Điều phối Command/Query đến đúng Handler tương ứng thông qua Middleware Pipeline tập trung.</p>
-<div class="space-y-4 animate-fade-up animate-delay-4 text-xs font-mono text-gray-600">
-<div class="flex items-center gap-3 bg-white p-3 rounded-xl border border-gray-100 shadow-sm">
-<div class="w-6 h-6 rounded bg-gray-100 flex items-center justify-center text-[#FF6B00] font-bold">1</div>
-<div><strong>LoggingBehavior:</strong> Tự động ghi nhật ký hệ thống (I/O) cho mọi yêu cầu.</div>
-</div>
-<div class="flex items-center gap-3 bg-white p-3 rounded-xl border border-gray-100 shadow-sm">
-<div class="w-6 h-6 rounded bg-gray-100 flex items-center justify-center text-[#FF6B00] font-bold">2</div>
-<div><strong>ValidationBehavior:</strong> Kiểm tra tính hợp lệ của dữ liệu đầu vào.</div>
-</div>
-<div class="flex items-center gap-3 bg-orange-50 text-[#FF6B00] p-3 rounded-xl border border-orange-200 font-bold">
-<div class="w-6 h-6 rounded bg-orange-100 flex items-center justify-center">3</div>
-<div><strong>Target Handler:</strong> Thực thi logic nghiệp vụ và xử lý dữ liệu.</div>
-</div>
-</div>
-</div>
-<div class="animate-fade-up animate-delay-3 flex flex-col items-center gap-1 scale-95 origin-top">
-  <!-- Request -->
-  <div class="px-4 py-1.5 bg-slate-800 text-white rounded shadow text-[10px] font-mono">Request</div>
-  <div class="text-slate-300 text-xs">↓</div>
-  
-  <!-- Pipeline -->
-  <div class="w-full max-w-[200px] border-2 border-dashed border-slate-200 rounded-2xl p-3 bg-slate-50/50">
-    <div class="text-center text-[8px] font-bold text-slate-400 uppercase tracking-widest mb-2">MediatR Pipeline</div>
-    <div class="space-y-1.5">
-      <div class="bg-white border border-slate-100 p-2 rounded-lg shadow-sm text-[10px] font-bold text-slate-600 flex items-center gap-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Logging
-      </div>
-      <div class="bg-white border border-slate-100 p-2 rounded-lg shadow-sm text-[10px] font-bold text-slate-600 flex items-center gap-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Validation
-      </div>
-      <div class="bg-[#FF6B00] p-2 rounded-lg shadow-md text-[10px] font-bold text-white flex items-center gap-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-white"></span> Target Handler
-      </div>
-    </div>
-  </div>
-  
-  <div class="text-slate-300 text-xs">↓</div>
-  <!-- Response -->
-  <div class="px-4 py-1.5 bg-emerald-500 text-white rounded shadow text-[10px] font-mono">Response</div>
-</div>
-</div>
-</div>
-
-<!--
-Để điều phối mô hình CQRS, em sử dụng thư viện MediatR. Mọi yêu cầu đều được xử lý tập trung qua một Pipeline Middleware. Tại đây, hệ thống sẽ tự động thực thi các tác vụ xuyên suốt như: Logging và Validation. Cơ chế này giúp mã nguồn sạch sẽ, loại bỏ lặp lại logic và nâng cao khả năng bảo trì.
 -->
 
 ---
@@ -810,7 +665,7 @@ transition: slide-up
 <div class="bg-white p-2.5 rounded-xl shadow-sm border border-green-100 flex items-center gap-2.5">
 <div class="w-1 h-full bg-green-400 rounded-full"></div>
 <div>
-<div class="font-bold text-[10px] text-green-600 uppercase tracking-wider">Dễ (3-5)</div>
+<div class="font-bold text-[10px] text-green-600 uppercase tracking-wider">Dễ (4-5)</div>
 <div class="text-[8px] text-slate-500">Tăng EF, giãn 1-4 tháng</div>
 </div>
 </div>
@@ -991,7 +846,7 @@ transition: slide-up
 <div class="glass-card !p-5">
 <div class="text-[#FF6B00] font-bold text-sm mb-2 border-b border-gray-100 pb-2 flex items-center gap-2"><div class="i-lucide-server"></div> Về Kiến trúc</div>
 <ul class="text-xs space-y-2 text-gray-600 list-disc pl-4">
-<li>Clean Architecture, CQRS (MediatR).</li>
+<li>Clean Architecture.</li>
 <li>Bảo mật Stateless.</li>
 </ul>
 </div>

@@ -159,7 +159,7 @@ Ngoài ra, em có bổ sung thêm cơ chế **Fuzz Factor** (lệch ±5% chu k�
 
 ### SLIDE 24: Hạn chế & Hướng phát triển
 **Lời thoại:**
-"Tất nhiên hệ thống vẫn còn những hạn chế như chưa hỗ trợ đầy đủ Offline Mode hay chi phí API AI còn cao. Trong tương lai, em sẽ phát triển Offline Mode with IndexedDB và tự host các Model AI nhỏ như Llama 3B để tối ưu chi phí và tăng tính riêng tư."
+"Hệ thống vẫn còn những hạn chế như chưa hỗ trợ đầy đủ Offline Mode hay chi phí API AI còn cao. Trong tương lai, em sẽ phát triển Offline Mode with IndexedDB và tự host các Model AI nhỏ như Llama 3B để tối ưu chi phí và tăng tính riêng tư."
 
 **Từ khóa:** Hạn chế (**Offline**, **Cost**), Tương lai (**Model nhỏ**, IndexedDB).
 
