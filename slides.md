@@ -763,8 +763,14 @@ transition: slide-up
 <div class="i-lucide-function-square"></div> SM-2 Formula
 </div>
 <div class="font-mono text-[10px] leading-relaxed relative z-10">
-EF' = EF + (0.1 - (5-q) × (0.08 + (5-q) × 0.02))<br/>
-<span class="text-blue-300 mt-0.5 block opacity-80">I(n) = I(n-1) × EF</span>
+  <div class="flex items-center gap-4 mb-2">
+    <span>EF' = EF + (0.1 - (5-q) × (0.08 + (5-q) × 0.02))</span>
+    <div class="text-[8px] text-slate-400 font-sans italic border-l border-slate-700 pl-2">
+      <b>EF:</b> Độ dễ (Easiness Factor)<br/>
+      <b>q:</b> Đánh giá của người dùng (0-5)
+    </div>
+  </div>
+  <div class="text-blue-300 mt-1 block opacity-80">I(n) = I(n-1) × EF</div>
 </div>
 </div>
 <!-- Optimization Blocks -->
@@ -912,7 +918,7 @@ Sử dụng công nghệ Container hóa để đảm bảo hệ thống hoạt �
 <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
 <div class="flex items-center gap-4 mb-3">
 <div class="p-2.5 bg-[#1D2235] text-white rounded-xl">
-<div class="i-lucide-container w-5 h-5"></div>
+<img src="/docker_logo.png" class="w-5 h-5 object-contain" />
 </div>
 <h3 class="text-xl font-bold text-slate-800">Docker (Portable)</h3>
 </div>
@@ -924,7 +930,7 @@ Sử dụng công nghệ Container hóa để đảm bảo hệ thống hoạt �
 <div class="p-6 bg-orange-50/50 rounded-2xl border border-orange-100 shadow-sm ring-1 ring-orange-200/50">
 <div class="flex items-center gap-4 mb-3">
 <div class="p-2.5 bg-[#FF6B00] text-white rounded-xl">
-<div class="i-lucide-cloud-upload w-5 h-5"></div>
+<img src="/railway_logo.png" class="w-5 h-5 object-contain" />
 </div>
 <h3 class="text-xl font-bold text-slate-800">Railway (Active)</h3>
 </div>

@@ -116,9 +116,15 @@ Sau đây, em xin phép bắt đầu bằng những rào cản thực tế mà n
 
 ### SLIDE 17: Thuật toán Spaced Repetition (SM-2)
 **Lời thoại:**
-"Một thành phần cốt lõi của hệ thống là thuật toán **SuperMemo-2**. Dựa trên đánh giá độ khó của người dùng, hệ thống tính toán EF (Easiness Factor) để giãn cách chu kỳ ôn tập. Em đã cải tiến thêm **Fuzz Factor (lệch ±5%)** để tránh hiện tượng 'Review Hell' - khi quá nhiều thẻ dồn vào cùng một ngày, giúp trải nghiệm học tập tự nhiên hơn."
+"Trái tim của LexiVocab chính là thuật toán **SuperMemo-2 (SM-2)**. Như các thầy thấy trên màn hình, hệ thống sẽ tính toán thời điểm ôn tập tối ưu dựa trên hai công thức chính:
 
-**Từ khóa:** **SM-2**, Easiness Factor (**EF**), **Fuzz Factor** (tránh Review Hell).
+Đầu tiên là việc cập nhật **EF (Easiness Factor)** - hay còn gọi là chỉ số độ dễ của từ. Dựa trên đánh giá **q** từ 0 đến 5 của người dùng sau mỗi lần học, thuật toán sẽ tự động điều chỉnh EF. Nếu người dùng đánh giá từ này dễ (q=4 hoặc 5), EF sẽ tăng lên; ngược lại nếu từ khó (q < 4), EF sẽ giảm xuống.
+
+Tiếp theo là công thức tính **Interval I(n)** - tức là khoảng thời gian cho đến lần ôn tập kế tiếp. Khoảng cách này được tính bằng cách lấy Interval trước đó nhân với chỉ số EF vừa cập nhật. Nhờ cơ chế nhân dồn này, những từ bạn đã thuộc kỹ sẽ được giãn cách ra rất xa (có thể là vài tháng), trong khi từ khó sẽ xuất hiện thường xuyên hơn để củng cố trí nhớ.
+
+Ngoài ra, em có bổ sung thêm cơ chế **Fuzz Factor** (lệch ±5% chu kỳ) để tránh hiện tượng 'Review Hell' - khi quá nhiều thẻ bị dồn vào cùng một ngày, giúp lộ trình học trở nên tự nhiên và bền bỉ hơn."
+
+**Từ khóa:** **SM-2**, Easiness Factor (**EF**), **Interval I(n)**, **Fuzz Factor**.
 
 
 "Chức năng tra cứu ngữ cảnh AI sử dụng cơ chế **Streaming qua Server-Sent Events (SSE)**. Việc trả về từng phần dữ liệu giúp giảm độ trễ (latency) ở Client. Hệ thống được thiết kế theo hướng **Lớp trung gian (Abstraction)** cho nhà cung cấp AI, cho phép chuyển đổi linh hoạt giữa OpenAI hoặc Gemini mà không ảnh hưởng logic chính."
